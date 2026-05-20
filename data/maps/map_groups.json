@@ -926,11 +926,7 @@
         "PalletTown_PlayersHouse_1F_Frlg",
         "PalletTown_PlayersHouse_2F_Frlg",
         "PalletTown_RivalsHouse_Frlg",
-        "PalletTown_ProfessorOaksLab_Frlg",
-        "PalletTown_AuntsHouse_1F",
-        "PalletTown_AuntsHouse_2F",
-        "PalletTown_Lab",
-        "PalletTown_RivalsHouse"
+        "PalletTown_ProfessorOaksLab_Frlg"
     ],
     "gMapGroup_IndoorViridian_Frlg": [
         "ViridianCity_House_Frlg",
