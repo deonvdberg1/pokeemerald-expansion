@@ -1,0 +1,43 @@
+// Pallet Town — Aunt's House 2F
+// Map: MAP_PALLET_TOWN_AUNTS_HOUSE_2F
+
+mapscripts PalletTown_AuntsHouse_2F_MapScripts {
+    MAP_SCRIPT_ON_TRANSITION {
+    }
+    MAP_SCRIPT_ON_RESUME {
+    }
+}
+
+// ─────────────────────────────────────────────
+// BG EVENT SCRIPTS
+// ─────────────────────────────────────────────
+
+// NES — Player's SNES
+script PalletTown_AuntsHouse_2F_EventScript_NES {
+    lock
+    msgbox("{PLAYER} turned on the NES!
+           Better get going—
+           there's an adventure waiting!")
+    release
+    end
+}
+
+// PC — Player's computer
+script PalletTown_AuntsHouse_2F_EventScript_PC {
+    lock
+    msgbox("{PLAYER} booted up the PC.
+           It's running some kind of
+           Pokémon development tool...")
+    release
+    end
+}
+
+// Bed — Rest up!
+script PalletTown_AuntsHouse_2F_EventScript_Bed {
+    lock
+    msgbox("A cozy bed.
+           Time to rest before
+           the journey ahead!")
+    release
+    end
+}
