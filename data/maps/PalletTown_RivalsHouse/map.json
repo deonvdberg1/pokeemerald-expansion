@@ -28,6 +28,13 @@
       "elevation": 0,
       "dest_map": "MAP_PALLET_TOWN_KHANTO",
       "dest_warp_id": "1"
+    },
+    {
+      "x": 2,
+      "y": 2,
+      "elevation": 0,
+      "dest_map": "MAP_PALLET_TOWN_RIVALS_HOUSE_2F_KHANTO",
+      "dest_warp_id": "0"
     }
   ],
   "coord_events": [],

@@ -9384,6 +9384,17 @@
       "layout_version": "emerald"
     },
     {
+      "id": "LAYOUT_PALLET_TOWN_RIVALS_HOUSE_2F_KHANTO",
+      "name": "PalletTown_RivalsHouse_2F_Khanto_Layout",
+      "width": 9,
+      "height": 8,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_BrendansMaysHouse",
+      "border_filepath": "data/layouts/PalletTown_RivalsHouse_2F/border.bin",
+      "blockdata_filepath": "data/layouts/PalletTown_RivalsHouse_2F/map.bin",
+      "layout_version": "emerald"
+    },
+    {
       "id": "LAYOUT_PALLET_TOWN_PROFESSOR_OAKS_LAB_KHANTO",
       "name": "PalletTown_ProfessorOaksLab_Khanto_Layout",
       "width": 13,

@@ -1,0 +1,7 @@
+// Pallet Town — Rival's House 2F
+// Map: MAP_PALLET_TOWN_RIVALS_HOUSE_2F_KHANTO
+
+mapscripts PalletTown_RivalsHouse_2F_Khanto_MapScripts {
+    MAP_SCRIPT_ON_TRANSITION {
+    }
+}
