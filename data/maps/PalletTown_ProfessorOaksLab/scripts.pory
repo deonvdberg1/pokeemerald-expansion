@@ -1,0 +1,8 @@
+// Pallet Town — ProfessorOaksLab
+// Map: MAP_PALLET_TOWN_PROFESSOR_OAKS_LAB
+
+mapscripts PalletTown_ProfessorOaksLab_MapScripts {
+    MAP_SCRIPT_ON_TRANSITION {
+        // Placeholder
+    }
+}

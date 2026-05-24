@@ -1,0 +1,8 @@
+PalletTown_ProfessorOaksLab_MapScripts::
+# 5 "data/maps/PalletTown_ProfessorOaksLab/scripts.pory"
+	map_script MAP_SCRIPT_ON_TRANSITION, PalletTown_ProfessorOaksLab_MapScripts_MAP_SCRIPT_ON_TRANSITION
+	.byte 0
+
+PalletTown_ProfessorOaksLab_MapScripts_MAP_SCRIPT_ON_TRANSITION:
+	return
+

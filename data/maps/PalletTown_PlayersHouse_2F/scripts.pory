@@ -1,0 +1,8 @@
+// Pallet Town — PlayersHouse_2F
+// Map: MAP_PALLET_TOWN_PLAYERS_HOUSE_2F
+
+mapscripts PalletTown_PlayersHouse_2F_MapScripts {
+    MAP_SCRIPT_ON_TRANSITION {
+        // Placeholder
+    }
+}
