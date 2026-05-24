@@ -1,8 +1,8 @@
-PalletTown_RivalsHouse_MapScripts::
+PalletTown_RivalsHouse_Khanto_MapScripts::
 # 5 "data/maps/PalletTown_RivalsHouse/scripts.pory"
-	map_script MAP_SCRIPT_ON_TRANSITION, PalletTown_RivalsHouse_MapScripts_MAP_SCRIPT_ON_TRANSITION
+	map_script MAP_SCRIPT_ON_TRANSITION, PalletTown_RivalsHouse_Khanto_MapScripts_MAP_SCRIPT_ON_TRANSITION
 	.byte 0
 
-PalletTown_RivalsHouse_MapScripts_MAP_SCRIPT_ON_TRANSITION:
+PalletTown_RivalsHouse_Khanto_MapScripts_MAP_SCRIPT_ON_TRANSITION:
 	return
 

@@ -1,7 +1,7 @@
 // Pallet Town — ProfessorOaksLab
 // Map: MAP_PALLET_TOWN_PROFESSOR_OAKS_LAB
 
-mapscripts PalletTown_ProfessorOaksLab_MapScripts {
+mapscripts PalletTown_ProfessorOaksLab_Khanto_MapScripts {
     MAP_SCRIPT_ON_TRANSITION {
         // Placeholder
     }

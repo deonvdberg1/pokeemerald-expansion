@@ -1,7 +1,7 @@
 // Pallet Town — RivalsHouse
 // Map: MAP_PALLET_TOWN_RIVALS_HOUSE
 
-mapscripts PalletTown_RivalsHouse_MapScripts {
+mapscripts PalletTown_RivalsHouse_Khanto_MapScripts {
     MAP_SCRIPT_ON_TRANSITION {
         // Placeholder
     }
