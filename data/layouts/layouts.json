@@ -4879,32 +4879,6 @@
       "layout_version": "frlg"
     },
     {
-      "id": "LAYOUT_PALLET_TOWN_RIVALS_HOUSE",
-      "name": "PalletTown_RivalsHouse_Layout",
-      "width": 13,
-      "height": 10,
-      "primary_tileset": "gTileset_BuildingFrlg",
-      "secondary_tileset": "gTileset_GenericBuilding2",
-      "border_filepath": "data/layouts/PalletTown_RivalsHouse_Frlg/border.bin",
-      "blockdata_filepath": "data/layouts/PalletTown_RivalsHouse_Frlg/map.bin",
-      "border_height": 2,
-      "border_width": 2,
-      "layout_version": "frlg"
-    },
-    {
-      "id": "LAYOUT_PALLET_TOWN_PROFESSOR_OAKS_LAB",
-      "name": "PalletTown_ProfessorOaksLab_Layout",
-      "width": 13,
-      "height": 14,
-      "primary_tileset": "gTileset_BuildingFrlg",
-      "secondary_tileset": "gTileset_Lab_Frlg",
-      "border_filepath": "data/layouts/PalletTown_ProfessorOaksLab_Frlg/border.bin",
-      "blockdata_filepath": "data/layouts/PalletTown_ProfessorOaksLab_Frlg/map.bin",
-      "border_height": 2,
-      "border_width": 2,
-      "layout_version": "frlg"
-    },
-    {
       "id": "LAYOUT_HOUSE1_FRLG",
       "name": "House1_FRLG_Layout",
       "width": 11,
@@ -9327,8 +9301,8 @@
     {
       "id": "LAYOUT_PALLET_TOWN_KHANTO",
       "name": "PalletTown_Khanto_Layout",
-      "width": 40,
-      "height": 60,
+      "width": 25,
+      "height": 27,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_Petalburg",
       "border_filepath": "data/layouts/PalletTown/border.bin",
@@ -9340,14 +9314,84 @@
     {
       "id": "LAYOUT_ROUTE1_KHANTO",
       "name": "Route1_Khanto_Layout",
-      "width": 40,
-      "height": 40,
+      "width": 28,
+      "height": 42,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_Petalburg",
       "border_filepath": "data/layouts/Route1_Khanto/border.bin",
       "blockdata_filepath": "data/layouts/Route1_Khanto/map.bin",
       "border_height": 2,
       "border_width": 2,
+      "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_ROUTE21_KHANTO",
+      "name": "Route21_Khanto_Layout",
+      "width": 24,
+      "height": 80,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Petalburg",
+      "border_filepath": "data/layouts/Route21_Khanto/border.bin",
+      "blockdata_filepath": "data/layouts/Route21_Khanto/map.bin",
+      "border_height": 2,
+      "border_width": 2,
+      "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_VIRIDIAN_CITY_KHANTO",
+      "name": "ViridianCity_Khanto_Layout",
+      "width": 52,
+      "height": 44,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Petalburg",
+      "border_filepath": "data/layouts/ViridianCity_Khanto/border.bin",
+      "blockdata_filepath": "data/layouts/ViridianCity_Khanto/map.bin",
+      "border_height": 2,
+      "border_width": 2,
+      "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_PALLET_TOWN_PLAYERS_HOUSE_1F_KHANTO",
+      "name": "PalletTown_PlayersHouse_1F_Khanto_Layout",
+      "width": 11,
+      "height": 9,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_BrendansMaysHouse",
+      "border_filepath": "data/layouts/PalletTown_PlayersHouse_1F/border.bin",
+      "blockdata_filepath": "data/layouts/PalletTown_PlayersHouse_1F/map.bin",
+      "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_PALLET_TOWN_PLAYERS_HOUSE_2F_KHANTO",
+      "name": "PalletTown_PlayersHouse_2F_Khanto_Layout",
+      "width": 9,
+      "height": 8,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_BrendansMaysHouse",
+      "border_filepath": "data/layouts/PalletTown_PlayersHouse_2F/border.bin",
+      "blockdata_filepath": "data/layouts/PalletTown_PlayersHouse_2F/map.bin",
+      "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_PALLET_TOWN_RIVALS_HOUSE_KHANTO",
+      "name": "PalletTown_RivalsHouse_Khanto_Layout",
+      "width": 11,
+      "height": 9,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_BrendansMaysHouse",
+      "border_filepath": "data/layouts/PalletTown_RivalsHouse/border.bin",
+      "blockdata_filepath": "data/layouts/PalletTown_RivalsHouse/map.bin",
+      "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_PALLET_TOWN_PROFESSOR_OAKS_LAB_KHANTO",
+      "name": "PalletTown_ProfessorOaksLab_Khanto_Layout",
+      "width": 13,
+      "height": 13,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_Lab",
+      "border_filepath": "data/layouts/PalletTown_ProfessorOaksLab/border.bin",
+      "blockdata_filepath": "data/layouts/PalletTown_ProfessorOaksLab/map.bin",
       "layout_version": "emerald"
     }
   ]

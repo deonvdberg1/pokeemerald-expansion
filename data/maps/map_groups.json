@@ -39,6 +39,7 @@
     "gMapGroup_SpecialArea_Frlg",
     "gMapGroup_TownsAndRoutes_Frlg",
     "gMapGroup_IndoorPallet_Frlg",
+    "gMapGroup_IndoorPallet_Khanto",
     "gMapGroup_IndoorViridian_Frlg",
     "gMapGroup_IndoorPewter_Frlg",
     "gMapGroup_IndoorCerulean_Frlg",
@@ -133,7 +134,11 @@
     "Underwater_Route128",
     "Underwater_Route129",
     "Underwater_Route105",
-    "Underwater_Route125"
+    "Underwater_Route125",
+    "PalletTown_Khanto",
+    "Route1_Khanto",
+    "Route21_Khanto",
+    "ViridianCity_Khanto"
   ],
   "gMapGroup_IndoorLittleroot": [
     "LittlerootTown_BrendansHouse_1F",
@@ -925,6 +930,12 @@
     "PalletTown_PlayersHouse_2F_Frlg",
     "PalletTown_RivalsHouse_Frlg",
     "PalletTown_ProfessorOaksLab_Frlg"
+  ],
+  "gMapGroup_IndoorPallet_Khanto": [
+    "PalletTown_PlayersHouse_1F",
+    "PalletTown_PlayersHouse_2F",
+    "PalletTown_RivalsHouse",
+    "PalletTown_ProfessorOaksLab"
   ],
   "gMapGroup_IndoorViridian_Frlg": [
     "ViridianCity_House_Frlg",
