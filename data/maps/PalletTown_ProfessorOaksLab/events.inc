@@ -5,11 +5,14 @@
 	.align 2
 
 MAP_PALLET_TOWN_PROFESSOR_OAKS_LAB_KHANTO_ObjectEvents:
-	object_event 1, OBJ_EVENT_GFX_PROF_OAK, 6, 4, 3, MOVEMENT_TYPE_FACE_DOWN, 0, 0, TRAINER_TYPE_NONE, 0, PalletTown_ProfessorOaksLab_EventScript_Oak, 0
+	object_event LOCALID_OAKS_LAB_OAK, OBJ_EVENT_GFX_PROF_OAK, 6, 4, 3, MOVEMENT_TYPE_FACE_DOWN, 0, 0, TRAINER_TYPE_NONE, 0, PalletTown_ProfessorOaksLab_EventScript_Oak, 0
+	object_event 0, OBJ_EVENT_GFX_ITEM_BALL, 5, 7, 3, MOVEMENT_TYPE_FACE_DOWN, 0, 0, TRAINER_TYPE_NONE, 0, PalletTown_ProfessorOaksLab_EventScript_BulbasaurBall, 0
+	object_event 0, OBJ_EVENT_GFX_ITEM_BALL, 6, 7, 3, MOVEMENT_TYPE_FACE_DOWN, 0, 0, TRAINER_TYPE_NONE, 0, PalletTown_ProfessorOaksLab_EventScript_CharmanderBall, 0
+	object_event 0, OBJ_EVENT_GFX_ITEM_BALL, 7, 7, 3, MOVEMENT_TYPE_FACE_DOWN, 0, 0, TRAINER_TYPE_NONE, 0, PalletTown_ProfessorOaksLab_EventScript_SquirtleBall, 0
 
 MAP_PALLET_TOWN_PROFESSOR_OAKS_LAB_KHANTO_MapWarps:
 	warp_def 6, 12, 0, 1, MAP_PALLET_TOWN_KHANTO
-	warp_def 7, 12, 0, 2, MAP_PALLET_TOWN_KHANTO
+	warp_def 7, 12, 0, 1, MAP_PALLET_TOWN_KHANTO
 
 MAP_PALLET_TOWN_PROFESSOR_OAKS_LAB_KHANTO_MapBGEvents:
 	bg_sign_event 0, 7, 0, BG_EVENT_PLAYER_FACING_ANY, 0x0

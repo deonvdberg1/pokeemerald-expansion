@@ -1,37 +1,152 @@
-// Pallet Town — Professor Oak's Lab
-// Map: MAP_PALLET_TOWN_PROFESSOR_OAKS_LAB_KHANTO
 
 mapscripts PalletTown_ProfessorOaksLab_Khanto_MapScripts {
     MAP_SCRIPT_ON_TRANSITION {
+        setflag(FLAG_HIDE_OAK_IN_HIS_LAB)
+    }
+    MAP_SCRIPT_ON_WARP_INTO_MAP_TABLE {
+        if (var(VAR_TEMP_0) == 0) {
+            turnobject(OBJ_EVENT_ID_PLAYER, DIR_NORTH)
+        }
+    }
+    MAP_SCRIPT_ON_FRAME_TABLE {
+        if (var(VAR_TEMP_0) == 0) {
+            call(OaksLab_EventScript_IntroScene)
+        }
     }
 }
 
-// ─────────────────────────────────────────────
-// OBJECT EVENT SCRIPTS
-// ─────────────────────────────────────────────
-
-script PalletTown_ProfessorOaksLab_EventScript_Oak {
-    lock
-    faceplayer
+script OaksLab_EventScript_IntroScene {
+    lockall
+    textcolor(NPC_TEXT_COLOR_MALE)
+    clearflag(FLAG_HIDE_OAK_IN_HIS_LAB)
+    applymovement(1, Common_Movement_WalkInPlaceFasterUp)
+    waitmovement(0)
     msgbox("Oak: Ah, {PLAYER}!
-           Welcome to my laboratory!
-           I've been studying Pokémon
-           here in Pallet Town for years.
-           Tell me, have you ever caught
-           a Pokémon before?")
-    release
+           Right on time!
+           I was hoping you'd come by today.")
+    msgbox("Oak: You see, {PLAYER},
+           I need your help with something
+           very important.
+           I've been researching a legendary
+           Pokémon that lives atop
+           MOUNT SILVER.
+           Its power is immense—
+           I believe studying it could
+           unlock secrets about Pokémon
+           we've never understood before.")
+    msgbox("Oak: However, MOUNT SILVER
+           is blocked off by the
+           POKÉMON LEAGUE.
+           Only the strongest trainers
+           are allowed past the checkpoint.
+           To get there, you must first
+           defeat all eight GYM LEADERS
+           and challenge the
+           POKÉMON LEAGUE.")
+    msgbox("Oak: It won't be easy.
+           The road ahead is long,
+           and the Gym Leaders of KANTO
+           are no pushovers.
+           But I believe you have what it
+           takes, {PLAYER}.")
+    msgbox("Oak: Of course, you can't start
+           a journey empty-handed!
+           That's why I've prepared
+           something for you.")
+    msgbox("Oak: Behold!
+           These three POKé BALLS each
+           contain a powerful Pokémon.
+           Choose one to be your partner
+           on this journey.")
+    setvar(VAR_TEMP_0, 1)
+    releaseall
     end
 }
 
-// ─────────────────────────────────────────────
-// BG EVENT SCRIPTS
-// ─────────────────────────────────────────────
-
-script PalletTown_ProfessorOaksLab_EventScript_Bookshelf {
+script PalletTown_ProfessorOaksLab_EventScript_BulbasaurBall {
     lock
     faceplayer
-    msgbox("It's filled with Pokémon research
-           journals and data.")
-    release
+    msgbox("It's a POKé BALL containing
+           BULBASAUR, the Grass type.
+           Would you like to choose
+           BULBASAUR as your partner?")
+    multichoicedefault(0, 0, 0, 2)
+    if (var(VAR_RESULT) == 0) {
+        setvar(VAR_TEMP_1, 0)
+        call(OaksLab_EventScript_GiveStarter)
+    } else {
+        msgbox("Take your time, {PLAYER}.
+               Choose the one that speaks to you.")
+        release
+        end
+    }
+}
+
+script PalletTown_ProfessorOaksLab_EventScript_CharmanderBall {
+    lock
+    faceplayer
+    msgbox("It's a POKé BALL containing
+           CHARMANDER, the Fire type.
+           Would you like to choose
+           CHARMANDER as your partner?")
+    multichoicedefault(0, 0, 0, 2)
+    if (var(VAR_RESULT) == 0) {
+        setvar(VAR_TEMP_1, 1)
+        call(OaksLab_EventScript_GiveStarter)
+    } else {
+        msgbox("Take your time, {PLAYER}.
+               Choose the one that speaks to you.")
+        release
+        end
+    }
+}
+
+script PalletTown_ProfessorOaksLab_EventScript_SquirtleBall {
+    lock
+    faceplayer
+    msgbox("It's a POKé BALL containing
+           SQUIRTLE, the Water type.
+           Would you like to choose
+           SQUIRTLE as your partner?")
+    multichoicedefault(0, 0, 0, 2)
+    if (var(VAR_RESULT) == 0) {
+        setvar(VAR_TEMP_1, 2)
+        call(OaksLab_EventScript_GiveStarter)
+    } else {
+        msgbox("Take your time, {PLAYER}.
+               Choose the one that speaks to you.")
+        release
+        end
+    }
+}
+
+script OaksLab_EventScript_GiveStarter {
+    lockall
+    textcolor(NPC_TEXT_COLOR_MALE)
+    if (var(VAR_TEMP_1) == 0) {
+        setvar(VAR_TEMP_2, SPECIES_BULBASAUR)
+    } else {
+        if (var(VAR_TEMP_1) == 1) {
+            setvar(VAR_TEMP_2, SPECIES_CHARMANDER)
+        } else {
+            setvar(VAR_TEMP_2, SPECIES_SQUIRTLE)
+        }
+    }
+    givepokemon(VAR_TEMP_2, 5, ITEM_NONE)
+    setstartermon()
+    msgbox("Oak: Excellent choice!
+           That Pokémon is now yours.
+           Take good care of it,
+           and it will be your most
+           loyal friend on this journey.")
+    msgbox("Oak: Now go, {PLAYER}!
+           The world of Pokémon awaits.
+           Defeat the Gym Leaders,
+           conquer the LEAGUE,
+           and meet me at
+           MOUNT SILVER.
+           I'll be waiting.")
+    setvar(VAR_TEMP_0, 2)
+    releaseall
     end
 }
