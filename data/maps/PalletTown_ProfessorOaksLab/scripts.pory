@@ -1,8 +1,37 @@
-// Pallet Town — ProfessorOaksLab
-// Map: MAP_PALLET_TOWN_PROFESSOR_OAKS_LAB
+// Pallet Town — Professor Oak's Lab
+// Map: MAP_PALLET_TOWN_PROFESSOR_OAKS_LAB_KHANTO
 
 mapscripts PalletTown_ProfessorOaksLab_Khanto_MapScripts {
     MAP_SCRIPT_ON_TRANSITION {
-        // Placeholder
     }
+}
+
+// ─────────────────────────────────────────────
+// OBJECT EVENT SCRIPTS
+// ─────────────────────────────────────────────
+
+script PalletTown_ProfessorOaksLab_EventScript_Oak {
+    lock
+    faceplayer
+    msgbox("Oak: Ah, {PLAYER}!
+           Welcome to my laboratory!
+           I've been studying Pokémon
+           here in Pallet Town for years.
+           Tell me, have you ever caught
+           a Pokémon before?")
+    release
+    end
+}
+
+// ─────────────────────────────────────────────
+// BG EVENT SCRIPTS
+// ─────────────────────────────────────────────
+
+script PalletTown_ProfessorOaksLab_EventScript_Bookshelf {
+    lock
+    faceplayer
+    msgbox("It's filled with Pokémon research
+           journals and data.")
+    release
+    end
 }
