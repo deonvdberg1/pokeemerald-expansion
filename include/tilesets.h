@@ -4,6 +4,12 @@
 extern const u32 gTilesetTiles_General[];
 extern const u16 gTilesetPalettes_General[][16];
 
+extern const u32 gTilesetTiles_GeneralORAS[];
+extern const u16 gTilesetPalettes_GeneralORAS[][16];
+
+extern const u32 gTilesetTiles_PetalburgORAS[];
+extern const u16 gTilesetPalettes_PetalburgORAS[][16];
+
 extern const struct Tileset *const gTilesetPointer_SecretBase;
 extern const struct Tileset *const gTilesetPointer_SecretBaseRedCave;
 
@@ -12,7 +18,9 @@ extern const struct Tileset gTileset_BuildingFrlg;
 extern const struct Tileset gTileset_BrendansMaysHouse;
 extern const struct Tileset gTileset_GenericBuilding1;
 extern const struct Tileset gTileset_General;
+extern const struct Tileset gTileset_GeneralORAS;
 extern const struct Tileset gTileset_Petalburg;
+extern const struct Tileset gTileset_PetalburgORAS;
 extern const struct Tileset gTileset_Rustboro;
 extern const struct Tileset gTileset_Fallarbor;
 extern const struct Tileset gTileset_Mauville;

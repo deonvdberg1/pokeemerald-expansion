@@ -109,91 +109,29 @@ LittlerootTown_OnFrame:
 
 LittlerootTown_EventScript_StepOffTruckMale::
 	lockall
-	setvar VAR_0x8004, 5
-	setvar VAR_0x8005, 8
-	call LittlerootTown_EventScript_GoInsideWithMom
+	delay 15
+	playse SE_LEDGE
+	applymovement LOCALID_PLAYER, LittlerootTown_Movement_PlayerStepOffTruck
+	waitmovement 0
+	setvar VAR_LITTLEROOT_INTRO_STATE, 3
 	setflag FLAG_HIDE_LITTLEROOT_TOWN_BRENDANS_HOUSE_TRUCK
-	warpsilent MAP_LITTLEROOT_TOWN_BRENDANS_HOUSE_1F, 8, 8
-	waitstate
+	clearflag FLAG_HIDE_MAP_NAME_POPUP
+	clearflag FLAG_HIDE_LITTLEROOT_TOWN_FAT_MAN
 	releaseall
 	end
 
 LittlerootTown_EventScript_StepOffTruckFemale::
 	lockall
-	setvar VAR_0x8004, 14
-	setvar VAR_0x8005, 8
-	call LittlerootTown_EventScript_GoInsideWithMom
-	setflag FLAG_HIDE_LITTLEROOT_TOWN_MAYS_HOUSE_TRUCK
-	warpsilent MAP_LITTLEROOT_TOWN_MAYS_HOUSE_1F, 2, 8
-	waitstate
-	releaseall
-	end
-
-LittlerootTown_EventScript_GoInsideWithMom::
 	delay 15
 	playse SE_LEDGE
 	applymovement LOCALID_PLAYER, LittlerootTown_Movement_PlayerStepOffTruck
 	waitmovement 0
-	opendoor VAR_0x8004, VAR_0x8005
-	waitdooranim
-	addobject LOCALID_LITTLEROOT_MOM
-	applymovement LOCALID_LITTLEROOT_MOM, LittlerootTown_Movement_MomExitHouse
-	waitmovement 0
-	closedoor VAR_0x8004, VAR_0x8005
-	waitdooranim
-	delay 10
-	applymovement LOCALID_LITTLEROOT_MOM, LittlerootTown_Movement_MomApproachPlayerAtTruck
-	waitmovement 0
-	msgbox LittlerootTown_Text_OurNewHomeLetsGoInside, MSGBOX_DEFAULT
-	closemessage
-	applymovement LOCALID_LITTLEROOT_MOM, LittlerootTown_Movement_MomApproachDoor
-	applymovement LOCALID_PLAYER, LittlerootTown_Movement_PlayerApproachDoor
-	waitmovement 0
-	opendoor VAR_0x8004, VAR_0x8005
-	waitdooranim
-	applymovement LOCALID_LITTLEROOT_MOM, LittlerootTown_Movement_MomEnterHouse
-	applymovement LOCALID_PLAYER, LittlerootTown_Movement_PlayerEnterHouse
-	waitmovement 0
-	setflag FLAG_HIDE_LITTLEROOT_TOWN_MOM_OUTSIDE
 	setvar VAR_LITTLEROOT_INTRO_STATE, 3
-	hideplayer
-	closedoor VAR_0x8004, VAR_0x8005
-	waitdooranim
-	clearflag FLAG_HIDE_LITTLEROOT_TOWN_FAT_MAN
+	setflag FLAG_HIDE_LITTLEROOT_TOWN_MAYS_HOUSE_TRUCK
 	clearflag FLAG_HIDE_MAP_NAME_POPUP
-	return
-
-LittlerootTown_Movement_MomExitHouse:
-	walk_down
-	step_end
-
-LittlerootTown_Movement_MomApproachPlayerAtTruck:
-	walk_down
-	walk_in_place_faster_left
-	step_end
-
-LittlerootTown_Movement_MomApproachDoor:
-	delay_16
-	delay_8
-	walk_up
-	step_end
-
-LittlerootTown_Movement_MomEnterHouse:
-	walk_up
-	set_invisible
-	step_end
-
-LittlerootTown_Movement_PlayerApproachDoor:
-	delay_16
-	delay_8
-	walk_right
-	walk_in_place_faster_up
-	step_end
-
-LittlerootTown_Movement_PlayerEnterHouse:
-	walk_up
-	walk_up
-	step_end
+	clearflag FLAG_HIDE_LITTLEROOT_TOWN_FAT_MAN
+	releaseall
+	end
 
 LittlerootTown_Movement_PlayerStepOffTruck:
 	jump_right
@@ -393,6 +331,10 @@ LittlerootTown_EventScript_TownSign::
 
 LittlerootTown_EventScript_BirchsLabSign::
 	msgbox LittlerootTown_Text_ProfBirchsLab, MSGBOX_SIGN
+	end
+
+LittlerootTown_EventScript_LittlerootRuinsSign::
+	msgbox LittlerootTown_Text_LittlerootRuins, MSGBOX_SIGN
 	end
 
 LittlerootTown_EventScript_BrendansHouseSign::
@@ -996,6 +938,10 @@ LittlerootTown_Text_TownSign:
 
 LittlerootTown_Text_ProfBirchsLab:
 	.string "PROF. BIRCH'S POKéMON LAB$"
+
+LittlerootTown_Text_LittlerootRuins:
+	.string "LITTLEROOT RUINS"
+	.string "“A piece of history long forgotten…”$"
 
 LittlerootTown_Text_PlayersHouse:
 	.string "{PLAYER}'s HOUSE$"

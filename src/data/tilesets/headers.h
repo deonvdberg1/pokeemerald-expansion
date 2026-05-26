@@ -1541,3 +1541,27 @@ const struct Tileset gTileset_HallOfFame =
 };
 
 #endif // IS_FRLG
+
+// ORAS General
+const struct Tileset gTileset_GeneralORAS =
+{
+    .isCompressed = TRUE,
+    .isSecondary = FALSE,
+    .tiles = gTilesetTiles_GeneralORAS,
+    .palettes = gTilesetPalettes_GeneralORAS,
+    .metatiles = gMetatiles_GeneralORAS,
+    .metatileAttributes = gMetatileAttributes_GeneralORAS,
+    .callback = InitTilesetAnim_General,
+};
+
+// ORAS Petalburg
+const struct Tileset gTileset_PetalburgORAS =
+{
+    .isCompressed = TRUE,
+    .isSecondary = TRUE,
+    .tiles = gTilesetTiles_PetalburgORAS,
+    .palettes = gTilesetPalettes_PetalburgORAS,
+    .metatiles = gMetatiles_PetalburgORAS,
+    .metatileAttributes = gMetatileAttributes_PetalburgORAS,
+    .callback = InitTilesetAnim_Petalburg,
+};

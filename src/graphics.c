@@ -2044,6 +2044,29 @@ const u16 ALIGNED(4) gTilesetPalettes_General[][16] =
 
 const u32 gTilesetTiles_General[] = INCGFX_U32("data/tilesets/primary/general/tiles.png", ".4bpp.smol");
 
+// ORAS General
+const u32 gTilesetTiles_GeneralORAS[] = INCGFX_U32("data/tilesets/primary/general_oras/tiles.png", ".4bpp.smol");
+
+const u16 ALIGNED(4) gTilesetPalettes_GeneralORAS[][16] =
+{
+    INCGFX_U16("data/tilesets/primary/general_oras/palettes/00.pal", ".gbapal"),
+    INCGFX_U16("data/tilesets/primary/general_oras/palettes/01.pal", ".gbapal"),
+    INCGFX_U16("data/tilesets/primary/general_oras/palettes/02.pal", ".gbapal"),
+    INCGFX_U16("data/tilesets/primary/general_oras/palettes/03.pal", ".gbapal"),
+    INCGFX_U16("data/tilesets/primary/general_oras/palettes/04.pal", ".gbapal"),
+    INCGFX_U16("data/tilesets/primary/general_oras/palettes/05.pal", ".gbapal"),
+    INCGFX_U16("data/tilesets/primary/general_oras/palettes/06.pal", ".gbapal"),
+    INCGFX_U16("data/tilesets/primary/general_oras/palettes/07.pal", ".gbapal"),
+    INCGFX_U16("data/tilesets/primary/general_oras/palettes/08.pal", ".gbapal"),
+    INCGFX_U16("data/tilesets/primary/general_oras/palettes/09.pal", ".gbapal"),
+    INCGFX_U16("data/tilesets/primary/general_oras/palettes/10.pal", ".gbapal"),
+    INCGFX_U16("data/tilesets/primary/general_oras/palettes/11.pal", ".gbapal"),
+    INCGFX_U16("data/tilesets/primary/general_oras/palettes/12.pal", ".gbapal"),
+    INCGFX_U16("data/tilesets/primary/general_oras/palettes/13.pal", ".gbapal"),
+    INCGFX_U16("data/tilesets/primary/general_oras/palettes/14.pal", ".gbapal"),
+    INCGFX_U16("data/tilesets/primary/general_oras/palettes/15.pal", ".gbapal"),
+};
+
 // trade/egg hatch
 
 const u16 gTradeGba_Pal[] = INCGFX_U16("graphics/trade/gba.pal", ".gbapal");

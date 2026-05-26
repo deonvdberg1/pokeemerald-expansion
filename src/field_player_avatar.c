@@ -1632,6 +1632,11 @@ enum Gender GetPlayerAvatarGenderByGraphicsId(u16 gfxId)
 
 bool8 PartyHasMonWithSurf(void)
 {
+    return TRUE;
+}
+
+static bool8 PartyHasMonWithSurf_OLD(void)
+{
     u8 i;
 
     if (!TestPlayerAvatarFlags(PLAYER_AVATAR_FLAG_SURFING))

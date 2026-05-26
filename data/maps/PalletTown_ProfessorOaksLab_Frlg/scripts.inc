@@ -1655,3 +1655,14 @@ PalletTown_ProfessorOaksLab_Text_RivalIllCompleteThePokedex::
 	.string "ONE ISLAND first…\p"
 	.string "Anyways, I'm outta here!$"
 
+
+PalletTown_Lab_TestWarp::
+	lockall
+	msgbox PalletTown_Lab_WarpText, MSGBOX_DEFAULT
+	closemessage
+	warp MAP_LITTLEROOT_TOWN, 14, 8
+	waitstate
+	end
+
+PalletTown_Lab_WarpText:
+	.string "Warping to Littleroot...$"

@@ -20,6 +20,29 @@ const u16 gTilesetPalettes_Petalburg[][16] =
     INCGFX_U16("data/tilesets/secondary/petalburg/palettes/15.pal", ".gbapal"),
 };
 
+// ORAS Petalburg
+const u32 gTilesetTiles_PetalburgORAS[] = INCGFX_U32("data/tilesets/secondary/petalburg_oras/tiles.png", ".4bpp.fastSmol");
+
+const u16 gTilesetPalettes_PetalburgORAS[][16] =
+{
+    INCGFX_U16("data/tilesets/secondary/petalburg_oras/palettes/00.pal", ".gbapal"),
+    INCGFX_U16("data/tilesets/secondary/petalburg_oras/palettes/01.pal", ".gbapal"),
+    INCGFX_U16("data/tilesets/secondary/petalburg_oras/palettes/02.pal", ".gbapal"),
+    INCGFX_U16("data/tilesets/secondary/petalburg_oras/palettes/03.pal", ".gbapal"),
+    INCGFX_U16("data/tilesets/secondary/petalburg_oras/palettes/04.pal", ".gbapal"),
+    INCGFX_U16("data/tilesets/secondary/petalburg_oras/palettes/05.pal", ".gbapal"),
+    INCGFX_U16("data/tilesets/secondary/petalburg_oras/palettes/06.pal", ".gbapal"),
+    INCGFX_U16("data/tilesets/secondary/petalburg_oras/palettes/07.pal", ".gbapal"),
+    INCGFX_U16("data/tilesets/secondary/petalburg_oras/palettes/08.pal", ".gbapal"),
+    INCGFX_U16("data/tilesets/secondary/petalburg_oras/palettes/09.pal", ".gbapal"),
+    INCGFX_U16("data/tilesets/secondary/petalburg_oras/palettes/10.pal", ".gbapal"),
+    INCGFX_U16("data/tilesets/secondary/petalburg_oras/palettes/11.pal", ".gbapal"),
+    INCGFX_U16("data/tilesets/secondary/petalburg_oras/palettes/12.pal", ".gbapal"),
+    INCGFX_U16("data/tilesets/secondary/petalburg_oras/palettes/13.pal", ".gbapal"),
+    INCGFX_U16("data/tilesets/secondary/petalburg_oras/palettes/14.pal", ".gbapal"),
+    INCGFX_U16("data/tilesets/secondary/petalburg_oras/palettes/15.pal", ".gbapal"),
+};
+
 const u32 gTilesetTiles_Rustboro[] = INCGFX_U32("data/tilesets/secondary/rustboro/tiles.png", ".4bpp.fastSmol", "-num_tiles 498 -Wnum_tiles");
 
 const u16 gTilesetPalettes_Rustboro[][16] =

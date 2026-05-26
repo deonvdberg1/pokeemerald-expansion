@@ -1,0 +1,7 @@
+// Route 21 (Khanto) — Scripts
+mapscripts Route21_Khanto_MapScripts {
+    MAP_SCRIPT_ON_TRANSITION {
+    }
+    MAP_SCRIPT_ON_RESUME {
+    }
+}
