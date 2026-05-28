@@ -9447,7 +9447,7 @@
     {
       "id": "LAYOUT_ROUTE2_KHANTO",
       "name": "Route2_Khanto_Layout",
-      "width": 24,
+      "width": 25,
       "height": 80,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_Petalburg",
