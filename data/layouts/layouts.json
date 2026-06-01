@@ -9466,8 +9466,6 @@
       "secondary_tileset": "gTileset_Petalburg",
       "border_filepath": "data/layouts/PewterCity_Khanto/border.bin",
       "blockdata_filepath": "data/layouts/PewterCity_Khanto/map.bin",
-      "border_height": 2,
-      "border_width": 2,
       "layout_version": "emerald"
     }
   ]
