@@ -74,6 +74,7 @@ enum
     MAP_ROUTE2_KHANTO        = (59 | (0 << 8)),
     MAP_ROUTE21_KHANTO       = (60 | (0 << 8)),
     MAP_VIRIDIAN_CITY_KHANTO = (61 | (0 << 8)),
+    MAP_PEWTER_CITY_KHANTO   = (62 | (0 << 8)),
 
     // gMapGroup_IndoorLittleroot
     MAP_LITTLEROOT_TOWN_BRENDANS_HOUSE_1F    = (0 | (1 << 8)),
@@ -1108,10 +1109,16 @@ enum
     // gMapGroup_IndoorSevenIslandRoute_Frlg
     MAP_SEVEN_ISLAND_SEVAULT_CANYON_HOUSE = (0 | (75 << 8)),
 
+    // gMapGroup_IndoorRoute2_Khanto
+    MAP_ROUTE2_VIRIDIAN_FOREST_KHANTO       = (0 | (76 << 8)),
+    MAP_ROUTE2_EAST_BUILDING_KHANTO         = (1 | (76 << 8)),
+    MAP_ROUTE2_HOUSE_KHANTO                 = (2 | (76 << 8)),
+    MAP_DIGLETTS_CAVE_NORTH_ENTRANCE_KHANTO = (3 | (76 << 8)),
+
 };
 
 //Constants for unused maps
 
-#define MAP_GROUPS_COUNT 76
+#define MAP_GROUPS_COUNT 77
 
 #endif // GUARD_CONSTANTS_MAP_GROUPS_H

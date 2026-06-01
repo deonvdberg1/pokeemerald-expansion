@@ -1,0 +1,28 @@
+{
+  "id": "MAP_PEWTER_CITY_KHANTO",
+  "name": "PewterCity_Khanto",
+  "layout": "LAYOUT_PEWTER_CITY_KHANTO",
+  "music": "MUS_LITTLEROOT",
+  "region_map_section": "MAPSEC_PEWTER_CITY",
+  "requires_flash": false,
+  "weather": "WEATHER_SUNNY",
+  "map_type": "MAP_TYPE_TOWN",
+  "allow_cycling": true,
+  "allow_escaping": false,
+  "allow_running": true,
+  "show_map_name": true,
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+  "floor_number": 0,
+  "region": "REGION_KANTO",
+  "connections": [
+    {
+      "map": "MAP_ROUTE2_KHANTO",
+      "offset": 12,
+      "direction": "down"
+    }
+  ],
+  "object_events": [],
+  "warp_events": [],
+  "coord_events": [],
+  "bg_events": []
+}

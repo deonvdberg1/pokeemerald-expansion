@@ -12,17 +12,64 @@
   "allow_running": true,
   "show_map_name": true,
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
-  "connections": null,
+  "connections": [
+    {
+      "map": "MAP_VIRIDIAN_CITY_KHANTO",
+      "offset": -12,
+      "direction": "down"
+    },
+    {
+      "map": "MAP_PEWTER_CITY_KHANTO",
+      "offset": -12,
+      "direction": "up"
+    }
+  ],
   "object_events": [],
   "warp_events": [
     {
       "x": 5,
-      "y": 47,
+      "y": 46,
+      "elevation": 3,
+      "dest_map": "MAP_ROUTE2_VIRIDIAN_FOREST_KHANTO",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 3,
+      "y": 16,
+      "elevation": 3,
+      "dest_map": "MAP_ROUTE2_VIRIDIAN_FOREST_KHANTO",
+      "dest_warp_id": "3"
+    },
+    {
+      "x": 15,
+      "y": 40,
+      "elevation": 3,
+      "dest_map": "MAP_ROUTE2_EAST_BUILDING_KHANTO",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 19,
+      "y": 36,
+      "elevation": 3,
+      "dest_map": "MAP_ROUTE2_EAST_BUILDING_KHANTO",
+      "dest_warp_id": "3"
+    },
+    {
+      "x": 17,
+      "y": 21,
       "elevation": 0,
-      "dest_map": "MAP_ROUTE2_KHANTO",
+      "dest_map": "MAP_ROUTE2_HOUSE_KHANTO",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 18,
+      "y": 10,
+      "elevation": 3,
+      "dest_map": "MAP_DIGLETTS_CAVE_NORTH_ENTRANCE_KHANTO",
       "dest_warp_id": "0"
     }
   ],
   "coord_events": [],
-  "bg_events": []
+  "bg_events": [],
+  "floor_number": 0
 }

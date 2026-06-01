@@ -75,7 +75,8 @@
     "gMapGroup_IndoorFiveIslandRoute_Frlg",
     "gMapGroup_IndoorTwoIslandRoute_Frlg",
     "gMapGroup_IndoorSixIslandRoute_Frlg",
-    "gMapGroup_IndoorSevenIslandRoute_Frlg"
+    "gMapGroup_IndoorSevenIslandRoute_Frlg",
+    "gMapGroup_IndoorRoute2_Khanto"
   ],
   "gMapGroup_TownsAndRoutes": [
     "PetalburgCity",
@@ -139,7 +140,8 @@
     "Route1_Khanto",
     "Route2_Khanto",
     "Route21_Khanto",
-    "ViridianCity_Khanto"
+    "ViridianCity_Khanto",
+    "PewterCity_Khanto"
   ],
   "gMapGroup_IndoorLittleroot": [
     "LittlerootTown_BrendansHouse_1F",
@@ -1173,5 +1175,11 @@
   ],
   "gMapGroup_IndoorSevenIslandRoute_Frlg": [
     "SevenIsland_SevaultCanyon_House_Frlg"
+  ],
+  "gMapGroup_IndoorRoute2_Khanto": [
+    "Route2_ViridianForest_Khanto",
+    "Route2_EastBuilding_Khanto",
+    "Route2_House_Khanto",
+    "DiglettsCave_NorthEntrance_Khanto"
   ]
 }

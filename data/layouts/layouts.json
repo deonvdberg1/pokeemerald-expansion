@@ -5843,9 +5843,9 @@
     {
       "id": "LAYOUT_VIRIDIAN_FOREST",
       "name": "ViridianForest_Layout",
-      "width": 54,
+      "width": 49,
       "height": 69,
-      "primary_tileset": "gTileset_General_Frlg",
+      "primary_tileset": "gTileset_GeneralORAS",
       "secondary_tileset": "gTileset_ViridianForest",
       "border_filepath": "data/layouts/ViridianForest_Frlg/border.bin",
       "blockdata_filepath": "data/layouts/ViridianForest_Frlg/map.bin",
@@ -9453,6 +9453,19 @@
       "secondary_tileset": "gTileset_Petalburg",
       "border_filepath": "data/layouts/Route2_Khanto/border.bin",
       "blockdata_filepath": "data/layouts/Route2_Khanto/map.bin",
+      "border_height": 2,
+      "border_width": 2,
+      "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_PEWTER_CITY_KHANTO",
+      "name": "PewterCity_Khanto_Layout",
+      "width": 48,
+      "height": 40,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Petalburg",
+      "border_filepath": "data/layouts/PewterCity_Khanto/border.bin",
+      "blockdata_filepath": "data/layouts/PewterCity_Khanto/map.bin",
       "border_height": 2,
       "border_width": 2,
       "layout_version": "emerald"
