@@ -1054,6 +1054,12 @@
     "Route2_EastBuilding_Frlg",
     "Route2_ViridianForest_NorthEntrance_Frlg"
   ],
+  "gMapGroup_IndoorRoute2_Khanto": [
+    "Route2_ViridianForest_Khanto",
+    "Route2_House_Khanto",
+    "Route2_EastBuilding_Khanto",
+    "DiglettsCave_NorthEntrance_Khanto"
+  ],
   "gMapGroup_IndoorRoute4_Frlg": [
     "Route4_PokemonCenter_1F_Frlg",
     "Route4_PokemonCenter_2F_Frlg"
@@ -1174,11 +1180,5 @@
   ],
   "gMapGroup_IndoorSevenIslandRoute_Frlg": [
     "SevenIsland_SevaultCanyon_House_Frlg"
-  ],
-  "gMapGroup_IndoorRoute2_Khanto": [
-    "Route2_ViridianForest_Khanto",
-    "Route2_House_Khanto",
-    "Route2_EastBuilding_Khanto",
-    "DiglettsCave_NorthEntrance_Khanto"
   ]
 }

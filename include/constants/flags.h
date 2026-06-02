@@ -1798,9 +1798,9 @@
 
 #define FLAG_HIDE_ROUTE2_ETHER                                  0
 #define FLAG_HIDE_ROUTE2_PARALYZE_HEAL                          0
-#define FLAG_HIDE_VIRIDIAN_FOREST_POKE_BALL                     0
-#define FLAG_HIDE_VIRIDIAN_FOREST_ANTIDOTE                      0
-#define FLAG_HIDE_VIRIDIAN_FOREST_POTION                        0
+#define FLAG_HIDE_VIRIDIAN_FOREST_POKE_BALL                     0x493
+#define FLAG_HIDE_VIRIDIAN_FOREST_ANTIDOTE                      0x494
+#define FLAG_HIDE_VIRIDIAN_FOREST_POTION                        0x495
 #define FLAG_HIDE_MT_MOON_1F_PARALYZE_HEAL                      0
 #define FLAG_HIDE_MT_MOON_1F_TM09                               0
 #define FLAG_HIDE_MT_MOON_1F_POTION                             0
@@ -1902,7 +1902,7 @@
 #define FLAG_HIDE_THREE_ISLAND_ZINC                             0
 #define FLAG_0x1BC                                              0
 #define FLAG_0x1BD                                              0
-#define FLAG_HIDE_VIRIDIAN_FOREST_POTION_2                      0
+#define FLAG_HIDE_VIRIDIAN_FOREST_POTION_2                      0x496
 #define FLAG_HIDE_MT_MOON_B2F_REVIVE                            0
 #define FLAG_HIDE_MT_MOON_B2F_ANTIDOTE                          0
 #define FLAG_HIDE_ROUTE11_X_DEFEND                              0
@@ -2155,8 +2155,8 @@
 #define FLAG_NO_ROOM_FOR_JOYFUL_GAME_CORNER_MOON_STONE   0
 #define FLAG_OAKS_RATING_IS_VIA_PC                       0
 
-#define FLAG_HIDDEN_ITEM_VIRIDIAN_FOREST_POTION                            0
-#define FLAG_HIDDEN_ITEM_VIRIDIAN_FOREST_ANTIDOTE                          0
+#define FLAG_HIDDEN_ITEM_VIRIDIAN_FOREST_POTION                            0x497
+#define FLAG_HIDDEN_ITEM_VIRIDIAN_FOREST_ANTIDOTE                          0x498
 #define FLAG_HIDDEN_ITEM_MT_MOON_B2F_MOON_STONE                            0
 #define FLAG_HIDDEN_ITEM_MT_MOON_B2F_ETHER                                 0
 #define FLAG_HIDDEN_ITEM_ROUTE25_ELIXIR                                    0
