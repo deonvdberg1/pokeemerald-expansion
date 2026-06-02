@@ -37,7 +37,7 @@ Route2_Khanto_Text_Trainer2PostBattle:
 
 @ ========== Signs ==========
 
-Route2_Khanto_EventScript_DiglettsCaveSign:
+Route2_Khanto_EventScript_DiglettsCaveSign::
 	msgbox Route2_Khanto_Text_DiglettsCaveSign, MSGBOX_SIGN
 	end
 
@@ -45,7 +45,7 @@ Route2_Khanto_Text_DiglettsCaveSign:
 	.string "DIGLETT'S CAVE\n"
 	.string "VIRIDIAN CITY - PEWTER CITY$"
 
-Route2_Khanto_EventScript_RouteSign:
+Route2_Khanto_EventScript_RouteSign::
 	msgbox Route2_Khanto_Text_RouteSign, MSGBOX_SIGN
 	end
 
