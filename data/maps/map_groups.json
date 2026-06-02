@@ -941,6 +941,14 @@
     "PalletTown_ProfessorOaksLab",
     "PalletTown_RivalsHouse_2F"
   ],
+  "gMapGroup_IndoorViridian_Khanto": [
+    "ViridianCity_PokemonCenter_1F_Khanto",
+    "ViridianCity_PokemonCenter_2F_Khanto",
+    "ViridianCity_Mart_Khanto",
+    "ViridianCity_House1_Khanto",
+    "ViridianCity_House2_Khanto",
+    "ViridianCity_Gym_Khanto"
+  ],
   "gMapGroup_IndoorViridian_Frlg": [
     "ViridianCity_House_Frlg",
     "ViridianCity_Gym_Frlg",
@@ -1183,13 +1191,5 @@
   ],
   "gMapGroup_IndoorSevenIslandRoute_Frlg": [
     "SevenIsland_SevaultCanyon_House_Frlg"
-  ],
-  "gMapGroup_IndoorViridian_Khanto": [
-    "ViridianCity_PokemonCenter_1F_Khanto",
-    "ViridianCity_PokemonCenter_2F_Khanto",
-    "ViridianCity_Mart_Khanto",
-    "ViridianCity_House1_Khanto",
-    "ViridianCity_House2_Khanto",
-    "ViridianCity_Gym_Khanto"
   ]
 }

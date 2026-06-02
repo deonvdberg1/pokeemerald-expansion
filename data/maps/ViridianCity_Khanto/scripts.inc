@@ -36,3 +36,28 @@ ViridianCity_Khanto_Text_GymSign:
 	.string "VIRIDIAN CITY POKeMON GYM\n"
 	.string "LEADER: GIOVANNI\p"
 	.string "The GYM is currently closed.$"
+
+ViridianCity_Khanto_EventScript_TrainerTips1::
+	msgbox ViridianCity_Khanto_Text_TrainerTips1, MSGBOX_SIGN
+	end
+
+ViridianCity_Khanto_Text_TrainerTips1:
+	.string "TRAINER TIPS\p"
+	.string "Catch POKeMON and expand your\n"
+	.string "collection.$"
+
+ViridianCity_Khanto_EventScript_TrainerTips2::
+	msgbox ViridianCity_Khanto_Text_TrainerTips2, MSGBOX_SIGN
+	end
+
+ViridianCity_Khanto_Text_TrainerTips2:
+	.string "TRAINER TIPS\p"
+	.string "The battle moves of POKeMON are\n"
+	.string "limited by their POWER POINTS, PP.$"
+
+ViridianCity_Khanto_EventScript_GymDoor::
+	msgbox ViridianCity_Khanto_Text_GymDoor, MSGBOX_SIGN
+	end
+
+ViridianCity_Khanto_Text_GymDoor:
+	.string "VIRIDIAN GYM's doors are locked…$"

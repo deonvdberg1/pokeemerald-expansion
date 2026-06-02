@@ -9518,8 +9518,8 @@
       "secondary_tileset": "gTileset_PokemonCenter",
       "border_filepath": "data/layouts/ViridianCity_PokemonCenter_1F_Khanto/border.bin",
       "blockdata_filepath": "data/layouts/ViridianCity_PokemonCenter_1F_Khanto/map.bin",
-      "border_width": 2,
       "border_height": 2,
+      "border_width": 2,
       "layout_version": "emerald"
     },
     {
@@ -9531,8 +9531,8 @@
       "secondary_tileset": "gTileset_PokemonCenter",
       "border_filepath": "data/layouts/ViridianCity_PokemonCenter_2F_Khanto/border.bin",
       "blockdata_filepath": "data/layouts/ViridianCity_PokemonCenter_2F_Khanto/map.bin",
-      "border_width": 2,
       "border_height": 2,
+      "border_width": 2,
       "layout_version": "emerald"
     },
     {
@@ -9544,8 +9544,8 @@
       "secondary_tileset": "gTileset_Shop",
       "border_filepath": "data/layouts/ViridianCity_Mart_Khanto/border.bin",
       "blockdata_filepath": "data/layouts/ViridianCity_Mart_Khanto/map.bin",
-      "border_width": 2,
       "border_height": 2,
+      "border_width": 2,
       "layout_version": "emerald"
     },
     {
@@ -9557,8 +9557,8 @@
       "secondary_tileset": "gTileset_GenericBuilding",
       "border_filepath": "data/layouts/ViridianCity_House1_Khanto/border.bin",
       "blockdata_filepath": "data/layouts/ViridianCity_House1_Khanto/map.bin",
-      "border_width": 2,
       "border_height": 2,
+      "border_width": 2,
       "layout_version": "emerald"
     },
     {
@@ -9570,8 +9570,8 @@
       "secondary_tileset": "gTileset_GenericBuilding",
       "border_filepath": "data/layouts/ViridianCity_House2_Khanto/border.bin",
       "blockdata_filepath": "data/layouts/ViridianCity_House2_Khanto/map.bin",
-      "border_width": 2,
       "border_height": 2,
+      "border_width": 2,
       "layout_version": "emerald"
     },
     {
@@ -9583,8 +9583,8 @@
       "secondary_tileset": "gTileset_GenericBuilding",
       "border_filepath": "data/layouts/ViridianCity_Gym_Khanto/border.bin",
       "blockdata_filepath": "data/layouts/ViridianCity_Gym_Khanto/map.bin",
-      "border_width": 2,
       "border_height": 2,
+      "border_width": 2,
       "layout_version": "emerald"
     }
   ]
