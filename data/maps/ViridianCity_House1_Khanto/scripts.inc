@@ -7,9 +7,7 @@ ViridianCity_House1_Khanto_EventScript_OldMan::
 
 ViridianCity_House1_Khanto_Text_OldMan:
 	.string "Welcome to VIRIDIAN CITY!\p"
-	.string "This city has a great GYM, but
-"
+	.string "This city has a great GYM, but\n"
 	.string "the LEADER is away often.\p"
-	.string "Make sure you visit the POKéMON
-"
+	.string "Make sure you visit the POKeMON\n"
 	.string "CENTER to heal your team!$"

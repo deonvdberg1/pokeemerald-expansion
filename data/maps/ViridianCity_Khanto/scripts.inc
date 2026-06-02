@@ -7,10 +7,8 @@ ViridianCity_Khanto_EventScript_OldMan::
 
 ViridianCity_Khanto_Text_OldMan:
 	.string "This is VIRIDIAN CITY!\p"
-	.string "You look like a TRAINER on
-"
-	.string "a journey. The road to PEWTER
-"
+	.string "You look like a TRAINER on\n"
+	.string "a journey. The road to PEWTER\n"
 	.string "goes through VIRIDIAN FOREST.$"
 
 ViridianCity_Khanto_EventScript_Beauty::
@@ -18,10 +16,8 @@ ViridianCity_Khanto_EventScript_Beauty::
 	end
 
 ViridianCity_Khanto_Text_Beauty:
-	.string "The GYM LEADER in VIRIDIAN
-"
-	.string "isn't around much, but the
-"
+	.string "The GYM LEADER in VIRIDIAN\n"
+	.string "isn't around much, but the\n"
 	.string "GYM itself is worth seeing!$"
 
 ViridianCity_Khanto_EventScript_CitySign::
@@ -29,8 +25,7 @@ ViridianCity_Khanto_EventScript_CitySign::
 	end
 
 ViridianCity_Khanto_Text_CitySign:
-	.string "VIRIDIAN CITY
-"
+	.string "VIRIDIAN CITY\n"
 	.string "The Garden of the Continent$"
 
 ViridianCity_Khanto_EventScript_GymSign::
@@ -38,7 +33,6 @@ ViridianCity_Khanto_EventScript_GymSign::
 	end
 
 ViridianCity_Khanto_Text_GymSign:
-	.string "VIRIDIAN CITY POKeMON GYM
-"
+	.string "VIRIDIAN CITY POKeMON GYM\n"
 	.string "LEADER: GIOVANNI\p"
 	.string "The GYM is currently closed.$"
