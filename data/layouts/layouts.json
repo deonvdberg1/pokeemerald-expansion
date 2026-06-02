@@ -7041,8 +7041,8 @@
       "name": "DiglettsCave_NorthEntrance_Layout",
       "width": 10,
       "height": 8,
-      "primary_tileset": "gTileset_General_Frlg",
-      "secondary_tileset": "gTileset_DiglettsCave",
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Cave",
       "border_filepath": "data/layouts/DiglettsCave_NorthEntrance_Frlg/border.bin",
       "blockdata_filepath": "data/layouts/DiglettsCave_NorthEntrance_Frlg/map.bin",
       "border_height": 2,
@@ -9468,6 +9468,19 @@
       "blockdata_filepath": "data/layouts/ViridianForest_Khanto/map.bin",
       "border_height": 2,
       "border_width": 2,
+      "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_DIGLETTS_CAVE_B1F_KHANTO",
+      "name": "DiglettsCave_B1F_Khanto_Layout",
+      "width": 50,
+      "height": 40,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Cave",
+      "border_filepath": "data/layouts/DiglettsCave_B1F_Khanto/border.bin",
+      "blockdata_filepath": "data/layouts/DiglettsCave_B1F_Khanto/map.bin",
+      "border_width": 2,
+      "border_height": 2,
       "layout_version": "emerald"
     }
   ]
