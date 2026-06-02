@@ -1059,6 +1059,7 @@ gStdScripts_End::
 
 .endif
 	.include "data/maps/DiglettsCave_B1F_Khanto/scripts.inc"
+	.include "data/maps/DiglettsCave_SouthEntrance_Khanto/scripts.inc"
 
 	.include "data/scripts/std_msgbox.inc"
 	.include "data/scripts/trainer_battle.inc"

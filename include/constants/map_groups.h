@@ -992,6 +992,7 @@ enum
     MAP_ROUTE2_HOUSE_KHANTO                 = (1 | (51 << 8)),
     MAP_ROUTE2_EAST_BUILDING_KHANTO         = (2 | (51 << 8)),
     MAP_DIGLETTS_CAVE_NORTH_ENTRANCE_KHANTO = (3 | (51 << 8)),
+    MAP_DIGLETTS_CAVE_B1F_KHANTO            = (4 | (51 << 8)),
 
     // gMapGroup_IndoorRoute4_Frlg
     MAP_ROUTE4_POKEMON_CENTER_1F = (0 | (52 << 8)),
