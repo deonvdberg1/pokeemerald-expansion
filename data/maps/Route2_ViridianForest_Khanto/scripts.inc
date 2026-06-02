@@ -8,14 +8,18 @@ Route2_ViridianForest_Khanto_EventScript_Youngster::
 	end
 
 Route2_ViridianForest_Khanto_Text_Youngster:
-	.string "I came to explore the forest, but{newline}it's easy to get lost in here!{newline}Make sure you have enough POKé BALLS!$"
+	.string "I came to explore the forest, but\n"
+	.string "it's easy to get lost in here!\n"
+	.string "Make sure you have enough POKé BALLS!$"
 
 Route2_ViridianForest_Khanto_EventScript_Boy::
 	msgbox Route2_ViridianForest_Khanto_Text_Boy, MSGBOX_NPC
 	end
 
 Route2_ViridianForest_Khanto_Text_Boy:
-	.string "BUG CATCHERS are experts at{newline}catching bugs! They use weak POKéMON{newline}but never underestimate them!$"
+	.string "BUG CATCHERS are experts at\n"
+	.string "catching bugs! They use weak POKéMON\n"
+	.string "but never underestimate them!$"
 
 @ ========== Bug Catcher Trainer Battles ==========
 
@@ -25,13 +29,15 @@ Route2_ViridianForest_Khanto_EventScript_Rick::
 	end
 
 Route2_ViridianForest_Khanto_Text_RickIntro:
-	.string "Let me show you what my{newline}BUG POKéMON can do!$"
+	.string "Let me show you what my\n"
+	.string "BUG POKéMON can do!$"
 
 Route2_ViridianForest_Khanto_Text_RickDefeat:
 	.string "No! My bug hunt failed!$"
 
 Route2_ViridianForest_Khanto_Text_RickPostBattle:
-	.string "You're tough! But my bugs will{newline}get stronger! You'll see!$"
+	.string "You're tough! But my bugs will\n"
+	.string "get stronger! You'll see!$"
 
 Route2_ViridianForest_Khanto_EventScript_Jose::
 	trainerbattle_single TRAINER_JOSE, Route2_ViridianForest_Khanto_Text_JoseIntro, Route2_ViridianForest_Khanto_Text_JoseDefeat
@@ -39,13 +45,15 @@ Route2_ViridianForest_Khanto_EventScript_Jose::
 	end
 
 Route2_ViridianForest_Khanto_Text_JoseIntro:
-	.string "Hohoho! You wandered into my{newline}web of BUG POKéMON!$"
+	.string "Hohoho! You wandered into my\n"
+	.string "web of BUG POKéMON!$"
 
 Route2_ViridianForest_Khanto_Text_JoseDefeat:
 	.string "My web has been torn apart!$"
 
 Route2_ViridianForest_Khanto_Text_JosePostBattle:
-	.string "Don't underestimate bug POKéMON!{newline}They evolve into powerful forms!$"
+	.string "Don't underestimate bug POKéMON!\n"
+	.string "They evolve into powerful forms!$"
 
 Route2_ViridianForest_Khanto_EventScript_Lyle::
 	trainerbattle_single TRAINER_LYLE, Route2_ViridianForest_Khanto_Text_LyleIntro, Route2_ViridianForest_Khanto_Text_LyleDefeat
@@ -53,13 +61,15 @@ Route2_ViridianForest_Khanto_EventScript_Lyle::
 	end
 
 Route2_ViridianForest_Khanto_Text_LyleIntro:
-	.string "I caught a bunch of bug POKéMON!{newline}Want to see?$"
+	.string "I caught a bunch of bug POKéMON!\n"
+	.string "Want to see?$"
 
 Route2_ViridianForest_Khanto_Text_LyleDefeat:
 	.string "Aww, they're not strong enough yet!$"
 
 Route2_ViridianForest_Khanto_Text_LylePostBattle:
-	.string "I'll raise my bugs to be the best!{newline}You'll see them evolve one day!$"
+	.string "I'll raise my bugs to be the best!\n"
+	.string "You'll see them evolve one day!$"
 
 @ Anthony is a Youngster trainer (Tommy - Geodude lv8)
 Route2_ViridianForest_Khanto_EventScript_Anthony::
@@ -68,13 +78,15 @@ Route2_ViridianForest_Khanto_EventScript_Anthony::
 	end
 
 Route2_ViridianForest_Khanto_Text_AnthonyIntro:
-	.string "Hey! I heard there are strong{newline}POKéMON deeper in the forest!$"
+	.string "Hey! I heard there are strong\n"
+	.string "POKéMON deeper in the forest!$"
 
 Route2_ViridianForest_Khanto_Text_AnthonyDefeat:
 	.string "Whoa! You're stronger than I thought!$"
 
 Route2_ViridianForest_Khanto_Text_AnthonyPostBattle:
-	.string "Be careful going deeper!{newline}There are lots of trainers ahead!$"
+	.string "Be careful going deeper!\n"
+	.string "There are lots of trainers ahead!$"
 
 @ Charlie is a Youngster trainer (Joey - Machop lv9)
 Route2_ViridianForest_Khanto_EventScript_Charlie::
@@ -83,13 +95,15 @@ Route2_ViridianForest_Khanto_EventScript_Charlie::
 	end
 
 Route2_ViridianForest_Khanto_Text_CharlieIntro:
-	.string "I'm gonna be the world's greatest{newline}POKéMON trainer! Starting with you!$"
+	.string "I'm gonna be the world's greatest\n"
+	.string "POKéMON trainer! Starting with you!$"
 
 Route2_ViridianForest_Khanto_Text_CharlieDefeat:
 	.string "I still have a long way to go...$"
 
 Route2_ViridianForest_Khanto_Text_CharliePostBattle:
-	.string "This forest is the perfect place{newline}to train! I'll come back stronger!$"
+	.string "This forest is the perfect place\n"
+	.string "to train! I'll come back stronger!$"
 
 @ ========== Sign Messages ==========
 
@@ -98,39 +112,51 @@ Route2_ViridianForest_Khanto_EventScript_TrainerTips1:
 	end
 
 Route2_ViridianForest_Khanto_Text_TrainerTips1:
-	.string "TRAINER TIPS{newline}Weaken POKéMON before you catch them!{newline}They're easier to catch when hurt!$"
+	.string "TRAINER TIPS\n"
+	.string "Weaken POKéMON before you catch them!\n"
+	.string "They're easier to catch when hurt!$"
 
 Route2_ViridianForest_Khanto_EventScript_TrainerTips2:
 	msgbox Route2_ViridianForest_Khanto_Text_TrainerTips2, MSGBOX_SIGN
 	end
 
 Route2_ViridianForest_Khanto_Text_TrainerTips2:
-	.string "TRAINER TIPS{newline}Some POKéMON evolve at certain levels.{newline}Keep training them to see!$"
+	.string "TRAINER TIPS\n"
+	.string "Some POKéMON evolve at certain levels.\n"
+	.string "Keep training them to see!$"
 
 Route2_ViridianForest_Khanto_EventScript_TrainerTips3:
 	msgbox Route2_ViridianForest_Khanto_Text_TrainerTips3, MSGBOX_SIGN
 	end
 
 Route2_ViridianForest_Khanto_Text_TrainerTips3:
-	.string "TRAINER TIPS{newline}POKéMON are easier to catch when{newline}they are asleep or poisoned!$"
+	.string "TRAINER TIPS\n"
+	.string "POKéMON are easier to catch when\n"
+	.string "they are asleep or poisoned!$"
 
 Route2_ViridianForest_Khanto_EventScript_TrainerTips4:
 	msgbox Route2_ViridianForest_Khanto_Text_TrainerTips4, MSGBOX_SIGN
 	end
 
 Route2_ViridianForest_Khanto_Text_TrainerTips4:
-	.string "TRAINER TIPS{newline}Heal your POKéMON at a POKéMON CENTER{newline}before venturing into tall grass!$"
+	.string "TRAINER TIPS\n"
+	.string "Heal your POKéMON at a POKéMON CENTER\n"
+	.string "before venturing into tall grass!$"
 
 Route2_ViridianForest_Khanto_EventScript_TrainerTips5:
 	msgbox Route2_ViridianForest_Khanto_Text_TrainerTips5, MSGBOX_SIGN
 	end
 
 Route2_ViridianForest_Khanto_Text_TrainerTips5:
-	.string "TRAINER TIPS{newline}Use ANTIDOTES to cure poisoning{newline}from BUG POKéMON attacks!$"
+	.string "TRAINER TIPS\n"
+	.string "Use ANTIDOTES to cure poisoning\n"
+	.string "from BUG POKéMON attacks!$"
 
 Route2_ViridianForest_Khanto_EventScript_ExitSign:
 	msgbox Route2_ViridianForest_Khanto_Text_ExitSign, MSGBOX_SIGN
 	end
 
 Route2_ViridianForest_Khanto_Text_ExitSign:
-	.string "VIRIDIAN FOREST{newline}LEAVE THROUGH HERE{newline}TO ROUTE 2$"
+	.string "VIRIDIAN FOREST\n"
+	.string "LEAVE THROUGH HERE\n"
+	.string "TO ROUTE 2$"
