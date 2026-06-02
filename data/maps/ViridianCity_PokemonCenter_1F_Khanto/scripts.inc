@@ -8,7 +8,7 @@ ViridianCity_PokemonCenter_1F_Khanto_OnTransition:
 	end
 
 ViridianCity_PokemonCenter_1F_Khanto_EventScript_Nurse::
-	setvar VAR_0x800B, LOCALID_NURSE_VIRIDIAN
+	setvar VAR_0x800B, LOCALID_VIRIDIAN_NURSE
 	call Common_EventScript_PkmnCenterNurse
 	waitmessage
 	waitbuttonpress
