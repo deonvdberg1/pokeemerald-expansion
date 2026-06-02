@@ -40,6 +40,7 @@
     "gMapGroup_TownsAndRoutes_Frlg",
     "gMapGroup_IndoorPallet_Frlg",
     "gMapGroup_IndoorPallet_Khanto",
+    "gMapGroup_IndoorViridian_Khanto",
     "gMapGroup_IndoorViridian_Frlg",
     "gMapGroup_IndoorPewter_Frlg",
     "gMapGroup_IndoorCerulean_Frlg",
@@ -1182,5 +1183,13 @@
   ],
   "gMapGroup_IndoorSevenIslandRoute_Frlg": [
     "SevenIsland_SevaultCanyon_House_Frlg"
+  ],
+  "gMapGroup_IndoorViridian_Khanto": [
+    "ViridianCity_PokemonCenter_1F_Khanto",
+    "ViridianCity_PokemonCenter_2F_Khanto",
+    "ViridianCity_Mart_Khanto",
+    "ViridianCity_House1_Khanto",
+    "ViridianCity_House2_Khanto",
+    "ViridianCity_Gym_Khanto"
   ]
 }

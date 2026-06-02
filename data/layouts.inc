@@ -8192,3 +8192,111 @@ DiglettsCave_NorthEntrance_Khanto_Layout::
 	.2byte 0
 	.byte 0
 
+ViridianCity_PokemonCenter_1F_Khanto_Layout_Border::
+	.incbin "data/layouts/ViridianCity_PokemonCenter_1F_Khanto/border.bin"
+
+ViridianCity_PokemonCenter_1F_Khanto_Layout_Blockdata::
+	.incbin "data/layouts/ViridianCity_PokemonCenter_1F_Khanto/map.bin"
+
+	.align 2
+ViridianCity_PokemonCenter_1F_Khanto_Layout::
+	.4byte 14
+	.4byte 9
+	.4byte ViridianCity_PokemonCenter_1F_Khanto_Layout_Border
+	.4byte ViridianCity_PokemonCenter_1F_Khanto_Layout_Blockdata
+	.4byte gTileset_Building
+	.4byte gTileset_PokemonCenter
+	.byte FALSE
+	.2byte 0
+	.byte 0
+
+ViridianCity_PokemonCenter_2F_Khanto_Layout_Border::
+	.incbin "data/layouts/ViridianCity_PokemonCenter_2F_Khanto/border.bin"
+
+ViridianCity_PokemonCenter_2F_Khanto_Layout_Blockdata::
+	.incbin "data/layouts/ViridianCity_PokemonCenter_2F_Khanto/map.bin"
+
+	.align 2
+ViridianCity_PokemonCenter_2F_Khanto_Layout::
+	.4byte 14
+	.4byte 9
+	.4byte ViridianCity_PokemonCenter_2F_Khanto_Layout_Border
+	.4byte ViridianCity_PokemonCenter_2F_Khanto_Layout_Blockdata
+	.4byte gTileset_Building
+	.4byte gTileset_PokemonCenter
+	.byte FALSE
+	.2byte 0
+	.byte 0
+
+ViridianCity_Mart_Khanto_Layout_Border::
+	.incbin "data/layouts/ViridianCity_Mart_Khanto/border.bin"
+
+ViridianCity_Mart_Khanto_Layout_Blockdata::
+	.incbin "data/layouts/ViridianCity_Mart_Khanto/map.bin"
+
+	.align 2
+ViridianCity_Mart_Khanto_Layout::
+	.4byte 10
+	.4byte 9
+	.4byte ViridianCity_Mart_Khanto_Layout_Border
+	.4byte ViridianCity_Mart_Khanto_Layout_Blockdata
+	.4byte gTileset_Building
+	.4byte gTileset_Shop
+	.byte FALSE
+	.2byte 0
+	.byte 0
+
+ViridianCity_House1_Khanto_Layout_Border::
+	.incbin "data/layouts/ViridianCity_House1_Khanto/border.bin"
+
+ViridianCity_House1_Khanto_Layout_Blockdata::
+	.incbin "data/layouts/ViridianCity_House1_Khanto/map.bin"
+
+	.align 2
+ViridianCity_House1_Khanto_Layout::
+	.4byte 8
+	.4byte 8
+	.4byte ViridianCity_House1_Khanto_Layout_Border
+	.4byte ViridianCity_House1_Khanto_Layout_Blockdata
+	.4byte gTileset_Building
+	.4byte gTileset_GenericBuilding
+	.byte FALSE
+	.2byte 0
+	.byte 0
+
+ViridianCity_House2_Khanto_Layout_Border::
+	.incbin "data/layouts/ViridianCity_House2_Khanto/border.bin"
+
+ViridianCity_House2_Khanto_Layout_Blockdata::
+	.incbin "data/layouts/ViridianCity_House2_Khanto/map.bin"
+
+	.align 2
+ViridianCity_House2_Khanto_Layout::
+	.4byte 8
+	.4byte 8
+	.4byte ViridianCity_House2_Khanto_Layout_Border
+	.4byte ViridianCity_House2_Khanto_Layout_Blockdata
+	.4byte gTileset_Building
+	.4byte gTileset_GenericBuilding
+	.byte FALSE
+	.2byte 0
+	.byte 0
+
+ViridianCity_Gym_Khanto_Layout_Border::
+	.incbin "data/layouts/ViridianCity_Gym_Khanto/border.bin"
+
+ViridianCity_Gym_Khanto_Layout_Blockdata::
+	.incbin "data/layouts/ViridianCity_Gym_Khanto/map.bin"
+
+	.align 2
+ViridianCity_Gym_Khanto_Layout::
+	.4byte 13
+	.4byte 13
+	.4byte ViridianCity_Gym_Khanto_Layout_Border
+	.4byte ViridianCity_Gym_Khanto_Layout_Blockdata
+	.4byte gTileset_Building
+	.4byte gTileset_GenericBuilding
+	.byte FALSE
+	.2byte 0
+	.byte 0
+

@@ -1,8 +1,44 @@
-@ Viridian City — placeholder scripts
-
 ViridianCity_Khanto_MapScripts::
-	map_script MAP_SCRIPT_ON_TRANSITION, ViridianCity_Khanto_OnTransition
 	.byte 0
 
-ViridianCity_Khanto_OnTransition:
+ViridianCity_Khanto_EventScript_OldMan::
+	msgbox ViridianCity_Khanto_Text_OldMan, MSGBOX_NPC
 	end
+
+ViridianCity_Khanto_Text_OldMan:
+	.string "This is VIRIDIAN CITY!\p"
+	.string "You look like a TRAINER on
+"
+	.string "a journey. The road to PEWTER
+"
+	.string "goes through VIRIDIAN FOREST.$"
+
+ViridianCity_Khanto_EventScript_Beauty::
+	msgbox ViridianCity_Khanto_Text_Beauty, MSGBOX_NPC
+	end
+
+ViridianCity_Khanto_Text_Beauty:
+	.string "The GYM LEADER in VIRIDIAN
+"
+	.string "isn't around much, but the
+"
+	.string "GYM itself is worth seeing!$"
+
+ViridianCity_Khanto_EventScript_CitySign::
+	msgbox ViridianCity_Khanto_Text_CitySign, MSGBOX_SIGN
+	end
+
+ViridianCity_Khanto_Text_CitySign:
+	.string "VIRIDIAN CITY
+"
+	.string "The Garden of the Continent$"
+
+ViridianCity_Khanto_EventScript_GymSign::
+	msgbox ViridianCity_Khanto_Text_GymSign, MSGBOX_SIGN
+	end
+
+ViridianCity_Khanto_Text_GymSign:
+	.string "VIRIDIAN CITY POKeMON GYM
+"
+	.string "LEADER: GIOVANNI\p"
+	.string "The GYM is currently closed.$"

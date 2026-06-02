@@ -23,22 +23,13 @@
       "dest_warp_id": "5"
     },
     {
-      "x": 6,
-      "y": 4,
+      "x": 7,
+      "y": 2,
       "elevation": 3,
       "dest_map": "MAP_DIGLETTS_CAVE_B1F_KHANTO",
       "dest_warp_id": "0"
     }
   ],
   "coord_events": [],
-  "bg_events": [
-    {
-      "type": "sign",
-      "x": 3,
-      "y": 7,
-      "elevation": 0,
-      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "DiglettsCave_NorthEntrance_Khanto_EventScript_Sign"
-    }
-  ]
+  "bg_events": []
 }

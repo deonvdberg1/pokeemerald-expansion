@@ -191,6 +191,7 @@ gStdScripts_End::
 	.include "data/maps/Route2_ViridianForest_Khanto/scripts.inc"
 	.include "data/maps/Route21_Khanto/scripts.inc"
 	.include "data/maps/ViridianCity_Khanto/scripts.inc"
+	.include "data/maps/ViridianCity_PokemonCenter_1F_Khanto/scripts.inc"	.include "data/maps/ViridianCity_PokemonCenter_2F_Khanto/scripts.inc"	.include "data/maps/ViridianCity_Mart_Khanto/scripts.inc"	.include "data/maps/ViridianCity_House1_Khanto/scripts.inc"	.include "data/maps/ViridianCity_House2_Khanto/scripts.inc"	.include "data/maps/ViridianCity_Gym_Khanto/scripts.inc"
 	.include "data/maps/PalletTown_PlayersHouse_1F/scripts.inc"
 	.include "data/maps/PalletTown_PlayersHouse_2F/scripts.inc"
 	.include "data/maps/PalletTown_RivalsHouse/scripts.inc"

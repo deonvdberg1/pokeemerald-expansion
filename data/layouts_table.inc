@@ -804,3 +804,9 @@ gMapLayouts::
 	.4byte DiglettsCave_B1F_Khanto_Layout
 	.4byte DiglettsCave_SouthEntrance_Khanto_Layout
 	.4byte DiglettsCave_NorthEntrance_Khanto_Layout
+	.4byte ViridianCity_PokemonCenter_1F_Khanto_Layout
+	.4byte ViridianCity_PokemonCenter_2F_Khanto_Layout
+	.4byte ViridianCity_Mart_Khanto_Layout
+	.4byte ViridianCity_House1_Khanto_Layout
+	.4byte ViridianCity_House2_Khanto_Layout
+	.4byte ViridianCity_Gym_Khanto_Layout
