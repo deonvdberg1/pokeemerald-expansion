@@ -9495,6 +9495,19 @@
       "border_height": 2,
       "border_width": 2,
       "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_DIGLETTS_CAVE_NORTH_ENTRANCE_KHANTO",
+      "name": "DiglettsCave_NorthEntrance_Khanto_Layout",
+      "width": 10,
+      "height": 8,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Cave",
+      "border_filepath": "data/layouts/DiglettsCave_NorthEntrance_Khanto/border.bin",
+      "blockdata_filepath": "data/layouts/DiglettsCave_NorthEntrance_Khanto/map.bin",
+      "border_width": 2,
+      "border_height": 2,
+      "layout_version": "emerald"
     }
   ]
 }

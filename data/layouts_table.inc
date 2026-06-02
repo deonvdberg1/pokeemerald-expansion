@@ -803,3 +803,4 @@ gMapLayouts::
 	.4byte ViridianForest_Khanto_Layout
 	.4byte DiglettsCave_B1F_Khanto_Layout
 	.4byte DiglettsCave_SouthEntrance_Khanto_Layout
+	.4byte DiglettsCave_NorthEntrance_Khanto_Layout

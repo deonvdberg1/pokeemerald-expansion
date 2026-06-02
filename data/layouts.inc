@@ -8174,3 +8174,21 @@ DiglettsCave_SouthEntrance_Khanto_Layout::
 	.2byte 0
 	.byte 0
 
+DiglettsCave_NorthEntrance_Khanto_Layout_Border::
+	.incbin "data/layouts/DiglettsCave_NorthEntrance_Khanto/border.bin"
+
+DiglettsCave_NorthEntrance_Khanto_Layout_Blockdata::
+	.incbin "data/layouts/DiglettsCave_NorthEntrance_Khanto/map.bin"
+
+	.align 2
+DiglettsCave_NorthEntrance_Khanto_Layout::
+	.4byte 10
+	.4byte 8
+	.4byte DiglettsCave_NorthEntrance_Khanto_Layout_Border
+	.4byte DiglettsCave_NorthEntrance_Khanto_Layout_Blockdata
+	.4byte gTileset_General
+	.4byte gTileset_Cave
+	.byte FALSE
+	.2byte 0
+	.byte 0
+
