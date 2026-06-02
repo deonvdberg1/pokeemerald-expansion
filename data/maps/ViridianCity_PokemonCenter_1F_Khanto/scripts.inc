@@ -14,3 +14,20 @@ ViridianCity_PokemonCenter_1F_Khanto_EventScript_Nurse::
 	waitbuttonpress
 	release
 	end
+
+ViridianCity_PokemonCenter_1F_Khanto_EventScript_Gentleman::
+	msgbox ViridianCity_PokemonCenter_1F_Khanto_Text_Gentleman, MSGBOX_NPC
+	end
+
+ViridianCity_PokemonCenter_1F_Khanto_Text_Gentleman:
+	.string "The POKeMON CENTER heals your\n"
+	.string "tired POKeMON completely!\p"
+	.string "It's free, too! Isn't that great?$"
+
+ViridianCity_PokemonCenter_1F_Khanto_EventScript_Boy::
+	msgbox ViridianCity_PokemonCenter_1F_Khanto_Text_Boy, MSGBOX_NPC
+	end
+
+ViridianCity_PokemonCenter_1F_Khanto_Text_Boy:
+	.string "The PC in the corner is useful!\n"
+	.string "You can store POKeMON and items.$"

@@ -133,8 +133,8 @@
     },
     {
       "type": "sign",
-      "x": 10,
-      "y": 22,
+      "x": 22,
+      "y": 16,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "ViridianCity_Khanto_EventScript_Route22Sign"
