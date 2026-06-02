@@ -1,7 +1,7 @@
 {
   "id": "MAP_ROUTE2_VIRIDIAN_FOREST_KHANTO",
   "name": "Route2_ViridianForest_Khanto",
-  "layout": "LAYOUT_VIRIDIAN_FOREST",
+  "layout": "LAYOUT_VIRIDIAN_FOREST_KHANTO",
   "music": "MUS_RG_VIRIDIAN_FOREST",
   "region_map_section": "MAPSEC_VIRIDIAN_FOREST",
   "requires_flash": false,

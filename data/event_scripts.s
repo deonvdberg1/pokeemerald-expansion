@@ -188,6 +188,7 @@ gStdScripts_End::
 	.include "data/maps/PalletTown_Khanto/scripts.inc"
 	.include "data/maps/Route1_Khanto/scripts.inc"
 	.include "data/maps/Route2_Khanto/scripts.inc"
+	.include "data/maps/Route2_ViridianForest_Khanto/scripts.inc"
 	.include "data/maps/Route21_Khanto/scripts.inc"
 	.include "data/maps/ViridianCity_Khanto/scripts.inc"
 	.include "data/maps/PalletTown_PlayersHouse_1F/scripts.inc"

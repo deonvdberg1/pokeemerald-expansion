@@ -9456,6 +9456,19 @@
       "border_height": 2,
       "border_width": 2,
       "layout_version": "emerald"
+    },
+    {
+      "id": "LAYOUT_VIRIDIAN_FOREST_KHANTO",
+      "name": "ViridianForest_Khanto_Layout",
+      "width": 54,
+      "height": 69,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Petalburg",
+      "border_filepath": "data/layouts/ViridianForest_Frlg/border.bin",
+      "blockdata_filepath": "data/layouts/ViridianForest_Frlg/map.bin",
+      "border_width": 2,
+      "border_height": 2,
+      "layout_version": "emerald"
     }
   ]
 }
