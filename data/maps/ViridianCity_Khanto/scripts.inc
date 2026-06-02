@@ -61,3 +61,12 @@ ViridianCity_Khanto_EventScript_GymDoor::
 
 ViridianCity_Khanto_Text_GymDoor:
 	.string "VIRIDIAN GYM's doors are locked…$"
+
+ViridianCity_Khanto_EventScript_Route22Sign::
+	msgbox ViridianCity_Khanto_Text_Route22Sign, MSGBOX_SIGN
+	end
+
+ViridianCity_Khanto_Text_Route22Sign:
+	.string "ROUTE 22\n"
+	.string "VICTORY ROAD\n"
+	.string "POKeMON LEAGUE AHEAD$"
