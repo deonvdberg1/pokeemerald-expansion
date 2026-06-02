@@ -9492,8 +9492,8 @@
       "secondary_tileset": "gTileset_Cave",
       "border_filepath": "data/layouts/DiglettsCave_SouthEntrance_Khanto/border.bin",
       "blockdata_filepath": "data/layouts/DiglettsCave_SouthEntrance_Khanto/map.bin",
-      "border_width": 2,
       "border_height": 2,
+      "border_width": 2,
       "layout_version": "emerald"
     }
   ]

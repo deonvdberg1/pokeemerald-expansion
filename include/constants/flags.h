@@ -2163,6 +2163,8 @@
 #define FLAG_HIDE_ROUTE2_KHANTO_POTION                                     0x49C
 #define FLAG_HIDE_ROUTE2_KHANTO_ANTIDOTE                                   0x49D
 #define FLAG_HIDDEN_ITEM_ROUTE2_KHANTO_POTION                              0x49E
+#define FLAG_HIDE_DIGLETTS_CAVE_B1F_KHANTO_ETHER                             0x49F
+#define FLAG_HIDDEN_ITEM_DIGLETTS_CAVE_B1F_KHANTO_ELIXIR                     0x4A0
 #define FLAG_HIDDEN_ITEM_MT_MOON_B2F_MOON_STONE                            0
 #define FLAG_HIDDEN_ITEM_MT_MOON_B2F_ETHER                                 0
 #define FLAG_HIDDEN_ITEM_ROUTE25_ELIXIR                                    0
