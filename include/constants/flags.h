@@ -2157,6 +2157,9 @@
 
 #define FLAG_HIDDEN_ITEM_VIRIDIAN_FOREST_POTION                            0x497
 #define FLAG_HIDDEN_ITEM_VIRIDIAN_FOREST_ANTIDOTE                          0x498
+#define FLAG_HIDDEN_ITEM_ROUTE1_KHANTO_POTION                              0x499
+#define FLAG_HIDE_ROUTE1_KHANTO_POTION                                     0x49A
+#define FLAG_HIDE_ROUTE1_KHANTO_POKE_BALL                                  0x49B
 #define FLAG_HIDDEN_ITEM_MT_MOON_B2F_MOON_STONE                            0
 #define FLAG_HIDDEN_ITEM_MT_MOON_B2F_ETHER                                 0
 #define FLAG_HIDDEN_ITEM_ROUTE25_ELIXIR                                    0
