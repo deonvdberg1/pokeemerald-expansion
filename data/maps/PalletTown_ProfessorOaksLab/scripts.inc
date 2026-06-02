@@ -1,35 +1,50 @@
-PalletTown_ProfessorOaksLab_Khanto_MapScripts::
+PalletTown_ProfessorOaksLab_MapScripts::
 # 3 "data/maps/PalletTown_ProfessorOaksLab/scripts.pory"
-	map_script MAP_SCRIPT_ON_TRANSITION, PalletTown_ProfessorOaksLab_Khanto_MapScripts_MAP_SCRIPT_ON_TRANSITION
+	map_script MAP_SCRIPT_ON_TRANSITION, PalletTown_ProfessorOaksLab_MapScripts_MAP_SCRIPT_ON_TRANSITION
 # 6 "data/maps/PalletTown_ProfessorOaksLab/scripts.pory"
-	map_script MAP_SCRIPT_ON_WARP_INTO_MAP_TABLE, PalletTown_ProfessorOaksLab_Khanto_MapScripts_MAP_SCRIPT_ON_WARP_INTO_MAP_TABLE
+	map_script MAP_SCRIPT_ON_WARP_INTO_MAP_TABLE, PalletTown_ProfessorOaksLab_MapScripts_MAP_SCRIPT_ON_WARP_INTO_MAP_TABLE
 # 11 "data/maps/PalletTown_ProfessorOaksLab/scripts.pory"
-	map_script MAP_SCRIPT_ON_FRAME_TABLE, PalletTown_ProfessorOaksLab_Khanto_MapScripts_MAP_SCRIPT_ON_FRAME_TABLE
+	map_script MAP_SCRIPT_ON_FRAME_TABLE, PalletTown_ProfessorOaksLab_MapScripts_MAP_SCRIPT_ON_FRAME_TABLE
 	.byte 0
 
-PalletTown_ProfessorOaksLab_Khanto_MapScripts_MAP_SCRIPT_ON_TRANSITION:
+PalletTown_ProfessorOaksLab_MapScripts_MAP_SCRIPT_ON_TRANSITION:
 # 4 "data/maps/PalletTown_ProfessorOaksLab/scripts.pory"
 	setflag FLAG_HIDE_OAK_IN_HIS_LAB
 	return
 
-PalletTown_ProfessorOaksLab_Khanto_MapScripts_MAP_SCRIPT_ON_WARP_INTO_MAP_TABLE:
+
+PalletTown_ProfessorOaksLab_EventScript_Oak::
+# 1 "data/maps/PalletTown_ProfessorOaksLab/scripts.pory"
+	lock
+	faceplayer
+	msgbox PalletTown_ProfessorOaksLab_EventScript_Oak_Text
+	release
+	end
+
+
+PalletTown_ProfessorOaksLab_EventScript_Oak_Text::
+	.string "Oak: Welcome to my lab, {PLAYER}!\n"
+	.string "Feel free to look around.$"
+
+
+PalletTown_ProfessorOaksLab_MapScripts_MAP_SCRIPT_ON_WARP_INTO_MAP_TABLE:
 # 7 "data/maps/PalletTown_ProfessorOaksLab/scripts.pory"
 	compare VAR_TEMP_0, 0
-	goto_if_eq PalletTown_ProfessorOaksLab_Khanto_MapScripts_MAP_SCRIPT_ON_WARP_INTO_MAP_TABLE_1
+	goto_if_eq PalletTown_ProfessorOaksLab_MapScripts_MAP_SCRIPT_ON_WARP_INTO_MAP_TABLE_1
 	return
 
-PalletTown_ProfessorOaksLab_Khanto_MapScripts_MAP_SCRIPT_ON_WARP_INTO_MAP_TABLE_1:
+PalletTown_ProfessorOaksLab_MapScripts_MAP_SCRIPT_ON_WARP_INTO_MAP_TABLE_1:
 # 8 "data/maps/PalletTown_ProfessorOaksLab/scripts.pory"
 	turnobject OBJ_EVENT_ID_PLAYER, DIR_NORTH
 	return
 
-PalletTown_ProfessorOaksLab_Khanto_MapScripts_MAP_SCRIPT_ON_FRAME_TABLE:
+PalletTown_ProfessorOaksLab_MapScripts_MAP_SCRIPT_ON_FRAME_TABLE:
 # 12 "data/maps/PalletTown_ProfessorOaksLab/scripts.pory"
 	compare VAR_TEMP_0, 0
-	goto_if_eq PalletTown_ProfessorOaksLab_Khanto_MapScripts_MAP_SCRIPT_ON_FRAME_TABLE_1
+	goto_if_eq PalletTown_ProfessorOaksLab_MapScripts_MAP_SCRIPT_ON_FRAME_TABLE_1
 	return
 
-PalletTown_ProfessorOaksLab_Khanto_MapScripts_MAP_SCRIPT_ON_FRAME_TABLE_1:
+PalletTown_ProfessorOaksLab_MapScripts_MAP_SCRIPT_ON_FRAME_TABLE_1:
 # 13 "data/maps/PalletTown_ProfessorOaksLab/scripts.pory"
 	call OaksLab_EventScript_IntroScene
 	return
@@ -73,7 +88,7 @@ PalletTown_ProfessorOaksLab_EventScript_BulbasaurBall::
 # 69 "data/maps/PalletTown_ProfessorOaksLab/scripts.pory"
 	msgbox PalletTown_ProfessorOaksLab_EventScript_BulbasaurBall_Text_0
 # 73 "data/maps/PalletTown_ProfessorOaksLab/scripts.pory"
-	multichoicedefault 0, 0, 0, 2
+	multichoicedefault 0, 0, 0, 2, FALSE
 # 74 "data/maps/PalletTown_ProfessorOaksLab/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq PalletTown_ProfessorOaksLab_EventScript_BulbasaurBall_1
@@ -99,7 +114,7 @@ PalletTown_ProfessorOaksLab_EventScript_CharmanderBall::
 # 88 "data/maps/PalletTown_ProfessorOaksLab/scripts.pory"
 	msgbox PalletTown_ProfessorOaksLab_EventScript_CharmanderBall_Text_0
 # 92 "data/maps/PalletTown_ProfessorOaksLab/scripts.pory"
-	multichoicedefault 0, 0, 0, 2
+	multichoicedefault 0, 0, 0, 2, FALSE
 # 93 "data/maps/PalletTown_ProfessorOaksLab/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq PalletTown_ProfessorOaksLab_EventScript_CharmanderBall_1
@@ -125,7 +140,7 @@ PalletTown_ProfessorOaksLab_EventScript_SquirtleBall::
 # 107 "data/maps/PalletTown_ProfessorOaksLab/scripts.pory"
 	msgbox PalletTown_ProfessorOaksLab_EventScript_SquirtleBall_Text_0
 # 111 "data/maps/PalletTown_ProfessorOaksLab/scripts.pory"
-	multichoicedefault 0, 0, 0, 2
+	multichoicedefault 0, 0, 0, 2, FALSE
 # 112 "data/maps/PalletTown_ProfessorOaksLab/scripts.pory"
 	compare VAR_RESULT, 0
 	goto_if_eq PalletTown_ProfessorOaksLab_EventScript_SquirtleBall_1
@@ -158,9 +173,9 @@ OaksLab_EventScript_GiveStarter::
 	setvar VAR_TEMP_2, SPECIES_SQUIRTLE
 OaksLab_EventScript_GiveStarter_1:
 # 135 "data/maps/PalletTown_ProfessorOaksLab/scripts.pory"
-	givepokemon VAR_TEMP_2, 5, ITEM_NONE
+	givemon VAR_TEMP_2, 5, ITEM_NONE
 # 136 "data/maps/PalletTown_ProfessorOaksLab/scripts.pory"
-	setstartermon
+	setvar VAR_STARTER_MON, VAR_TEMP_2
 # 137 "data/maps/PalletTown_ProfessorOaksLab/scripts.pory"
 	msgbox OaksLab_EventScript_GiveStarter_Text_0
 # 142 "data/maps/PalletTown_ProfessorOaksLab/scripts.pory"
@@ -196,7 +211,7 @@ OaksLab_EventScript_IntroScene_Text_1:
 	.string "I've been researching a legendary\l"
 	.string "Pokémon that lives atop\l"
 	.string "MOUNT SILVER.\l"
-	.string "Its power is immense—\l"
+	.string "Its power is immense-\l"
 	.string "I believe studying it could\l"
 	.string "unlock secrets about Pokémon\l"
 	.string "we've never understood before.$"

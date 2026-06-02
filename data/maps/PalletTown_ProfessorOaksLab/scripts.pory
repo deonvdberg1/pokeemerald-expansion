@@ -1,5 +1,5 @@
 
-mapscripts PalletTown_ProfessorOaksLab_Khanto_MapScripts {
+mapscripts PalletTown_ProfessorOaksLab_MapScripts {
     MAP_SCRIPT_ON_TRANSITION {
         setflag(FLAG_HIDE_OAK_IN_HIS_LAB)
     }
@@ -13,6 +13,15 @@ mapscripts PalletTown_ProfessorOaksLab_Khanto_MapScripts {
             call(OaksLab_EventScript_IntroScene)
         }
     }
+}
+
+script PalletTown_ProfessorOaksLab_EventScript_Oak {
+    lock
+    faceplayer
+    msgbox("Oak: Welcome to my lab, {PLAYER}!
+           Feel free to look around.")
+    release
+    end
 }
 
 script OaksLab_EventScript_IntroScene {
@@ -30,7 +39,7 @@ script OaksLab_EventScript_IntroScene {
            I've been researching a legendary
            Pokémon that lives atop
            MOUNT SILVER.
-           Its power is immense—
+           Its power is immense-
            I believe studying it could
            unlock secrets about Pokémon
            we've never understood before.")
@@ -70,7 +79,7 @@ script PalletTown_ProfessorOaksLab_EventScript_BulbasaurBall {
            BULBASAUR, the Grass type.
            Would you like to choose
            BULBASAUR as your partner?")
-    multichoicedefault(0, 0, 0, 2)
+    multichoicedefault(0, 0, 0, 2, FALSE)
     if (var(VAR_RESULT) == 0) {
         setvar(VAR_TEMP_1, 0)
         call(OaksLab_EventScript_GiveStarter)
@@ -89,7 +98,7 @@ script PalletTown_ProfessorOaksLab_EventScript_CharmanderBall {
            CHARMANDER, the Fire type.
            Would you like to choose
            CHARMANDER as your partner?")
-    multichoicedefault(0, 0, 0, 2)
+    multichoicedefault(0, 0, 0, 2, FALSE)
     if (var(VAR_RESULT) == 0) {
         setvar(VAR_TEMP_1, 1)
         call(OaksLab_EventScript_GiveStarter)
@@ -108,7 +117,7 @@ script PalletTown_ProfessorOaksLab_EventScript_SquirtleBall {
            SQUIRTLE, the Water type.
            Would you like to choose
            SQUIRTLE as your partner?")
-    multichoicedefault(0, 0, 0, 2)
+    multichoicedefault(0, 0, 0, 2, FALSE)
     if (var(VAR_RESULT) == 0) {
         setvar(VAR_TEMP_1, 2)
         call(OaksLab_EventScript_GiveStarter)
@@ -132,8 +141,8 @@ script OaksLab_EventScript_GiveStarter {
             setvar(VAR_TEMP_2, SPECIES_SQUIRTLE)
         }
     }
-    givepokemon(VAR_TEMP_2, 5, ITEM_NONE)
-    setstartermon()
+    givemon(VAR_TEMP_2, 5, ITEM_NONE)
+    setvar(VAR_STARTER_MON, VAR_TEMP_2)
     msgbox("Oak: Excellent choice!
            That Pokémon is now yours.
            Take good care of it,

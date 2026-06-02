@@ -1,8 +1,8 @@
-PalletTown_PlayersHouse_2F_Khanto_MapScripts::
+PalletTown_PlayersHouse_2F_MapScripts::
 # 5 "data/maps/PalletTown_PlayersHouse_2F/scripts.pory"
-	map_script MAP_SCRIPT_ON_TRANSITION, PalletTown_PlayersHouse_2F_Khanto_MapScripts_MAP_SCRIPT_ON_TRANSITION
+	map_script MAP_SCRIPT_ON_TRANSITION, PalletTown_PlayersHouse_2F_MapScripts_MAP_SCRIPT_ON_TRANSITION
 	.byte 0
 
-PalletTown_PlayersHouse_2F_Khanto_MapScripts_MAP_SCRIPT_ON_TRANSITION:
+PalletTown_PlayersHouse_2F_MapScripts_MAP_SCRIPT_ON_TRANSITION:
 	return
 
