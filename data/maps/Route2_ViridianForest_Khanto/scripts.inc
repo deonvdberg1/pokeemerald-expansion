@@ -24,7 +24,7 @@ Route2_ViridianForest_Khanto_Text_Boy:
 @ ========== Bug Catcher Trainer Battles ==========
 
 Route2_ViridianForest_Khanto_EventScript_Rick::
-	trainerbattle_single TRAINER_RICK, Route2_ViridianForest_Khanto_Text_RickIntro, Route2_ViridianForest_Khanto_Text_RickDefeat
+	trainerbattle_single TRAINER_BUG_CATCHER_RICK_KHANTO, Route2_ViridianForest_Khanto_Text_RickIntro, Route2_ViridianForest_Khanto_Text_RickDefeat
 	msgbox Route2_ViridianForest_Khanto_Text_RickPostBattle, MSGBOX_AUTOCLOSE
 	end
 
@@ -40,7 +40,7 @@ Route2_ViridianForest_Khanto_Text_RickPostBattle:
 	.string "get stronger! You'll see!$"
 
 Route2_ViridianForest_Khanto_EventScript_Jose::
-	trainerbattle_single TRAINER_JOSE, Route2_ViridianForest_Khanto_Text_JoseIntro, Route2_ViridianForest_Khanto_Text_JoseDefeat
+	trainerbattle_single TRAINER_BUG_CATCHER_DOUG_KHANTO, Route2_ViridianForest_Khanto_Text_JoseIntro, Route2_ViridianForest_Khanto_Text_JoseDefeat
 	msgbox Route2_ViridianForest_Khanto_Text_JosePostBattle, MSGBOX_AUTOCLOSE
 	end
 
@@ -56,7 +56,7 @@ Route2_ViridianForest_Khanto_Text_JosePostBattle:
 	.string "They evolve into powerful forms!$"
 
 Route2_ViridianForest_Khanto_EventScript_Lyle::
-	trainerbattle_single TRAINER_LYLE, Route2_ViridianForest_Khanto_Text_LyleIntro, Route2_ViridianForest_Khanto_Text_LyleDefeat
+	trainerbattle_single TRAINER_BUG_CATCHER_SAMMY_KHANTO, Route2_ViridianForest_Khanto_Text_LyleIntro, Route2_ViridianForest_Khanto_Text_LyleDefeat
 	msgbox Route2_ViridianForest_Khanto_Text_LylePostBattle, MSGBOX_AUTOCLOSE
 	end
 
