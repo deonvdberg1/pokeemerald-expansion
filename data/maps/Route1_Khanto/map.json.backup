@@ -14,11 +14,6 @@
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
   "connections": [
     {
-      "map": "MAP_VIRIDIAN_CITY_KHANTO",
-      "offset": -12,
-      "direction": "up"
-    },
-    {
       "map": "MAP_PALLET_TOWN_KHANTO",
       "offset": 0,
       "direction": "down"
