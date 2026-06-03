@@ -418,3 +418,35 @@ const u16 gMetatileAttributes_GeneralORAS[] = INCBIN_U16("data/tilesets/primary/
 // ORAS Petalburg
 const u16 gMetatiles_PetalburgORAS[] = INCBIN_U16("data/tilesets/secondary/petalburg_oras/metatiles.bin");
 const u16 gMetatileAttributes_PetalburgORAS[] = INCBIN_U16("data/tilesets/secondary/petalburg_oras/metatile_attributes.bin");
+
+
+const u16 gMetatiles_PewterGymKhanto[] = INCBIN_U16("data/tilesets/secondary/pewtergymkhanto/metatiles.bin");
+const u16 gMetatileAttributes_PewterGymKhanto[] = INCBIN_U16("data/tilesets/secondary/pewtergymkhanto/metatile_attributes.bin");
+
+
+const u16 gMetatiles_CeruleanGymKhanto[] = INCBIN_U16("data/tilesets/secondary/ceruleangymkhanto/metatiles.bin");
+const u16 gMetatileAttributes_CeruleanGymKhanto[] = INCBIN_U16("data/tilesets/secondary/ceruleangymkhanto/metatile_attributes.bin");
+
+
+const u16 gMetatiles_VermilionGymKhanto[] = INCBIN_U16("data/tilesets/secondary/vermiliongymkhanto/metatiles.bin");
+const u16 gMetatileAttributes_VermilionGymKhanto[] = INCBIN_U16("data/tilesets/secondary/vermiliongymkhanto/metatile_attributes.bin");
+
+
+const u16 gMetatiles_CeladonGymKhanto[] = INCBIN_U16("data/tilesets/secondary/celadongymkhanto/metatiles.bin");
+const u16 gMetatileAttributes_CeladonGymKhanto[] = INCBIN_U16("data/tilesets/secondary/celadongymkhanto/metatile_attributes.bin");
+
+
+const u16 gMetatiles_SaffronGymKhanto[] = INCBIN_U16("data/tilesets/secondary/saffrongymkhanto/metatiles.bin");
+const u16 gMetatileAttributes_SaffronGymKhanto[] = INCBIN_U16("data/tilesets/secondary/saffrongymkhanto/metatile_attributes.bin");
+
+
+const u16 gMetatiles_FuchsiaGymKhanto[] = INCBIN_U16("data/tilesets/secondary/fuchsiagymkhanto/metatiles.bin");
+const u16 gMetatileAttributes_FuchsiaGymKhanto[] = INCBIN_U16("data/tilesets/secondary/fuchsiagymkhanto/metatile_attributes.bin");
+
+
+const u16 gMetatiles_CinnabarGymKhanto[] = INCBIN_U16("data/tilesets/secondary/cinnabargymkhanto/metatiles.bin");
+const u16 gMetatileAttributes_CinnabarGymKhanto[] = INCBIN_U16("data/tilesets/secondary/cinnabargymkhanto/metatile_attributes.bin");
+
+
+const u16 gMetatiles_ViridianGymKhanto[] = INCBIN_U16("data/tilesets/secondary/viridiangymkhanto/metatiles.bin");
+const u16 gMetatileAttributes_ViridianGymKhanto[] = INCBIN_U16("data/tilesets/secondary/viridiangymkhanto/metatile_attributes.bin");
