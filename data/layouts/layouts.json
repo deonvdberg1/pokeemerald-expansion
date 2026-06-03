@@ -9580,7 +9580,7 @@
       "width": 13,
       "height": 13,
       "primary_tileset": "gTileset_Building",
-      "secondary_tileset": "gTileset_ViridianGym",
+      "secondary_tileset": "gTileset_ViridianGymKhanto",
       "border_filepath": "data/layouts/ViridianCity_Gym_Khanto/border.bin",
       "blockdata_filepath": "data/layouts/ViridianCity_Gym_Khanto/map.bin",
       "border_height": 2,
