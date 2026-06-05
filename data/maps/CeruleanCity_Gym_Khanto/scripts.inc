@@ -74,7 +74,7 @@ CeruleanCity_Gym_Khanto_Text_MistyIntro::
 	.string "WATER has so many powerful moves…\p"
 	.string "Let's see if you can handle my\n"
 	.string "WATER-type POKéMON!\p"
-	.string "You'd better做好准备!{PLAY_BGM}{MUS_RG_ENCOUNTER_GYM_LEADER}$"
+	.string "You'd better prepare yourself!{PLAY_BGM}{MUS_RG_ENCOUNTER_GYM_LEADER}$"
 
 CeruleanCity_Gym_Khanto_Text_MistyDefeat::
 	.string "I can't believe it…\n"

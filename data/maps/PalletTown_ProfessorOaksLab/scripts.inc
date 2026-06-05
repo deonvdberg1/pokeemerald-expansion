@@ -77,25 +77,25 @@ OaksLab_EventScript_IntroScene::
 	end
 
 
-PalletTown_ProfessorOaksLab_EventScript_BulbasaurBall::
+PalletTown_ProfessorOaksLab_Khanto_EventScript_BulbasaurBall::
 # 76 "data/maps/PalletTown_ProfessorOaksLab/scripts.pory"
 	lock
 # 77 "data/maps/PalletTown_ProfessorOaksLab/scripts.pory"
 	faceplayer
 # 78 "data/maps/PalletTown_ProfessorOaksLab/scripts.pory"
-	msgbox PalletTown_ProfessorOaksLab_EventScript_BulbasaurBall_Text_0
+	msgbox PalletTown_ProfessorOaksLab_Khanto_EventScript_BulbasaurBall_Text_0
 # 82 "data/maps/PalletTown_ProfessorOaksLab/scripts.pory"
 	multichoicedefault 0, 0, 0, 2, FALSE
 # 83 "data/maps/PalletTown_ProfessorOaksLab/scripts.pory"
 	compare VAR_RESULT, 0
-	goto_if_eq PalletTown_ProfessorOaksLab_EventScript_BulbasaurBall_1
+	goto_if_eq PalletTown_ProfessorOaksLab_Khanto_EventScript_BulbasaurBall_1
 # 87 "data/maps/PalletTown_ProfessorOaksLab/scripts.pory"
-	msgbox PalletTown_ProfessorOaksLab_EventScript_BulbasaurBall_Text_1
+	msgbox PalletTown_ProfessorOaksLab_Khanto_EventScript_BulbasaurBall_Text_1
 # 89 "data/maps/PalletTown_ProfessorOaksLab/scripts.pory"
 	release
 	end
 
-PalletTown_ProfessorOaksLab_EventScript_BulbasaurBall_1:
+PalletTown_ProfessorOaksLab_Khanto_EventScript_BulbasaurBall_1:
 # 84 "data/maps/PalletTown_ProfessorOaksLab/scripts.pory"
 	setvar VAR_TEMP_1, 0
 # 85 "data/maps/PalletTown_ProfessorOaksLab/scripts.pory"
@@ -103,25 +103,25 @@ PalletTown_ProfessorOaksLab_EventScript_BulbasaurBall_1:
 	return
 
 
-PalletTown_ProfessorOaksLab_EventScript_CharmanderBall::
+PalletTown_ProfessorOaksLab_Khanto_EventScript_CharmanderBall::
 # 95 "data/maps/PalletTown_ProfessorOaksLab/scripts.pory"
 	lock
 # 96 "data/maps/PalletTown_ProfessorOaksLab/scripts.pory"
 	faceplayer
 # 97 "data/maps/PalletTown_ProfessorOaksLab/scripts.pory"
-	msgbox PalletTown_ProfessorOaksLab_EventScript_CharmanderBall_Text_0
+	msgbox PalletTown_ProfessorOaksLab_Khanto_EventScript_CharmanderBall_Text_0
 # 101 "data/maps/PalletTown_ProfessorOaksLab/scripts.pory"
 	multichoicedefault 0, 0, 0, 2, FALSE
 # 102 "data/maps/PalletTown_ProfessorOaksLab/scripts.pory"
 	compare VAR_RESULT, 0
-	goto_if_eq PalletTown_ProfessorOaksLab_EventScript_CharmanderBall_1
+	goto_if_eq PalletTown_ProfessorOaksLab_Khanto_EventScript_CharmanderBall_1
 # 106 "data/maps/PalletTown_ProfessorOaksLab/scripts.pory"
-	msgbox PalletTown_ProfessorOaksLab_EventScript_BulbasaurBall_Text_1
+	msgbox PalletTown_ProfessorOaksLab_Khanto_EventScript_BulbasaurBall_Text_1
 # 108 "data/maps/PalletTown_ProfessorOaksLab/scripts.pory"
 	release
 	end
 
-PalletTown_ProfessorOaksLab_EventScript_CharmanderBall_1:
+PalletTown_ProfessorOaksLab_Khanto_EventScript_CharmanderBall_1:
 # 103 "data/maps/PalletTown_ProfessorOaksLab/scripts.pory"
 	setvar VAR_TEMP_1, 1
 # 104 "data/maps/PalletTown_ProfessorOaksLab/scripts.pory"
@@ -129,25 +129,25 @@ PalletTown_ProfessorOaksLab_EventScript_CharmanderBall_1:
 	return
 
 
-PalletTown_ProfessorOaksLab_EventScript_SquirtleBall::
+PalletTown_ProfessorOaksLab_Khanto_EventScript_SquirtleBall::
 # 114 "data/maps/PalletTown_ProfessorOaksLab/scripts.pory"
 	lock
 # 115 "data/maps/PalletTown_ProfessorOaksLab/scripts.pory"
 	faceplayer
 # 116 "data/maps/PalletTown_ProfessorOaksLab/scripts.pory"
-	msgbox PalletTown_ProfessorOaksLab_EventScript_SquirtleBall_Text_0
+	msgbox PalletTown_ProfessorOaksLab_Khanto_EventScript_SquirtleBall_Text_0
 # 120 "data/maps/PalletTown_ProfessorOaksLab/scripts.pory"
 	multichoicedefault 0, 0, 0, 2, FALSE
 # 121 "data/maps/PalletTown_ProfessorOaksLab/scripts.pory"
 	compare VAR_RESULT, 0
-	goto_if_eq PalletTown_ProfessorOaksLab_EventScript_SquirtleBall_1
+	goto_if_eq PalletTown_ProfessorOaksLab_Khanto_EventScript_SquirtleBall_1
 # 125 "data/maps/PalletTown_ProfessorOaksLab/scripts.pory"
-	msgbox PalletTown_ProfessorOaksLab_EventScript_BulbasaurBall_Text_1
+	msgbox PalletTown_ProfessorOaksLab_Khanto_EventScript_BulbasaurBall_Text_1
 # 127 "data/maps/PalletTown_ProfessorOaksLab/scripts.pory"
 	release
 	end
 
-PalletTown_ProfessorOaksLab_EventScript_SquirtleBall_1:
+PalletTown_ProfessorOaksLab_Khanto_EventScript_SquirtleBall_1:
 # 122 "data/maps/PalletTown_ProfessorOaksLab/scripts.pory"
 	setvar VAR_TEMP_1, 2
 # 123 "data/maps/PalletTown_ProfessorOaksLab/scripts.pory"
@@ -254,26 +254,26 @@ OaksLab_EventScript_IntroScene_Text_5:
 	.string "Choose one to be your partner\l"
 	.string "on this journey.$"
 
-PalletTown_ProfessorOaksLab_EventScript_BulbasaurBall_Text_0:
+PalletTown_ProfessorOaksLab_Khanto_EventScript_BulbasaurBall_Text_0:
 # 78 "data/maps/PalletTown_ProfessorOaksLab/scripts.pory"
 	.string "It's a POKé BALL containing\n"
 	.string "BULBASAUR, the Grass type.\l"
 	.string "Would you like to choose\l"
 	.string "BULBASAUR as your partner?$"
 
-PalletTown_ProfessorOaksLab_EventScript_BulbasaurBall_Text_1:
+PalletTown_ProfessorOaksLab_Khanto_EventScript_BulbasaurBall_Text_1:
 # 87 "data/maps/PalletTown_ProfessorOaksLab/scripts.pory"
 	.string "Take your time, {PLAYER}.\n"
 	.string "Choose the one that speaks to you.$"
 
-PalletTown_ProfessorOaksLab_EventScript_CharmanderBall_Text_0:
+PalletTown_ProfessorOaksLab_Khanto_EventScript_CharmanderBall_Text_0:
 # 97 "data/maps/PalletTown_ProfessorOaksLab/scripts.pory"
 	.string "It's a POKé BALL containing\n"
 	.string "CHARMANDER, the Fire type.\l"
 	.string "Would you like to choose\l"
 	.string "CHARMANDER as your partner?$"
 
-PalletTown_ProfessorOaksLab_EventScript_SquirtleBall_Text_0:
+PalletTown_ProfessorOaksLab_Khanto_EventScript_SquirtleBall_Text_0:
 # 116 "data/maps/PalletTown_ProfessorOaksLab/scripts.pory"
 	.string "It's a POKé BALL containing\n"
 	.string "SQUIRTLE, the Water type.\l"
