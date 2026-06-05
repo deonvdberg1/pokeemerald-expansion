@@ -1,0 +1,64 @@
+{
+    "id": "MAP_PEWTER_CITY_KHANTO",
+    "name": "PewterCity_Khanto",
+    "layout": "LAYOUT_PEWTER_CITY_KHANTO",
+    "music": "MUS_RG_PEWTER",
+    "region_map_section": "MAPSEC_PEWTER_CITY",
+    "requires_flash": false,
+    "weather": "WEATHER_NONE",
+    "map_type": "MAP_TYPE_TOWN",
+    "allow_cycling": true,
+    "allow_escaping": true,
+    "allow_running": true,
+    "show_map_name": true,
+    "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
+    "connections": [
+        {
+            "direction": "down",
+            "offset": -12,
+            "map": "MAP_ROUTE2_KHANTO"
+        }
+    ],
+    "object_events": [],
+    "warp_events": [
+        {
+            "x": 15,
+            "y": 16,
+            "elevation": 3,
+            "dest_map": "MAP_PEWTER_CITY_GYM_KHANTO",
+            "dest_warp_id": "0"
+        },
+        {
+            "x": 28,
+            "y": 18,
+            "elevation": 3,
+            "dest_map": "MAP_PEWTER_CITY_MART_FRLG",
+            "dest_warp_id": "0"
+        },
+        {
+            "x": 17,
+            "y": 25,
+            "elevation": 3,
+            "dest_map": "MAP_PEWTER_CITY_POKEMON_CENTER_1F_FRLG",
+            "dest_warp_id": "0"
+        },
+        {
+            "x": 33,
+            "y": 11,
+            "elevation": 3,
+            "dest_map": "MAP_PEWTER_CITY_HOUSE1_FRLG",
+            "dest_warp_id": "0"
+        },
+        {
+            "x": 9,
+            "y": 30,
+            "elevation": 3,
+            "dest_map": "MAP_PEWTER_CITY_HOUSE2_FRLG",
+            "dest_warp_id": "0"
+        }
+    ],
+    "coord_events": [],
+    "bg_events": [],
+    "floor_number": 0,
+    "region": "REGION_KANTO"
+}

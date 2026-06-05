@@ -71,9 +71,10 @@ enum
     MAP_UNDERWATER_ROUTE125  = (56 | (0 << 8)),
     MAP_PALLET_TOWN_KHANTO   = (57 | (0 << 8)),
     MAP_ROUTE1_KHANTO        = (58 | (0 << 8)),
-    MAP_ROUTE2_KHANTO        = (59 | (0 << 8)),
-    MAP_ROUTE21_KHANTO       = (60 | (0 << 8)),
-    MAP_VIRIDIAN_CITY_KHANTO = (61 | (0 << 8)),
+    MAP_PEWTER_CITY_KHANTO   = (59 | (0 << 8)),
+    MAP_ROUTE2_KHANTO        = (60 | (0 << 8)),
+    MAP_ROUTE21_KHANTO       = (61 | (0 << 8)),
+    MAP_VIRIDIAN_CITY_KHANTO = (62 | (0 << 8)),
 
     // gMapGroup_IndoorLittleroot
     MAP_LITTLEROOT_TOWN_BRENDANS_HOUSE_1F    = (0 | (1 << 8)),
