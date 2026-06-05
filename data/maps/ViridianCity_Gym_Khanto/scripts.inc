@@ -271,6 +271,55 @@ ViridianCity_Gym_Khanto_Text_GymStatuePlayerWon::
 	.string "WINNING TRAINERS:\n"
 	.string "{RIVAL}, {PLAYER}$"
 
+@ ── Arrow tile scripts ───────────────────────────────────────────
+
+ViridianCity_Gym_Khanto_EventScript_ArrowUp::
+	lockall
+	applymovement LOCALID_PLAYER, ViridianCity_Gym_Khanto_Movement_ArrowUp
+	waitmovement 0
+	releaseall
+	end
+
+ViridianCity_Gym_Khanto_EventScript_ArrowDown::
+	lockall
+	applymovement LOCALID_PLAYER, ViridianCity_Gym_Khanto_Movement_ArrowDown
+	waitmovement 0
+	releaseall
+	end
+
+ViridianCity_Gym_Khanto_EventScript_ArrowLeft::
+	lockall
+	applymovement LOCALID_PLAYER, ViridianCity_Gym_Khanto_Movement_ArrowLeft
+	waitmovement 0
+	releaseall
+	end
+
+ViridianCity_Gym_Khanto_EventScript_ArrowRight::
+	lockall
+	applymovement LOCALID_PLAYER, ViridianCity_Gym_Khanto_Movement_ArrowRight
+	waitmovement 0
+	releaseall
+	end
+
+ViridianCity_Gym_Khanto_EventScript_ArrowStop::
+	end
+
+ViridianCity_Gym_Khanto_Movement_ArrowUp:
+	walk_up
+	step_end
+
+ViridianCity_Gym_Khanto_Movement_ArrowDown:
+	walk_down
+	step_end
+
+ViridianCity_Gym_Khanto_Movement_ArrowLeft:
+	walk_left
+	step_end
+
+ViridianCity_Gym_Khanto_Movement_ArrowRight:
+	walk_right
+	step_end
+
 ViridianCity_Gym_Khanto_EventScript_Receptionist::
 	lock
 	faceplayer
