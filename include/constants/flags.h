@@ -2015,7 +2015,7 @@
 #define FLAG_GOT_TM27                                    0
 #define FLAG_0x25C                                       0
 #define FLAG_0x25D                                       0
-#define FLAG_GOT_OLD_AMBER                               0
+#define FLAG_GOT_OLD_AMBER                               0x511
 #define FLAG_0x25F                                       0
 #define FLAG_0x260                                       0
 #define FLAG_0x261                                       0
@@ -2034,8 +2034,8 @@
 #define FLAG_GOT_20_COINS_FROM_GAMBLER                   0
 #define FLAG_GOT_20_COINS_FROM_GAMBLER_2                 0
 #define FLAG_GOT_BICYCLE                                 0
-#define FLAG_GOT_DOME_FOSSIL                             0
-#define FLAG_GOT_HELIX_FOSSIL                            0
+#define FLAG_GOT_DOME_FOSSIL                             0x512
+#define FLAG_GOT_HELIX_FOSSIL                            0x513
 #define FLAG_DID_ESPHERE_TRADE                           0
 #define FLAG_DID_TANGENY_TRADE                           0
 #define FLAG_DID_SEELOR_TRADE                            0
@@ -2136,9 +2136,9 @@
 #define FLAG_0x2E9                                       0
 #define FLAG_0x2EA                                       0
 #define FLAG_0x2EB                                       0
-#define FLAG_REVIVED_DOME                                0
-#define FLAG_REVIVED_HELIX                               0
-#define FLAG_REVIVED_AMBER                               0
+#define FLAG_REVIVED_DOME                                0x514
+#define FLAG_REVIVED_HELIX                               0x515
+#define FLAG_REVIVED_AMBER                               0x516
 #define FLAG_GOT_HM06                                    0
 #define FLAG_FOUGHT_LUGIA                                0
 #define FLAG_FOUGHT_HO_OH                                0
@@ -2456,6 +2456,10 @@
 #define FLAG_AMBER_QUEST_COMPLETE                       0x50A
 #define FLAG_HELIX_QUEST_COMPLETE                       0x50B
 #define FLAG_DOME_QUEST_COMPLETE                        0x50C
+#define FLAG_HIDE_DIGLETTS_CAVE_DITTO                   0x50D
+#define FLAG_HIDE_VIRIDIAN_FOREST_ROCKET1               0x50E
+#define FLAG_HIDE_VIRIDIAN_FOREST_ROCKET2               0x50F
+#define FLAG_HIDE_VIRIDIAN_FOREST_SCYTHER               0x510
 
 #endif
 

@@ -64,6 +64,7 @@ PewterCity_Museum_2F_Khanto_EventScript_GiveHelix::
 	goto_if_eq VAR_RESULT, FALSE, PewterCity_Museum_2F_Khanto_EventScript_NoBagSpace
 	giveitem ITEM_HELIX_FOSSIL
 	setflag FLAG_RECEIVED_HELIX_FOSSIL
+	setflag FLAG_GOT_HELIX_FOSSIL
 	setflag FLAG_HIDE_PEWTER_MUSEUM_AERODACTYL_SKELETON
 	msgbox PewterCity_Museum_2F_Khanto_Text_HelixPostReward, MSGBOX_DEFAULT
 	release
@@ -78,6 +79,7 @@ PewterCity_Museum_2F_Khanto_EventScript_GiveDome::
 	goto_if_eq VAR_RESULT, FALSE, PewterCity_Museum_2F_Khanto_EventScript_NoBagSpace
 	giveitem ITEM_DOME_FOSSIL
 	setflag FLAG_RECEIVED_DOME_FOSSIL
+	setflag FLAG_GOT_DOME_FOSSIL
 	setflag FLAG_HIDE_PEWTER_MUSEUM_KABUTOPS_SKELETON
 	msgbox PewterCity_Museum_2F_Khanto_Text_DomePostReward, MSGBOX_DEFAULT
 	release

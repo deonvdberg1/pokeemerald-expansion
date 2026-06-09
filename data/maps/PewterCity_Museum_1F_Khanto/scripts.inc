@@ -41,6 +41,7 @@ PewterCity_Museum_1F_Khanto_EventScript_GiveOldAmber::
 	goto_if_eq VAR_RESULT, FALSE, PewterCity_Museum_1F_Khanto_EventScript_NoBagSpace
 	giveitem ITEM_OLD_AMBER
 	setflag FLAG_RECEIVED_OLD_AMBER
+	setflag FLAG_GOT_OLD_AMBER
 	setflag FLAG_HIDE_PEWTER_MUSEUM_OLD_AMBER
 	msgbox PewterCity_Museum_1F_Khanto_Text_AmberPostReward, MSGBOX_DEFAULT
 	release

@@ -8140,6 +8140,16 @@
       "secondary_tileset": "gTileset_Petalburg",
       "border_filepath": "data/layouts/PewterCity_Khanto/border.bin",
       "blockdata_filepath": "data/layouts/PewterCity_Khanto/map.bin"
+    },
+    {
+      "id": "LAYOUT_CINNABARISLAND_KHANTO",
+      "name": "CinnabarIsland_Khanto_Layout",
+      "width": 24,
+      "height": 20,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Petalburg",
+      "border_filepath": "data/layouts/CinnabarIsland_Khanto/border.bin",
+      "blockdata_filepath": "data/layouts/CinnabarIsland_Khanto/map.bin"
     }
   ]
 }
