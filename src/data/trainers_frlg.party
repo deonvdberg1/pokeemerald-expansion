@@ -3856,7 +3856,11 @@ Double Battle: No
 AI: Check Bad Move
 
 Rhyhorn
-Level: 43
+Level: 29
+IVs: 4 HP / 4 Atk / 4 Def / 4 SpA / 4 SpD / 4 Spe
+
+Rhydon
+Level: 31
 IVs: 4 HP / 4 Atk / 4 Def / 4 SpA / 4 SpD / 4 Spe
 
 === TRAINER_TAMER_COLE ===
@@ -3868,12 +3872,16 @@ Music: Hiker
 Double Battle: No
 AI: Check Bad Move
 
-Arbok
-Level: 39
+Primeape
+Level: 28
 IVs: 4 HP / 4 Atk / 4 Def / 4 SpA / 4 SpD / 4 Spe
 
-Tauros
-Level: 39
+Machop
+Level: 28
+IVs: 4 HP / 4 Atk / 4 Def / 4 SpA / 4 SpD / 4 Spe
+
+Machoke
+Level: 30
 IVs: 4 HP / 4 Atk / 4 Def / 4 SpA / 4 SpD / 4 Spe
 
 === TRAINER_TAMER_VINCENT ===
@@ -4382,9 +4390,13 @@ Music: Intense
 Double Battle: No
 AI: Check Bad Move
 
-Machoke @ Black Belt
-Level: 43
-IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
+Hitmonlee
+Level: 29
+IVs: 4 HP / 4 Atk / 4 Def / 4 SpA / 4 SpD / 4 Spe
+
+Hitmonchan
+Level: 29
+IVs: 4 HP / 4 Atk / 4 Def / 4 SpA / 4 SpD / 4 Spe
 
 === TRAINER_BLACK_BELT_TAKASHI ===
 Name: TAKASHI
