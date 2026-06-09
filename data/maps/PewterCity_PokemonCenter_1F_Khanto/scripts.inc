@@ -1,0 +1,15 @@
+PewterCity_PokemonCenter_1F_Khanto_MapScripts::
+	map_script MAP_SCRIPT_ON_TRANSITION, PewterCity_PokemonCenter_1F_Khanto_OnTransition
+	map_script MAP_SCRIPT_ON_RESUME, CableClub_OnResume
+	.byte 0
+
+PewterCity_PokemonCenter_1F_Khanto_OnTransition::
+	setrespawn HEAL_LOCATION_PEWTER_CITY
+	end
+
+PewterCity_PokemonCenter_1F_Khanto_EventScript_Nurse::
+	lock
+	faceplayer
+	call EventScript_PkmnCenterNurse_Frlg
+	release
+	end

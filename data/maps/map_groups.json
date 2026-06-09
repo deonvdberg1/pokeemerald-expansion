@@ -43,6 +43,7 @@
     "gMapGroup_IndoorViridian_Khanto",
     "gMapGroup_IndoorViridian_Frlg",
     "gMapGroup_IndoorPewter_Frlg",
+    "gMapGroup_IndoorPewter_Khanto",
     "gMapGroup_IndoorCerulean_Frlg",
     "gMapGroup_IndoorLavender_Frlg",
     "gMapGroup_IndoorVermilion_Frlg",
@@ -967,6 +968,15 @@
     "PewterCity_PokemonCenter_1F_Frlg",
     "PewterCity_PokemonCenter_2F_Frlg",
     "PewterCity_House2_Frlg"
+  ],
+  "gMapGroup_IndoorPewter_Khanto": [
+    "PewterCity_Gym_Khanto",
+    "PewterCity_Mart_Khanto",
+    "PewterCity_PokemonCenter_1F_Khanto",
+    "PewterCity_House1_Khanto",
+    "PewterCity_House2_Khanto",
+    "PewterCity_Museum_1F_Khanto",
+    "PewterCity_Museum_2F_Khanto"
   ],
   "gMapGroup_IndoorCerulean_Frlg": [
     "CeruleanCity_House1_Frlg",

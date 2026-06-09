@@ -20,7 +20,7 @@
     },
     {
       "map": "MAP_PALLET_TOWN_KHANTO",
-      "offset": 0,
+      "offset": 2,
       "direction": "down"
     }
   ],
@@ -65,8 +65,12 @@
       "flag": "FLAG_HIDE_ROUTE1_KHANTO_POKE_BALL"
     }
   ],
-  "warp_events": [],
-  "coord_events": [],
+  "warp_events": [
+
+  ],
+  "coord_events": [
+
+  ],
   "bg_events": [
     {
       "type": "sign",

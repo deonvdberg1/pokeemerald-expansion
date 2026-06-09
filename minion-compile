@@ -1,0 +1,33 @@
+#!/bin/bash
+set -e
+
+export DEVKITPRO=/opt/devkitpro
+export DEVKITARM=/opt/devkitpro/devkitARM
+
+ROOT="$(cd "$(dirname "$0")" && pwd)"
+
+echo "🧪 Checking Porymap safety guard..."
+cd "$ROOT"
+python3 .porymap_guard.py --explain
+GUARD_EXIT=$?
+
+if [ $GUARD_EXIT -ne 0 ]; then
+    echo ""
+    echo "⚠️  Safety guard triggered (uncommitted Porymap work)."
+    echo "   Compilation doesn't touch these files, proceeding..."
+    echo ""
+fi
+
+echo "🔨 Building with make -j$(sysctl -n hw.logicalcpu)..."
+make -j$(sysctl -n hw.logicalcpu) 2>&1
+echo "✅ Build complete!"
+
+ROM="$ROOT/pokefirered.gba"
+if [ -f "$ROM" ]; then
+    echo "🎮 Launching in mGBA..."
+    open -a mGBA "$ROM"
+    echo "✅ mGBA launched!"
+else
+    echo "❌ ROM not found at $ROM"
+    exit 1
+fi

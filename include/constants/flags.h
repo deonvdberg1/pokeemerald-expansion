@@ -2442,19 +2442,24 @@
 #define FLAG_WORLD_MAP_SEVEN_ISLAND_SEVAULT_CANYON_TANOBY_KEY       0
 #define FLAG_WORLD_MAP_BIRTH_ISLAND_EXTERIOR                        0
 
+
+// Pewter Museum Khanto flags
+#define FLAG_HIDE_PEWTER_MUSEUM_OLD_AMBER                 0x501
+#define FLAG_HIDE_PEWTER_MUSEUM_AERODACTYL_SKELETON       0x502
+#define FLAG_HIDE_PEWTER_MUSEUM_KABUTOPS_SKELETON         0x503
+#define FLAG_RECEIVED_OLD_AMBER                           0x504
+#define FLAG_RECEIVED_HELIX_FOSSIL                        0x505
+#define FLAG_RECEIVED_DOME_FOSSIL                         0x506
+#define FLAG_ACCEPTED_OLD_AMBER_QUEST                  0x507
+#define FLAG_ACCEPTED_HELIX_FOSSIL_QUEST               0x508
+#define FLAG_ACCEPTED_DOME_FOSSIL_QUEST                0x509
+
 #endif
 
-#if TESTING
-#define TESTING_FLAGS_START                     0x5000
-#define TESTING_FLAG_SLEEP_CLAUSE               (TESTING_FLAGS_START + 0x0)
-#define TESTING_FLAG_INVERSE_BATTLE             (TESTING_FLAGS_START + 0x1)
-#define TESTING_FLAG_TRAINER_SLIDES             (TESTING_FLAGS_START + 0x2)
-#define TESTING_FLAG_UNUSED_3                   (TESTING_FLAGS_START + 0x3)
-#define TESTING_FLAG_UNUSED_4                   (TESTING_FLAGS_START + 0x4)
-#define TESTING_FLAG_UNUSED_5                   (TESTING_FLAGS_START + 0x5)
-#define TESTING_FLAG_UNUSED_6                   (TESTING_FLAGS_START + 0x6)
-#define TESTING_FLAG_UNUSED_7                   (TESTING_FLAGS_START + 0x7)
-#endif // TESTING
+
+
+
+
 
 
 #endif // GUARD_CONSTANTS_FLAGS_H

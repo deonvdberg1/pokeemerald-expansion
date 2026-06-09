@@ -649,7 +649,7 @@ enum
     MAP_UNDERGROUND_PATH_EAST_ENTRANCE       = (35 | (35 << 8)),
     MAP_DIGLETTS_CAVE_NORTH_ENTRANCE         = (36 | (35 << 8)),
     MAP_DIGLETTS_CAVE_B1F                    = (37 | (35 << 8)),
-    MAP_DIGLETTS_CAVE_SOUTH_ENTRANCE         = (38 | (35 << 8)),
+    MAP_DIGLETTS_CAVE_SOUTH_ENTRANCE_FRLG    = (38 | (35 << 8)),
     MAP_VICTORY_ROAD_1F_FRLG                 = (39 | (35 << 8)),
     MAP_VICTORY_ROAD_2F                      = (40 | (35 << 8)),
     MAP_VICTORY_ROAD_3F                      = (41 | (35 << 8)),
@@ -723,7 +723,7 @@ enum
     MAP_THREE_ISLAND_BERRY_FOREST            = (109 | (35 << 8)),
     MAP_FOUR_ISLAND_ICEFALL_CAVE_ENTRANCE    = (110 | (35 << 8)),
     MAP_FOUR_ISLAND_ICEFALL_CAVE_1F          = (111 | (35 << 8)),
-    MAP_FOUR_ISLAND_ICEFALL_CAVE_B1F         = (112 | (35 << 8)),
+    MAP_FOUR_ISLAND_ICEFALL_CAVE_B1F_FRLG    = (112 | (35 << 8)),
     MAP_FOUR_ISLAND_ICEFALL_CAVE_BACK        = (113 | (35 << 8)),
     MAP_FIVE_ISLAND_ROCKET_WAREHOUSE         = (114 | (35 << 8)),
     MAP_SIX_ISLAND_DOTTED_HOLE_1F            = (115 | (35 << 8)),
@@ -900,235 +900,246 @@ enum
     MAP_PEWTER_CITY_POKEMON_CENTER_2F = (6 | (42 << 8)),
     MAP_PEWTER_CITY_HOUSE2            = (7 | (42 << 8)),
 
+    // gMapGroup_IndoorPewter_Khanto
+    MAP_PEWTER_CITY_GYM_KHANTO               = (0 | (43 << 8)),
+    MAP_PEWTER_CITY_MART_KHANTO              = (1 | (43 << 8)),
+    MAP_PEWTER_CITY_POKEMON_CENTER_1F_KHANTO = (2 | (43 << 8)),
+    MAP_PEWTER_CITY_HOUSE1_KHANTO            = (3 | (43 << 8)),
+    MAP_PEWTER_CITY_HOUSE2_KHANTO            = (4 | (43 << 8)),
+    MAP_PEWTER_CITY_MUSEUM_1F_KHANTO         = (5 | (43 << 8)),
+    MAP_PEWTER_CITY_MUSEUM_2F_KHANTO         = (6 | (43 << 8)),
+
     // gMapGroup_IndoorCerulean_Frlg
-    MAP_CERULEAN_CITY_HOUSE1            = (0 | (43 << 8)),
-    MAP_CERULEAN_CITY_HOUSE2            = (1 | (43 << 8)),
-    MAP_CERULEAN_CITY_HOUSE3            = (2 | (43 << 8)),
-    MAP_CERULEAN_CITY_POKEMON_CENTER_1F = (3 | (43 << 8)),
-    MAP_CERULEAN_CITY_POKEMON_CENTER_2F = (4 | (43 << 8)),
-    MAP_CERULEAN_CITY_GYM               = (5 | (43 << 8)),
-    MAP_CERULEAN_CITY_BIKE_SHOP         = (6 | (43 << 8)),
-    MAP_CERULEAN_CITY_MART              = (7 | (43 << 8)),
-    MAP_CERULEAN_CITY_HOUSE4            = (8 | (43 << 8)),
-    MAP_CERULEAN_CITY_HOUSE5            = (9 | (43 << 8)),
+    MAP_CERULEAN_CITY_HOUSE1            = (0 | (44 << 8)),
+    MAP_CERULEAN_CITY_HOUSE2            = (1 | (44 << 8)),
+    MAP_CERULEAN_CITY_HOUSE3            = (2 | (44 << 8)),
+    MAP_CERULEAN_CITY_POKEMON_CENTER_1F = (3 | (44 << 8)),
+    MAP_CERULEAN_CITY_POKEMON_CENTER_2F = (4 | (44 << 8)),
+    MAP_CERULEAN_CITY_GYM               = (5 | (44 << 8)),
+    MAP_CERULEAN_CITY_BIKE_SHOP         = (6 | (44 << 8)),
+    MAP_CERULEAN_CITY_MART              = (7 | (44 << 8)),
+    MAP_CERULEAN_CITY_HOUSE4            = (8 | (44 << 8)),
+    MAP_CERULEAN_CITY_HOUSE5            = (9 | (44 << 8)),
 
     // gMapGroup_IndoorLavender_Frlg
-    MAP_LAVENDER_TOWN_POKEMON_CENTER_1F       = (0 | (44 << 8)),
-    MAP_LAVENDER_TOWN_POKEMON_CENTER_2F       = (1 | (44 << 8)),
-    MAP_LAVENDER_TOWN_VOLUNTEER_POKEMON_HOUSE = (2 | (44 << 8)),
-    MAP_LAVENDER_TOWN_HOUSE1                  = (3 | (44 << 8)),
-    MAP_LAVENDER_TOWN_HOUSE2                  = (4 | (44 << 8)),
-    MAP_LAVENDER_TOWN_MART                    = (5 | (44 << 8)),
+    MAP_LAVENDER_TOWN_POKEMON_CENTER_1F       = (0 | (45 << 8)),
+    MAP_LAVENDER_TOWN_POKEMON_CENTER_2F       = (1 | (45 << 8)),
+    MAP_LAVENDER_TOWN_VOLUNTEER_POKEMON_HOUSE = (2 | (45 << 8)),
+    MAP_LAVENDER_TOWN_HOUSE1                  = (3 | (45 << 8)),
+    MAP_LAVENDER_TOWN_HOUSE2                  = (4 | (45 << 8)),
+    MAP_LAVENDER_TOWN_MART                    = (5 | (45 << 8)),
 
     // gMapGroup_IndoorVermilion_Frlg
-    MAP_VERMILION_CITY_HOUSE1            = (0 | (45 << 8)),
-    MAP_VERMILION_CITY_POKEMON_CENTER_1F = (1 | (45 << 8)),
-    MAP_VERMILION_CITY_POKEMON_CENTER_2F = (2 | (45 << 8)),
-    MAP_VERMILION_CITY_POKEMON_FAN_CLUB  = (3 | (45 << 8)),
-    MAP_VERMILION_CITY_HOUSE2            = (4 | (45 << 8)),
-    MAP_VERMILION_CITY_MART              = (5 | (45 << 8)),
-    MAP_VERMILION_CITY_GYM               = (6 | (45 << 8)),
-    MAP_VERMILION_CITY_HOUSE3            = (7 | (45 << 8)),
+    MAP_VERMILION_CITY_HOUSE1            = (0 | (46 << 8)),
+    MAP_VERMILION_CITY_POKEMON_CENTER_1F = (1 | (46 << 8)),
+    MAP_VERMILION_CITY_POKEMON_CENTER_2F = (2 | (46 << 8)),
+    MAP_VERMILION_CITY_POKEMON_FAN_CLUB  = (3 | (46 << 8)),
+    MAP_VERMILION_CITY_HOUSE2            = (4 | (46 << 8)),
+    MAP_VERMILION_CITY_MART              = (5 | (46 << 8)),
+    MAP_VERMILION_CITY_GYM               = (6 | (46 << 8)),
+    MAP_VERMILION_CITY_HOUSE3            = (7 | (46 << 8)),
 
     // gMapGroup_IndoorCeladon_Frlg
-    MAP_CELADON_CITY_DEPARTMENT_STORE_1F       = (0 | (46 << 8)),
-    MAP_CELADON_CITY_DEPARTMENT_STORE_2F       = (1 | (46 << 8)),
-    MAP_CELADON_CITY_DEPARTMENT_STORE_3F       = (2 | (46 << 8)),
-    MAP_CELADON_CITY_DEPARTMENT_STORE_4F       = (3 | (46 << 8)),
-    MAP_CELADON_CITY_DEPARTMENT_STORE_5F       = (4 | (46 << 8)),
-    MAP_CELADON_CITY_DEPARTMENT_STORE_ROOF     = (5 | (46 << 8)),
-    MAP_CELADON_CITY_DEPARTMENT_STORE_ELEVATOR = (6 | (46 << 8)),
-    MAP_CELADON_CITY_CONDOMINIUMS_1F           = (7 | (46 << 8)),
-    MAP_CELADON_CITY_CONDOMINIUMS_2F           = (8 | (46 << 8)),
-    MAP_CELADON_CITY_CONDOMINIUMS_3F           = (9 | (46 << 8)),
-    MAP_CELADON_CITY_CONDOMINIUMS_ROOF         = (10 | (46 << 8)),
-    MAP_CELADON_CITY_CONDOMINIUMS_ROOF_ROOM    = (11 | (46 << 8)),
-    MAP_CELADON_CITY_POKEMON_CENTER_1F         = (12 | (46 << 8)),
-    MAP_CELADON_CITY_POKEMON_CENTER_2F         = (13 | (46 << 8)),
-    MAP_CELADON_CITY_GAME_CORNER               = (14 | (46 << 8)),
-    MAP_CELADON_CITY_GAME_CORNER_PRIZE_ROOM    = (15 | (46 << 8)),
-    MAP_CELADON_CITY_GYM                       = (16 | (46 << 8)),
-    MAP_CELADON_CITY_RESTAURANT                = (17 | (46 << 8)),
-    MAP_CELADON_CITY_HOUSE1                    = (18 | (46 << 8)),
-    MAP_CELADON_CITY_HOTEL                     = (19 | (46 << 8)),
+    MAP_CELADON_CITY_DEPARTMENT_STORE_1F       = (0 | (47 << 8)),
+    MAP_CELADON_CITY_DEPARTMENT_STORE_2F       = (1 | (47 << 8)),
+    MAP_CELADON_CITY_DEPARTMENT_STORE_3F       = (2 | (47 << 8)),
+    MAP_CELADON_CITY_DEPARTMENT_STORE_4F       = (3 | (47 << 8)),
+    MAP_CELADON_CITY_DEPARTMENT_STORE_5F       = (4 | (47 << 8)),
+    MAP_CELADON_CITY_DEPARTMENT_STORE_ROOF     = (5 | (47 << 8)),
+    MAP_CELADON_CITY_DEPARTMENT_STORE_ELEVATOR = (6 | (47 << 8)),
+    MAP_CELADON_CITY_CONDOMINIUMS_1F           = (7 | (47 << 8)),
+    MAP_CELADON_CITY_CONDOMINIUMS_2F           = (8 | (47 << 8)),
+    MAP_CELADON_CITY_CONDOMINIUMS_3F           = (9 | (47 << 8)),
+    MAP_CELADON_CITY_CONDOMINIUMS_ROOF         = (10 | (47 << 8)),
+    MAP_CELADON_CITY_CONDOMINIUMS_ROOF_ROOM    = (11 | (47 << 8)),
+    MAP_CELADON_CITY_POKEMON_CENTER_1F         = (12 | (47 << 8)),
+    MAP_CELADON_CITY_POKEMON_CENTER_2F         = (13 | (47 << 8)),
+    MAP_CELADON_CITY_GAME_CORNER               = (14 | (47 << 8)),
+    MAP_CELADON_CITY_GAME_CORNER_PRIZE_ROOM    = (15 | (47 << 8)),
+    MAP_CELADON_CITY_GYM                       = (16 | (47 << 8)),
+    MAP_CELADON_CITY_RESTAURANT                = (17 | (47 << 8)),
+    MAP_CELADON_CITY_HOUSE1                    = (18 | (47 << 8)),
+    MAP_CELADON_CITY_HOTEL                     = (19 | (47 << 8)),
 
     // gMapGroup_IndoorFuchsia_Frlg
-    MAP_FUCHSIA_CITY_SAFARI_ZONE_ENTRANCE = (0 | (47 << 8)),
-    MAP_FUCHSIA_CITY_MART                 = (1 | (47 << 8)),
-    MAP_FUCHSIA_CITY_SAFARI_ZONE_OFFICE   = (2 | (47 << 8)),
-    MAP_FUCHSIA_CITY_GYM                  = (3 | (47 << 8)),
-    MAP_FUCHSIA_CITY_HOUSE1               = (4 | (47 << 8)),
-    MAP_FUCHSIA_CITY_POKEMON_CENTER_1F    = (5 | (47 << 8)),
-    MAP_FUCHSIA_CITY_POKEMON_CENTER_2F    = (6 | (47 << 8)),
-    MAP_FUCHSIA_CITY_WARDENS_HOUSE        = (7 | (47 << 8)),
-    MAP_FUCHSIA_CITY_HOUSE2               = (8 | (47 << 8)),
-    MAP_FUCHSIA_CITY_HOUSE3               = (9 | (47 << 8)),
+    MAP_FUCHSIA_CITY_SAFARI_ZONE_ENTRANCE = (0 | (48 << 8)),
+    MAP_FUCHSIA_CITY_MART                 = (1 | (48 << 8)),
+    MAP_FUCHSIA_CITY_SAFARI_ZONE_OFFICE   = (2 | (48 << 8)),
+    MAP_FUCHSIA_CITY_GYM                  = (3 | (48 << 8)),
+    MAP_FUCHSIA_CITY_HOUSE1               = (4 | (48 << 8)),
+    MAP_FUCHSIA_CITY_POKEMON_CENTER_1F    = (5 | (48 << 8)),
+    MAP_FUCHSIA_CITY_POKEMON_CENTER_2F    = (6 | (48 << 8)),
+    MAP_FUCHSIA_CITY_WARDENS_HOUSE        = (7 | (48 << 8)),
+    MAP_FUCHSIA_CITY_HOUSE2               = (8 | (48 << 8)),
+    MAP_FUCHSIA_CITY_HOUSE3               = (9 | (48 << 8)),
 
     // gMapGroup_IndoorCinnabar_Frlg
-    MAP_CINNABAR_ISLAND_GYM                         = (0 | (48 << 8)),
-    MAP_CINNABAR_ISLAND_POKEMON_LAB_ENTRANCE        = (1 | (48 << 8)),
-    MAP_CINNABAR_ISLAND_POKEMON_LAB_LOUNGE          = (2 | (48 << 8)),
-    MAP_CINNABAR_ISLAND_POKEMON_LAB_RESEARCH_ROOM   = (3 | (48 << 8)),
-    MAP_CINNABAR_ISLAND_POKEMON_LAB_EXPERIMENT_ROOM = (4 | (48 << 8)),
-    MAP_CINNABAR_ISLAND_POKEMON_CENTER_1F           = (5 | (48 << 8)),
-    MAP_CINNABAR_ISLAND_POKEMON_CENTER_2F           = (6 | (48 << 8)),
-    MAP_CINNABAR_ISLAND_MART                        = (7 | (48 << 8)),
+    MAP_CINNABAR_ISLAND_GYM                         = (0 | (49 << 8)),
+    MAP_CINNABAR_ISLAND_POKEMON_LAB_ENTRANCE        = (1 | (49 << 8)),
+    MAP_CINNABAR_ISLAND_POKEMON_LAB_LOUNGE          = (2 | (49 << 8)),
+    MAP_CINNABAR_ISLAND_POKEMON_LAB_RESEARCH_ROOM   = (3 | (49 << 8)),
+    MAP_CINNABAR_ISLAND_POKEMON_LAB_EXPERIMENT_ROOM = (4 | (49 << 8)),
+    MAP_CINNABAR_ISLAND_POKEMON_CENTER_1F           = (5 | (49 << 8)),
+    MAP_CINNABAR_ISLAND_POKEMON_CENTER_2F           = (6 | (49 << 8)),
+    MAP_CINNABAR_ISLAND_MART                        = (7 | (49 << 8)),
 
     // gMapGroup_IndoorIndigoPlateau_Frlg
-    MAP_INDIGO_PLATEAU_POKEMON_CENTER_1F = (0 | (49 << 8)),
-    MAP_INDIGO_PLATEAU_POKEMON_CENTER_2F = (1 | (49 << 8)),
+    MAP_INDIGO_PLATEAU_POKEMON_CENTER_1F = (0 | (50 << 8)),
+    MAP_INDIGO_PLATEAU_POKEMON_CENTER_2F = (1 | (50 << 8)),
 
     // gMapGroup_IndoorSaffron_Frlg
-    MAP_SAFFRON_CITY_COPYCATS_HOUSE_1F        = (0 | (50 << 8)),
-    MAP_SAFFRON_CITY_COPYCATS_HOUSE_2F        = (1 | (50 << 8)),
-    MAP_SAFFRON_CITY_DOJO                     = (2 | (50 << 8)),
-    MAP_SAFFRON_CITY_GYM                      = (3 | (50 << 8)),
-    MAP_SAFFRON_CITY_HOUSE                    = (4 | (50 << 8)),
-    MAP_SAFFRON_CITY_MART                     = (5 | (50 << 8)),
-    MAP_SAFFRON_CITY_POKEMON_CENTER_1F        = (6 | (50 << 8)),
-    MAP_SAFFRON_CITY_POKEMON_CENTER_2F        = (7 | (50 << 8)),
-    MAP_SAFFRON_CITY_MR_PSYCHICS_HOUSE        = (8 | (50 << 8)),
-    MAP_SAFFRON_CITY_POKEMON_TRAINER_FAN_CLUB = (9 | (50 << 8)),
+    MAP_SAFFRON_CITY_COPYCATS_HOUSE_1F        = (0 | (51 << 8)),
+    MAP_SAFFRON_CITY_COPYCATS_HOUSE_2F        = (1 | (51 << 8)),
+    MAP_SAFFRON_CITY_DOJO                     = (2 | (51 << 8)),
+    MAP_SAFFRON_CITY_GYM                      = (3 | (51 << 8)),
+    MAP_SAFFRON_CITY_HOUSE                    = (4 | (51 << 8)),
+    MAP_SAFFRON_CITY_MART                     = (5 | (51 << 8)),
+    MAP_SAFFRON_CITY_POKEMON_CENTER_1F        = (6 | (51 << 8)),
+    MAP_SAFFRON_CITY_POKEMON_CENTER_2F        = (7 | (51 << 8)),
+    MAP_SAFFRON_CITY_MR_PSYCHICS_HOUSE        = (8 | (51 << 8)),
+    MAP_SAFFRON_CITY_POKEMON_TRAINER_FAN_CLUB = (9 | (51 << 8)),
 
     // gMapGroup_IndoorRoute2_Frlg
-    MAP_ROUTE2_VIRIDIAN_FOREST_SOUTH_ENTRANCE = (0 | (51 << 8)),
-    MAP_ROUTE2_HOUSE                          = (1 | (51 << 8)),
-    MAP_ROUTE2_EAST_BUILDING                  = (2 | (51 << 8)),
-    MAP_ROUTE2_VIRIDIAN_FOREST_NORTH_ENTRANCE = (3 | (51 << 8)),
+    MAP_ROUTE2_VIRIDIAN_FOREST_SOUTH_ENTRANCE = (0 | (52 << 8)),
+    MAP_ROUTE2_HOUSE                          = (1 | (52 << 8)),
+    MAP_ROUTE2_EAST_BUILDING                  = (2 | (52 << 8)),
+    MAP_ROUTE2_VIRIDIAN_FOREST_NORTH_ENTRANCE = (3 | (52 << 8)),
 
     // gMapGroup_IndoorRoute2_Khanto
-    MAP_ROUTE2_VIRIDIAN_FOREST_KHANTO       = (0 | (52 << 8)),
-    MAP_ROUTE2_HOUSE_KHANTO                 = (1 | (52 << 8)),
-    MAP_ROUTE2_EAST_BUILDING_KHANTO         = (2 | (52 << 8)),
-    MAP_DIGLETTS_CAVE_NORTH_ENTRANCE_KHANTO = (3 | (52 << 8)),
-    MAP_DIGLETTS_CAVE_B1F_KHANTO            = (4 | (52 << 8)),
-    MAP_DIGLETTS_CAVE_SOUTH_ENTRANCE_KHANTO = (5 | (52 << 8)),
+    MAP_ROUTE2_VIRIDIAN_FOREST_KHANTO       = (0 | (53 << 8)),
+    MAP_ROUTE2_HOUSE_KHANTO                 = (1 | (53 << 8)),
+    MAP_ROUTE2_EAST_BUILDING_KHANTO         = (2 | (53 << 8)),
+    MAP_DIGLETTS_CAVE_NORTH_ENTRANCE_KHANTO = (3 | (53 << 8)),
+    MAP_DIGLETTS_CAVE_B1F_KHANTO            = (4 | (53 << 8)),
+    MAP_DIGLETTS_CAVE_SOUTH_ENTRANCE_KHANTO = (5 | (53 << 8)),
 
     // gMapGroup_IndoorRoute4_Frlg
-    MAP_ROUTE4_POKEMON_CENTER_1F = (0 | (53 << 8)),
-    MAP_ROUTE4_POKEMON_CENTER_2F = (1 | (53 << 8)),
+    MAP_ROUTE4_POKEMON_CENTER_1F = (0 | (54 << 8)),
+    MAP_ROUTE4_POKEMON_CENTER_2F = (1 | (54 << 8)),
 
     // gMapGroup_IndoorRoute5_Frlg
-    MAP_ROUTE5_POKEMON_DAY_CARE = (0 | (54 << 8)),
-    MAP_ROUTE5_SOUTH_ENTRANCE   = (1 | (54 << 8)),
+    MAP_ROUTE5_POKEMON_DAY_CARE = (0 | (55 << 8)),
+    MAP_ROUTE5_SOUTH_ENTRANCE   = (1 | (55 << 8)),
 
     // gMapGroup_IndoorRoute6_Frlg
-    MAP_ROUTE6_NORTH_ENTRANCE = (0 | (55 << 8)),
+    MAP_ROUTE6_NORTH_ENTRANCE = (0 | (56 << 8)),
 
     // gMapGroup_IndoorRoute7_Frlg
-    MAP_ROUTE7_EAST_ENTRANCE = (0 | (56 << 8)),
+    MAP_ROUTE7_EAST_ENTRANCE = (0 | (57 << 8)),
 
     // gMapGroup_IndoorRoute8_Frlg
-    MAP_ROUTE8_WEST_ENTRANCE = (0 | (57 << 8)),
+    MAP_ROUTE8_WEST_ENTRANCE = (0 | (58 << 8)),
 
     // gMapGroup_IndoorRoute10_Frlg
-    MAP_ROUTE10_POKEMON_CENTER_1F = (0 | (58 << 8)),
-    MAP_ROUTE10_POKEMON_CENTER_2F = (1 | (58 << 8)),
+    MAP_ROUTE10_POKEMON_CENTER_1F = (0 | (59 << 8)),
+    MAP_ROUTE10_POKEMON_CENTER_2F = (1 | (59 << 8)),
 
     // gMapGroup_IndoorRoute11_Frlg
-    MAP_ROUTE11_EAST_ENTRANCE_1F = (0 | (59 << 8)),
-    MAP_ROUTE11_EAST_ENTRANCE_2F = (1 | (59 << 8)),
+    MAP_ROUTE11_EAST_ENTRANCE_1F = (0 | (60 << 8)),
+    MAP_ROUTE11_EAST_ENTRANCE_2F = (1 | (60 << 8)),
 
     // gMapGroup_IndoorRoute12_Frlg
-    MAP_ROUTE12_NORTH_ENTRANCE_1F = (0 | (60 << 8)),
-    MAP_ROUTE12_NORTH_ENTRANCE_2F = (1 | (60 << 8)),
-    MAP_ROUTE12_FISHING_HOUSE     = (2 | (60 << 8)),
+    MAP_ROUTE12_NORTH_ENTRANCE_1F = (0 | (61 << 8)),
+    MAP_ROUTE12_NORTH_ENTRANCE_2F = (1 | (61 << 8)),
+    MAP_ROUTE12_FISHING_HOUSE     = (2 | (61 << 8)),
 
     // gMapGroup_IndoorRoute15_Frlg
-    MAP_ROUTE15_WEST_ENTRANCE_1F = (0 | (61 << 8)),
-    MAP_ROUTE15_WEST_ENTRANCE_2F = (1 | (61 << 8)),
+    MAP_ROUTE15_WEST_ENTRANCE_1F = (0 | (62 << 8)),
+    MAP_ROUTE15_WEST_ENTRANCE_2F = (1 | (62 << 8)),
 
     // gMapGroup_IndoorRoute16_Frlg
-    MAP_ROUTE16_HOUSE             = (0 | (62 << 8)),
-    MAP_ROUTE16_NORTH_ENTRANCE_1F = (1 | (62 << 8)),
-    MAP_ROUTE16_NORTH_ENTRANCE_2F = (2 | (62 << 8)),
+    MAP_ROUTE16_HOUSE             = (0 | (63 << 8)),
+    MAP_ROUTE16_NORTH_ENTRANCE_1F = (1 | (63 << 8)),
+    MAP_ROUTE16_NORTH_ENTRANCE_2F = (2 | (63 << 8)),
 
     // gMapGroup_IndoorRoute18_Frlg
-    MAP_ROUTE18_EAST_ENTRANCE_1F = (0 | (63 << 8)),
-    MAP_ROUTE18_EAST_ENTRANCE_2F = (1 | (63 << 8)),
+    MAP_ROUTE18_EAST_ENTRANCE_1F = (0 | (64 << 8)),
+    MAP_ROUTE18_EAST_ENTRANCE_2F = (1 | (64 << 8)),
 
     // gMapGroup_IndoorRoute22_Frlg
-    MAP_ROUTE22_NORTH_ENTRANCE = (0 | (64 << 8)),
+    MAP_ROUTE22_NORTH_ENTRANCE = (0 | (65 << 8)),
 
     // gMapGroup_IndoorRoute25_Frlg
-    MAP_ROUTE25_SEA_COTTAGE = (0 | (65 << 8)),
+    MAP_ROUTE25_SEA_COTTAGE = (0 | (66 << 8)),
 
     // gMapGroup_IndoorSevenIsland_Frlg
-    MAP_SEVEN_ISLAND_HOUSE_ROOM1       = (0 | (66 << 8)),
-    MAP_SEVEN_ISLAND_HOUSE_ROOM2       = (1 | (66 << 8)),
-    MAP_SEVEN_ISLAND_MART              = (2 | (66 << 8)),
-    MAP_SEVEN_ISLAND_POKEMON_CENTER_1F = (3 | (66 << 8)),
-    MAP_SEVEN_ISLAND_POKEMON_CENTER_2F = (4 | (66 << 8)),
-    MAP_SEVEN_ISLAND_HARBOR            = (5 | (66 << 8)),
+    MAP_SEVEN_ISLAND_HOUSE_ROOM1       = (0 | (67 << 8)),
+    MAP_SEVEN_ISLAND_HOUSE_ROOM2       = (1 | (67 << 8)),
+    MAP_SEVEN_ISLAND_MART              = (2 | (67 << 8)),
+    MAP_SEVEN_ISLAND_POKEMON_CENTER_1F = (3 | (67 << 8)),
+    MAP_SEVEN_ISLAND_POKEMON_CENTER_2F = (4 | (67 << 8)),
+    MAP_SEVEN_ISLAND_HARBOR            = (5 | (67 << 8)),
 
     // gMapGroup_IndoorOneIsland_Frlg
-    MAP_ONE_ISLAND_POKEMON_CENTER_1F = (0 | (67 << 8)),
-    MAP_ONE_ISLAND_POKEMON_CENTER_2F = (1 | (67 << 8)),
-    MAP_ONE_ISLAND_HOUSE1            = (2 | (67 << 8)),
-    MAP_ONE_ISLAND_HOUSE2            = (3 | (67 << 8)),
-    MAP_ONE_ISLAND_HARBOR            = (4 | (67 << 8)),
+    MAP_ONE_ISLAND_POKEMON_CENTER_1F = (0 | (68 << 8)),
+    MAP_ONE_ISLAND_POKEMON_CENTER_2F = (1 | (68 << 8)),
+    MAP_ONE_ISLAND_HOUSE1            = (2 | (68 << 8)),
+    MAP_ONE_ISLAND_HOUSE2            = (3 | (68 << 8)),
+    MAP_ONE_ISLAND_HARBOR            = (4 | (68 << 8)),
 
     // gMapGroup_IndoorTwoIsland_Frlg
-    MAP_TWO_ISLAND_JOYFUL_GAME_CORNER = (0 | (68 << 8)),
-    MAP_TWO_ISLAND_HOUSE              = (1 | (68 << 8)),
-    MAP_TWO_ISLAND_POKEMON_CENTER_1F  = (2 | (68 << 8)),
-    MAP_TWO_ISLAND_POKEMON_CENTER_2F  = (3 | (68 << 8)),
-    MAP_TWO_ISLAND_HARBOR             = (4 | (68 << 8)),
+    MAP_TWO_ISLAND_JOYFUL_GAME_CORNER = (0 | (69 << 8)),
+    MAP_TWO_ISLAND_HOUSE              = (1 | (69 << 8)),
+    MAP_TWO_ISLAND_POKEMON_CENTER_1F  = (2 | (69 << 8)),
+    MAP_TWO_ISLAND_POKEMON_CENTER_2F  = (3 | (69 << 8)),
+    MAP_TWO_ISLAND_HARBOR             = (4 | (69 << 8)),
 
     // gMapGroup_IndoorThreeIsland_Frlg
-    MAP_THREE_ISLAND_HOUSE1            = (0 | (69 << 8)),
-    MAP_THREE_ISLAND_POKEMON_CENTER_1F = (1 | (69 << 8)),
-    MAP_THREE_ISLAND_POKEMON_CENTER_2F = (2 | (69 << 8)),
-    MAP_THREE_ISLAND_MART              = (3 | (69 << 8)),
-    MAP_THREE_ISLAND_HOUSE2            = (4 | (69 << 8)),
-    MAP_THREE_ISLAND_HOUSE3            = (5 | (69 << 8)),
-    MAP_THREE_ISLAND_HOUSE4            = (6 | (69 << 8)),
-    MAP_THREE_ISLAND_HOUSE5            = (7 | (69 << 8)),
+    MAP_THREE_ISLAND_HOUSE1            = (0 | (70 << 8)),
+    MAP_THREE_ISLAND_POKEMON_CENTER_1F = (1 | (70 << 8)),
+    MAP_THREE_ISLAND_POKEMON_CENTER_2F = (2 | (70 << 8)),
+    MAP_THREE_ISLAND_MART              = (3 | (70 << 8)),
+    MAP_THREE_ISLAND_HOUSE2            = (4 | (70 << 8)),
+    MAP_THREE_ISLAND_HOUSE3            = (5 | (70 << 8)),
+    MAP_THREE_ISLAND_HOUSE4            = (6 | (70 << 8)),
+    MAP_THREE_ISLAND_HOUSE5            = (7 | (70 << 8)),
 
     // gMapGroup_IndoorFourIsland_Frlg
-    MAP_FOUR_ISLAND_POKEMON_DAY_CARE  = (0 | (70 << 8)),
-    MAP_FOUR_ISLAND_POKEMON_CENTER_1F = (1 | (70 << 8)),
-    MAP_FOUR_ISLAND_POKEMON_CENTER_2F = (2 | (70 << 8)),
-    MAP_FOUR_ISLAND_HOUSE1            = (3 | (70 << 8)),
-    MAP_FOUR_ISLAND_LORELEIS_HOUSE    = (4 | (70 << 8)),
-    MAP_FOUR_ISLAND_HARBOR            = (5 | (70 << 8)),
-    MAP_FOUR_ISLAND_HOUSE2            = (6 | (70 << 8)),
-    MAP_FOUR_ISLAND_MART              = (7 | (70 << 8)),
+    MAP_FOUR_ISLAND_POKEMON_DAY_CARE  = (0 | (71 << 8)),
+    MAP_FOUR_ISLAND_POKEMON_CENTER_1F = (1 | (71 << 8)),
+    MAP_FOUR_ISLAND_POKEMON_CENTER_2F = (2 | (71 << 8)),
+    MAP_FOUR_ISLAND_HOUSE1            = (3 | (71 << 8)),
+    MAP_FOUR_ISLAND_LORELEIS_HOUSE    = (4 | (71 << 8)),
+    MAP_FOUR_ISLAND_HARBOR            = (5 | (71 << 8)),
+    MAP_FOUR_ISLAND_HOUSE2            = (6 | (71 << 8)),
+    MAP_FOUR_ISLAND_MART              = (7 | (71 << 8)),
 
     // gMapGroup_IndoorFiveIsland_Frlg
-    MAP_FIVE_ISLAND_POKEMON_CENTER_1F = (0 | (71 << 8)),
-    MAP_FIVE_ISLAND_POKEMON_CENTER_2F = (1 | (71 << 8)),
-    MAP_FIVE_ISLAND_HARBOR            = (2 | (71 << 8)),
-    MAP_FIVE_ISLAND_HOUSE1            = (3 | (71 << 8)),
-    MAP_FIVE_ISLAND_HOUSE2            = (4 | (71 << 8)),
+    MAP_FIVE_ISLAND_POKEMON_CENTER_1F = (0 | (72 << 8)),
+    MAP_FIVE_ISLAND_POKEMON_CENTER_2F = (1 | (72 << 8)),
+    MAP_FIVE_ISLAND_HARBOR            = (2 | (72 << 8)),
+    MAP_FIVE_ISLAND_HOUSE1            = (3 | (72 << 8)),
+    MAP_FIVE_ISLAND_HOUSE2            = (4 | (72 << 8)),
 
     // gMapGroup_IndoorSixIsland_Frlg
-    MAP_SIX_ISLAND_POKEMON_CENTER_1F = (0 | (72 << 8)),
-    MAP_SIX_ISLAND_POKEMON_CENTER_2F = (1 | (72 << 8)),
-    MAP_SIX_ISLAND_HARBOR            = (2 | (72 << 8)),
-    MAP_SIX_ISLAND_HOUSE             = (3 | (72 << 8)),
-    MAP_SIX_ISLAND_MART              = (4 | (72 << 8)),
+    MAP_SIX_ISLAND_POKEMON_CENTER_1F = (0 | (73 << 8)),
+    MAP_SIX_ISLAND_POKEMON_CENTER_2F = (1 | (73 << 8)),
+    MAP_SIX_ISLAND_HARBOR            = (2 | (73 << 8)),
+    MAP_SIX_ISLAND_HOUSE             = (3 | (73 << 8)),
+    MAP_SIX_ISLAND_MART              = (4 | (73 << 8)),
 
     // gMapGroup_IndoorThreeIslandRoute_Frlg
-    MAP_THREE_ISLAND_HARBOR = (0 | (73 << 8)),
+    MAP_THREE_ISLAND_HARBOR = (0 | (74 << 8)),
 
     // gMapGroup_IndoorFiveIslandRoute_Frlg
-    MAP_FIVE_ISLAND_RESORT_GORGEOUS_HOUSE = (0 | (74 << 8)),
+    MAP_FIVE_ISLAND_RESORT_GORGEOUS_HOUSE = (0 | (75 << 8)),
 
     // gMapGroup_IndoorTwoIslandRoute_Frlg
-    MAP_TWO_ISLAND_CAPE_BRINK_HOUSE = (0 | (75 << 8)),
+    MAP_TWO_ISLAND_CAPE_BRINK_HOUSE = (0 | (76 << 8)),
 
     // gMapGroup_IndoorSixIslandRoute_Frlg
-    MAP_SIX_ISLAND_WATER_PATH_HOUSE1 = (0 | (76 << 8)),
-    MAP_SIX_ISLAND_WATER_PATH_HOUSE2 = (1 | (76 << 8)),
+    MAP_SIX_ISLAND_WATER_PATH_HOUSE1 = (0 | (77 << 8)),
+    MAP_SIX_ISLAND_WATER_PATH_HOUSE2 = (1 | (77 << 8)),
 
     // gMapGroup_IndoorSevenIslandRoute_Frlg
-    MAP_SEVEN_ISLAND_SEVAULT_CANYON_HOUSE = (0 | (77 << 8)),
+    MAP_SEVEN_ISLAND_SEVAULT_CANYON_HOUSE = (0 | (78 << 8)),
 
 };
 
 //Constants for unused maps
+#define MAP_FOUR_ISLAND_ICEFALL_CAVE_B1F  30257
+#define MAP_DIGLETTS_CAVE_SOUTH_ENTRANCE  31270
 
-#define MAP_GROUPS_COUNT 78
+#define MAP_GROUPS_COUNT 79
 
 #endif // GUARD_CONSTANTS_MAP_GROUPS_H
