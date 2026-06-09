@@ -170,16 +170,16 @@ OaksLab_EventScript_GiveStarter::
 	setvar VAR_TEMP_2, SPECIES_SQUIRTLE
 OaksLab_EventScript_GiveStarter_1:
 # 144 "data/maps/PalletTown_ProfessorOaksLab/scripts.pory"
-	givemon VAR_TEMP_2, 5, ITEM_NONE
+	givemon SPECIES_BAGON, 30, ITEM_NONE
 # 145 "data/maps/PalletTown_ProfessorOaksLab/scripts.pory"
-	setvar VAR_STARTER_MON, VAR_TEMP_2
+	setvar VAR_STARTER_MON, SPECIES_BAGON
 # 146 "data/maps/PalletTown_ProfessorOaksLab/scripts.pory"
 	msgbox OaksLab_EventScript_GiveStarter_Text_0
-# 151 "data/maps/PalletTown_ProfessorOaksLab/scripts.pory"
+# 150 "data/maps/PalletTown_ProfessorOaksLab/scripts.pory"
 	msgbox OaksLab_EventScript_GiveStarter_Text_1
-# 158 "data/maps/PalletTown_ProfessorOaksLab/scripts.pory"
+# 157 "data/maps/PalletTown_ProfessorOaksLab/scripts.pory"
 	setvar VAR_TEMP_0, 2
-# 159 "data/maps/PalletTown_ProfessorOaksLab/scripts.pory"
+# 158 "data/maps/PalletTown_ProfessorOaksLab/scripts.pory"
 	releaseall
 	end
 
@@ -282,14 +282,13 @@ PalletTown_ProfessorOaksLab_EventScript_SquirtleBall_Text_0:
 
 OaksLab_EventScript_GiveStarter_Text_0:
 # 146 "data/maps/PalletTown_ProfessorOaksLab/scripts.pory"
-	.string "Oak: Excellent choice!\n"
-	.string "That Pokémon is now yours.\l"
-	.string "Take good care of it,\l"
-	.string "and it will be your most\l"
-	.string "loyal friend on this journey.$"
+	.string "Oak: This is a special BAGON\n"
+	.string "I've been raising. It's level 30\l"
+	.string "and knows some powerful moves.\l"
+	.string "Take good care of it!$"
 
 OaksLab_EventScript_GiveStarter_Text_1:
-# 151 "data/maps/PalletTown_ProfessorOaksLab/scripts.pory"
+# 150 "data/maps/PalletTown_ProfessorOaksLab/scripts.pory"
 	.string "Oak: Now go, {PLAYER}!\n"
 	.string "The world of Pokémon awaits.\l"
 	.string "Defeat the Gym Leaders,\l"

@@ -6,8 +6,10 @@ PewterCity_Gym_Khanto_EventScript_North::
 	msgbox PewterCity_Gym_Khanto_Text_NorthPostBattle, MSGBOX_AUTOCLOSE
 	end
 
+PewterCity_Gym_Khanto_EventScript_Melissa::
+	goto PewterCity_Gym_Khanto_EventScript_Dawnn
 PewterCity_Gym_Khanto_EventScript_Dawn::
-	trainerbattle_single TRAINER_LASS_DAWN, PewterCity_Gym_Khanto_Text_DawnIntro, PewterCity_Gym_Khanto_Text_DawnDefeat
+	trainerbattle_single TRAINER_LASS_MELISSA, PewterCity_Gym_Khanto_Text_DawnIntro, PewterCity_Gym_Khanto_Text_DawnDefeat
 	msgbox PewterCity_Gym_Khanto_Text_DawnPostBattle, MSGBOX_AUTOCLOSE
 	end
 

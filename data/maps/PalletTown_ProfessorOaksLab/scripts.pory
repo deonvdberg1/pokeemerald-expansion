@@ -141,13 +141,12 @@ script OaksLab_EventScript_GiveStarter {
             setvar(VAR_TEMP_2, SPECIES_SQUIRTLE)
         }
     }
-    givemon(VAR_TEMP_2, 5, ITEM_NONE)
-    setvar(VAR_STARTER_MON, VAR_TEMP_2)
-    msgbox("Oak: Excellent choice!
-           That Pokémon is now yours.
-           Take good care of it,
-           and it will be your most
-           loyal friend on this journey.")
+    givemon(SPECIES_BAGON, 30, ITEM_NONE)
+    setvar(VAR_STARTER_MON, SPECIES_BAGON)
+    msgbox("Oak: This is a special BAGON
+           I've been raising. It's level 30
+           and knows some powerful moves.
+           Take good care of it!")
     msgbox("Oak: Now go, {PLAYER}!
            The world of Pokémon awaits.
            Defeat the Gym Leaders,

@@ -129,3 +129,9 @@ PewterCity_Museum_1F_Khanto_Text_AmberDisplay:
 	.string "containing ancient genetic material.\p"
 	.string "Estimated age: 100 million years.\p"
 	.string "Please do not touch.$"
+
+PewterCity_Museum_1F_Khanto_Text_AmberPostReward:
+	.string "Go on, take that OLD AMBER to\n"
+	.string "the POKEMON LAB on CINNABAR.\p"
+	.string "They'll be able to do wonders\n"
+	.string "with it!$"

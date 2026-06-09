@@ -107,7 +107,7 @@ Route2_ViridianForest_Khanto_Text_CharliePostBattle:
 
 @ ========== Sign Messages ==========
 
-Route2_ViridianForest_Khanto_EventScript_TrainerTips1:
+Route2_ViridianForest_Khanto_EventScript_TrainerTips1::
 	msgbox Route2_ViridianForest_Khanto_Text_TrainerTips1, MSGBOX_SIGN
 	end
 
@@ -116,7 +116,7 @@ Route2_ViridianForest_Khanto_Text_TrainerTips1:
 	.string "Weaken POKéMON before you catch them!\n"
 	.string "They're easier to catch when hurt!$"
 
-Route2_ViridianForest_Khanto_EventScript_TrainerTips2:
+Route2_ViridianForest_Khanto_EventScript_TrainerTips2::
 	msgbox Route2_ViridianForest_Khanto_Text_TrainerTips2, MSGBOX_SIGN
 	end
 
@@ -125,7 +125,7 @@ Route2_ViridianForest_Khanto_Text_TrainerTips2:
 	.string "Some POKéMON evolve at certain levels.\n"
 	.string "Keep training them to see!$"
 
-Route2_ViridianForest_Khanto_EventScript_TrainerTips3:
+Route2_ViridianForest_Khanto_EventScript_TrainerTips3::
 	msgbox Route2_ViridianForest_Khanto_Text_TrainerTips3, MSGBOX_SIGN
 	end
 
@@ -134,7 +134,7 @@ Route2_ViridianForest_Khanto_Text_TrainerTips3:
 	.string "POKéMON are easier to catch when\n"
 	.string "they are asleep or poisoned!$"
 
-Route2_ViridianForest_Khanto_EventScript_TrainerTips4:
+Route2_ViridianForest_Khanto_EventScript_TrainerTips4::
 	msgbox Route2_ViridianForest_Khanto_Text_TrainerTips4, MSGBOX_SIGN
 	end
 
@@ -143,7 +143,7 @@ Route2_ViridianForest_Khanto_Text_TrainerTips4:
 	.string "Heal your POKéMON at a POKéMON CENTER\n"
 	.string "before venturing into tall grass!$"
 
-Route2_ViridianForest_Khanto_EventScript_TrainerTips5:
+Route2_ViridianForest_Khanto_EventScript_TrainerTips5::
 	msgbox Route2_ViridianForest_Khanto_Text_TrainerTips5, MSGBOX_SIGN
 	end
 
@@ -152,7 +152,7 @@ Route2_ViridianForest_Khanto_Text_TrainerTips5:
 	.string "Use ANTIDOTES to cure poisoning\n"
 	.string "from BUG POKéMON attacks!$"
 
-Route2_ViridianForest_Khanto_EventScript_ExitSign:
+Route2_ViridianForest_Khanto_EventScript_ExitSign::
 	msgbox Route2_ViridianForest_Khanto_Text_ExitSign, MSGBOX_SIGN
 	end
 
