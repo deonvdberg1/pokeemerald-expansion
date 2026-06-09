@@ -4447,7 +4447,7 @@
       "width": 11,
       "height": 9,
       "primary_tileset": "gTileset_BuildingFrlg",
-      "secondary_tileset": "gTileset_GenericBuilding2",
+      "secondary_tileset": "gTileset_GenericBuilding",
       "border_filepath": "data/layouts/House2_Frlg/border.bin",
       "blockdata_filepath": "data/layouts/House2_Frlg/map.bin"
     },
@@ -4456,8 +4456,8 @@
       "name": "PokemonCenter_1F_FRLG_Layout",
       "width": 15,
       "height": 10,
-      "primary_tileset": "gTileset_BuildingFrlg",
-      "secondary_tileset": "gTileset_PokemonCenterFrlg",
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_PokemonCenter",
       "border_filepath": "data/layouts/PokemonCenter_1F_Frlg/border.bin",
       "blockdata_filepath": "data/layouts/PokemonCenter_1F_Frlg/map.bin"
     },
@@ -4474,10 +4474,10 @@
     {
       "id": "LAYOUT_MART_FRLG",
       "name": "Mart_Layout_FRLG",
-      "width": 11,
-      "height": 9,
-      "primary_tileset": "gTileset_BuildingFrlg",
-      "secondary_tileset": "gTileset_Mart",
+      "width": 10,
+      "height": 8,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Shop",
       "border_filepath": "data/layouts/Mart_Frlg/border.bin",
       "blockdata_filepath": "data/layouts/Mart_Frlg/map.bin"
     },
@@ -8064,10 +8064,10 @@
     {
       "id": "LAYOUT_PEWTERCITY_GYM_KHANTO",
       "name": "PewterCity_Gym_Khanto_Layout",
-      "width": 13,
+      "width": 11,
       "height": 11,
       "primary_tileset": "gTileset_Building",
-      "secondary_tileset": "gTileset_PewterGymKhanto",
+      "secondary_tileset": "gTileset_RustboroGym",
       "border_filepath": "data/layouts/PewterCity_Gym_Khanto/border.bin",
       "blockdata_filepath": "data/layouts/PewterCity_Gym_Khanto/map.bin"
     },

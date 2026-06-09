@@ -56,13 +56,6 @@
   ],
   "warp_events": [
     {
-      "x": 3,
-      "y": 7,
-      "elevation": 3,
-      "dest_map": "MAP_PEWTER_CITY_KHANTO",
-      "dest_warp_id": "2"
-    },
-    {
       "x": 4,
       "y": 7,
       "elevation": 3,

@@ -10,6 +10,6 @@ PewterCity_PokemonCenter_1F_Khanto_OnTransition::
 PewterCity_PokemonCenter_1F_Khanto_EventScript_Nurse::
 	lock
 	faceplayer
-	call EventScript_PkmnCenterNurse_Frlg
+	call Common_EventScript_PkmnCenterNurse
 	release
 	end

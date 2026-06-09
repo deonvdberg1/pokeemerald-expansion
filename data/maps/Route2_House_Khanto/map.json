@@ -1,7 +1,7 @@
 {
   "id": "MAP_ROUTE2_HOUSE_KHANTO",
   "name": "Route2_House_Khanto",
-  "layout": "LAYOUT_HOUSE2_FRLG",
+  "layout": "LAYOUT_HOUSE2",
   "music": "MUS_RG_PEWTER",
   "region_map_section": "MAPSEC_ROUTE_2",
   "requires_flash": false,

@@ -172,7 +172,7 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_ROCKET_M",
-      "x": 66,
+      "x": 67,
       "y": 49,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_UP",

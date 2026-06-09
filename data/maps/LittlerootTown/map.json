@@ -145,11 +145,18 @@
       "dest_warp_id": "1"
     },
     {
-      "x": 7,
-      "y": 16,
+      "x": 6,
+      "y": 18,
       "elevation": 0,
       "dest_map": "MAP_LITTLEROOT_TOWN_PROFESSOR_BIRCHS_LAB",
       "dest_warp_id": "0"
+    },
+    {
+      "x": 7,
+      "y": 16,
+      "elevation": 0,
+      "dest_map": "MAP_PALLET_TOWN_KHANTO",
+      "dest_warp_id": "3"
     }
   ],
   "coord_events": [

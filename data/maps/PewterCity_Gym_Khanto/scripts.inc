@@ -1,4 +1,71 @@
 PewterCity_Gym_Khanto_MapScripts::
+@ ----- 4 New Gym Trainers -----
+
+PewterCity_Gym_Khanto_EventScript_North::
+	trainerbattle_single TRAINER_HIKER_NORTH, PewterCity_Gym_Khanto_Text_NorthIntro, PewterCity_Gym_Khanto_Text_NorthDefeat
+	msgbox PewterCity_Gym_Khanto_Text_NorthPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+PewterCity_Gym_Khanto_EventScript_Dawn::
+	trainerbattle_single TRAINER_LASS_DAWN, PewterCity_Gym_Khanto_Text_DawnIntro, PewterCity_Gym_Khanto_Text_DawnDefeat
+	msgbox PewterCity_Gym_Khanto_Text_DawnPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+PewterCity_Gym_Khanto_EventScript_Sam::
+	trainerbattle_single TRAINER_YOUNGSTER_SAM, PewterCity_Gym_Khanto_Text_SamIntro, PewterCity_Gym_Khanto_Text_SamDefeat
+	msgbox PewterCity_Gym_Khanto_Text_SamPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+PewterCity_Gym_Khanto_EventScript_Troy::
+	trainerbattle_single TRAINER_HIKER_TROY, PewterCity_Gym_Khanto_Text_TroyIntro, PewterCity_Gym_Khanto_Text_TroyDefeat
+	msgbox PewterCity_Gym_Khanto_Text_TroyPostBattle, MSGBOX_AUTOCLOSE
+	end
+
+PewterCity_Gym_Khanto_Text_NorthIntro:
+	.string "Hmph! Think you can beat me and\n"
+	.string "make it to BROCK? Not a chance!$"
+
+PewterCity_Gym_Khanto_Text_NorthDefeat:
+	.string "Gah! My GEODUDE wasn't enough!$"
+
+PewterCity_Gym_Khanto_Text_NorthPostBattle:
+	.string "BROCK's ONIX is way tougher than\n"
+	.string "my GEODUDE. You'd better prepare!$"
+
+PewterCity_Gym_Khanto_Text_DawnIntro:
+	.string "I'm training my DIGLETT and\n"
+	.string "SANDSHREW to be the best!$"
+
+PewterCity_Gym_Khanto_Text_DawnDefeat:
+	.string "Aw, they're still not strong\n"
+	.string "enough...$"
+
+PewterCity_Gym_Khanto_Text_DawnPostBattle:
+	.string "SANDSHREW evolves into a tough\n"
+	.string "SANDSLASH, you know!$"
+
+PewterCity_Gym_Khanto_Text_SamIntro:
+	.string "My CUBONE is super tough!\n"
+	.string "Let me show you!$"
+
+PewterCity_Gym_Khanto_Text_SamDefeat:
+	.string "CUBONE! No!$"
+
+PewterCity_Gym_Khanto_Text_SamPostBattle:
+	.string "If my CUBONE evolves into a\n"
+	.string "MAROWAK, it'll be unstoppable!$"
+
+PewterCity_Gym_Khanto_Text_TroyIntro:
+	.string "I've been digging in caves my\n"
+	.string "whole life! My POKEMON are tough!$"
+
+PewterCity_Gym_Khanto_Text_TroyDefeat:
+	.string "You're tougher than a rock slide!$"
+
+PewterCity_Gym_Khanto_Text_TroyPostBattle:
+	.string "BROCK is the real challenge.\n"
+	.string "Don't get overconfident!$"
+
 	.byte 0
 
 PewterCity_Gym_Khanto_EventScript_Brock::
