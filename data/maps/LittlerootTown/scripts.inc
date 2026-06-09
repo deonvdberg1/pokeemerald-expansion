@@ -960,3 +960,33 @@ LittlerootTown_Text_BirchSomethingToShowYouAtLab:
 	.string "I have something to show you.\n"
 	.string "Let's go to my LAB.$"
 
+
+
+@ Bagon test ball - gives a level 30 Bagon and sets all badges for obedience
+LittlerootTown_EventScript_BagonBall::
+	lock
+	faceplayer
+	msgbox LittlerootTown_Text_BagonFound, MSGBOX_DEFAULT
+
+	setflag FLAG_BADGE01_GET
+	setflag FLAG_BADGE02_GET
+	setflag FLAG_BADGE03_GET
+	setflag FLAG_BADGE04_GET
+	setflag FLAG_BADGE05_GET
+	setflag FLAG_BADGE06_GET
+	setflag FLAG_BADGE07_GET
+	setflag FLAG_BADGE08_GET
+	givemon SPECIES_BAGON, 30, ITEM_NONE
+	msgbox LittlerootTown_Text_ReceivedBagon, MSGBOX_DEFAULT
+	setflag FLAG_HIDE_LITTLEROOT_BAGON_BALL
+	release
+	end
+
+LittlerootTown_Text_BagonFound:
+	.string "A lone POKE BALL sits on the\n"
+	.string "ground. It seems out of place...$"
+
+LittlerootTown_Text_ReceivedBagon:
+	.string "The POKE BALL contained a\n"
+	.string "level 30 BAGON!\p"
+	.string "(All badges set for testing)$"

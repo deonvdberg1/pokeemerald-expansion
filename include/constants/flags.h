@@ -2460,6 +2460,7 @@
 #define FLAG_HIDE_VIRIDIAN_FOREST_ROCKET1               0x50E
 #define FLAG_HIDE_VIRIDIAN_FOREST_ROCKET2               0x50F
 #define FLAG_HIDE_VIRIDIAN_FOREST_SCYTHER               0x510
+#define FLAG_HIDE_LITTLEROOT_BAGON_BALL                  0x517
 
 #endif
 
