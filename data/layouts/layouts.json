@@ -7964,7 +7964,7 @@
     {
       "id": "LAYOUT_VIRIDIAN_FOREST_KHANTO",
       "name": "ViridianForest_Khanto_Layout",
-      "width": 54,
+      "width": 70,
       "height": 66,
       "primary_tileset": "gTileset_GeneralORAS",
       "secondary_tileset": "gTileset_Petalburg",

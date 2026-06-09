@@ -2453,6 +2453,9 @@
 #define FLAG_ACCEPTED_OLD_AMBER_QUEST                  0x507
 #define FLAG_ACCEPTED_HELIX_FOSSIL_QUEST               0x508
 #define FLAG_ACCEPTED_DOME_FOSSIL_QUEST                0x509
+#define FLAG_AMBER_QUEST_COMPLETE                       0x50A
+#define FLAG_HELIX_QUEST_COMPLETE                       0x50B
+#define FLAG_DOME_QUEST_COMPLETE                        0x50C
 
 #endif
 

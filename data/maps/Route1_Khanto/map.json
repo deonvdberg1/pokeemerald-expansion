@@ -65,12 +65,8 @@
       "flag": "FLAG_HIDE_ROUTE1_KHANTO_POKE_BALL"
     }
   ],
-  "warp_events": [
-
-  ],
-  "coord_events": [
-
-  ],
+  "warp_events": [],
+  "coord_events": [],
   "bg_events": [
     {
       "type": "sign",

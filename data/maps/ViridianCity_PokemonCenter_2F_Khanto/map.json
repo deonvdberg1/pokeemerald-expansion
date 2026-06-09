@@ -2,7 +2,7 @@
   "id": "MAP_VIRIDIAN_CITY_POKEMON_CENTER_2F_KHANTO",
   "name": "ViridianCity_PokemonCenter_2F_Khanto",
   "layout": "LAYOUT_VIRIDIAN_CITY_POKEMON_CENTER_2F_KHANTO",
-  "music": "MUS_POKEMON_CENTER",
+  "music": "MUS_POKE_CENTER",
   "region_map_section": "MAPSEC_VIRIDIAN_CITY",
   "requires_flash": false,
   "weather": "WEATHER_NONE",

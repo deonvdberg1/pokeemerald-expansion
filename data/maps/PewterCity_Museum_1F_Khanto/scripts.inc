@@ -28,12 +28,11 @@ PewterCity_Museum_1F_Khanto_EventScript_AcceptAmberQuest::
 	end
 
 PewterCity_Museum_1F_Khanto_EventScript_QuestInProgress::
+	goto_if_set FLAG_AMBER_QUEST_COMPLETE, PewterCity_Museum_1F_Khanto_EventScript_GiveOldAmber
 	msgbox PewterCity_Museum_1F_Khanto_Text_AmberQuestReminder, MSGBOX_DEFAULT
 	release
 	end
 
-@ (Placeholder: when actual quest is complete, set FLAG_RECEIVED_OLD_AMBER and call this)
-@ For now this is how the reward is given - triggered when FLAG_ACCEPTED + FLAG_RECEIVED are set
 PewterCity_Museum_1F_Khanto_EventScript_GiveOldAmber::
 	lock
 	faceplayer
@@ -64,91 +63,68 @@ PewterCity_Museum_1F_Khanto_EventScript_AmberDisplay::
 
 @ ----- TEXT -----
 PewterCity_Museum_1F_Khanto_Text_Welcome:
-	.string "Welcome to the PEWTER MUSEUM
-"
+	.string "Welcome to the PEWTER MUSEUM\n"
 	.string "of SCIENCE!\p"
-	.string "Our fossil collection spans
-"
+	.string "Our fossil collection spans\n"
 	.string "millions of years of history.\p"
 	.string "Feel free to explore both floors!$"
 
 PewterCity_Museum_1F_Khanto_Text_AmberQuestIntro:
-	.string "Ah, a TRAINER! You're just the
-"
-	.string "sort of person I've been hoping
-"
+	.string "Ah, a TRAINER! You're just the\n"
+	.string "sort of person I've been hoping\n"
 	.string "to run into.\p"
-	.string "I'm researching the genetic
-"
+	.string "I'm researching the genetic\n"
 	.string "potential of OLD AMBER.\p"
-	.string "But I need a sample from deep
-"
-	.string "within MT. MOON to complete
-"
+	.string "But I need a sample from deep\n"
+	.string "within MT. MOON to complete\n"
 	.string "my research.\p"
-	.string "It's dangerous in there, but a
-"
-	.string "skilled TRAINER like you could
-"
+	.string "It's dangerous in there, but a\n"
+	.string "skilled TRAINER like you could\n"
 	.string "manage it easily.\p"
-	.string "If you bring me what I need,
-"
-	.string "I'll reward you with a piece
-"
+	.string "If you bring me what I need,\n"
+	.string "I'll reward you with a piece\n"
 	.string "of genuine OLD AMBER!\p"
-	.string "What do you say — interested?$"
+	.string "What do you say - interested?$"
 
 PewterCity_Museum_1F_Khanto_Text_AmberQuestDecline:
-	.string "Oh, I see… Well, if you change
-"
+	.string "Oh, I see... Well, if you change\n"
 	.string "your mind, the offer stands.$"
 
 PewterCity_Museum_1F_Khanto_Text_AmberQuestAccepted:
-	.string "Excellent! I knew you had
-"
+	.string "Excellent! I knew you had\n"
 	.string "adventurous spirit!\p"
-	.string "Deep inside MT. MOON, there
-"
+	.string "Deep inside MT. MOON, there\n"
 	.string "are ancient amber deposits.\p"
-	.string "Bring me some, and the OLD
-"
+	.string "Bring me some, and the OLD\n"
 	.string "AMBER is yours!$"
 
 PewterCity_Museum_1F_Khanto_Text_AmberQuestReminder:
-	.string "Back already? Did you find
-"
-	.string "the amber deposits in
-"
+	.string "Back already? Did you find\n"
+	.string "the amber deposits in\n"
 	.string "MT. MOON?\p"
 	.string "I'm counting on you!$"
 
 PewterCity_Museum_1F_Khanto_Text_AmberQuestComplete:
-	.string "You found it! This is exactly
-"
+	.string "You found it! This is exactly\n"
 	.string "what I needed!\p"
-	.string "As promised, the OLD AMBER
-"
+	.string "As promised, the OLD AMBER\n"
 	.string "is yours!$"
 
 PewterCity_Museum_1F_Khanto_Text_NoRoom:
 	.string "Oh! Your BAG is completely full.\p"
-	.string "Make some room and come back
-"
+	.string "Make some room and come back\n"
 	.string "to claim your reward.$"
 
 PewterCity_Museum_1F_Khanto_Text_AlreadyGotAmber:
 	.string "You still have that OLD AMBER?\p"
-	.string "I've heard there's a laboratory
-"
-	.string "in CINNABAR ISLAND that can
-"
+	.string "I've heard there's a laboratory\n"
+	.string "in CINNABAR ISLAND that can\n"
 	.string "revive POKEMON from fossils!\p"
 	.string "You should give it a try!$"
 
 PewterCity_Museum_1F_Khanto_Text_AmberDisplay:
 	.string "OLD AMBER\p"
-	.string "A piece of petrified tree sap
-"
+	.string "A piece of petrified tree sap\n"
 	.string "containing ancient genetic material.\p"
 	.string "Estimated age: 100 million years.\p"
 	.string "Please do not touch.$"
