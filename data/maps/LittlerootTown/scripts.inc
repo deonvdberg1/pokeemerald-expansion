@@ -976,7 +976,7 @@ LittlerootTown_EventScript_BagonBall::
 	setflag FLAG_BADGE06_GET
 	setflag FLAG_BADGE07_GET
 	setflag FLAG_BADGE08_GET
-	givemon SPECIES_BAGON, 30, ITEM_NONE
+	givemon SPECIES_SALAMENCE, 55, ITEM_NONE
 	msgbox LittlerootTown_Text_ReceivedBagon, MSGBOX_DEFAULT
 	setflag FLAG_HIDE_LITTLEROOT_BAGON_BALL
 	release
@@ -988,5 +988,5 @@ LittlerootTown_Text_BagonFound:
 
 LittlerootTown_Text_ReceivedBagon:
 	.string "The POKE BALL contained a\n"
-	.string "level 30 BAGON!\p"
+	.string "level 55 SALAMENCE!\p"
 	.string "(All badges set for testing)$"
