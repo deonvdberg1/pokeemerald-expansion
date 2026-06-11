@@ -3,19 +3,29 @@
 
 mapscripts PalletTown_Khanto_MapScripts {
     MAP_SCRIPT_ON_TRANSITION {
-        call_if_eq(VAR_TEMP_5, 1, PalletTown_EventScript_TruckArrival)
+        call_if_eq(VAR_TEMP_5, 1, PalletTown_EventScript_SetTruckArrival)
+    }
+    MAP_SCRIPT_ON_FRAME_TABLE {
+        if (var(VAR_TEMP_5) == 1) {
+            call(PalletTown_EventScript_TruckArrivalScene)
+        }
     }
     MAP_SCRIPT_ON_RESUME {
     }
 }
 
+script PalletTown_EventScript_SetTruckArrival {
+    setvar(VAR_TEMP_5, 0)
+    return
+}
+
 // ─────────────────────────────────────────────
-// TRUCK ARRIVAL — First time you arrive from Hoenn
+// TRUCK ARRIVAL SCENE
 // ─────────────────────────────────────────────
 
-script PalletTown_EventScript_TruckArrival {
+script PalletTown_EventScript_TruckArrivalScene {
     lockall
-    msgbox("You arrived in PALLET TOWN!\lThe truck driver waves goodbye and drives off.")
+    msgbox("You arrived in PALLET TOWN!\pThe truck driver waves goodbye and drives off.")
     closemessage
     applymovement(OBJ_EVENT_ID_PLAYER, Common_Movement_WalkInPlaceFasterDown)
     waitmovement(0)
@@ -29,27 +39,19 @@ script PalletTown_EventScript_TruckArrival {
 // OBJECT EVENT SCRIPTS (NPCs)
 // ─────────────────────────────────────────────
 
-// Prof. Oak — Greets you on arrival
 script PalletTown_ProfOak {
     lock
     faceplayer
-    msgbox("Ah, you must be {PLAYER}!
-           Your mother called ahead.\p
-           I've been expecting you!
-           Come see me in my lab just up ahead.")
-    msgbox("It's the building with the big sign.\n
-           I'll set you up with a POKÉMON!")
+    msgbox("Ah, you must be {PLAYER}!\pYour mother called ahead. I've been expecting you!\pCome see me in my lab just up ahead.")
+    msgbox("I'll set you up with a POKEMON!")
     release
     end
 }
 
-// Generic town NPCs
 script PalletTown_Woman {
     lock
     faceplayer
-    msgbox("Welcome to Pallet Town!
-           It's a quiet little town,
-           but we love it.")
+    msgbox("Welcome to Pallet Town!\nIt's a quiet little town, but we love it.")
     release
     end
 }
@@ -57,8 +59,7 @@ script PalletTown_Woman {
 script PalletTown_Man {
     lock
     faceplayer
-    msgbox("Prof. Oak's lab is up ahead.
-           He's a world-famous Pokémon researcher!")
+    msgbox("Prof. Oak's lab is up ahead.\nHe's a world-famous POKEMON researcher!")
     release
     end
 }
@@ -66,15 +67,13 @@ script PalletTown_Man {
 script PalletTown_Fisherman {
     lock
     faceplayer
-    msgbox("If you walk in tall grass,
-           wild Pokémon will appear.
-           Be sure to have some Pokéballs handy!")
+    msgbox("If you walk in tall grass,\nwild POKEMON will appear.\lBe sure to have some POKE BALLS handy!")
     release
     end
 }
 
 // ─────────────────────────────────────────────
-// BG EVENT SCRIPTS (Signs, etc.)
+// BG EVENT SCRIPTS (Signs)
 // ─────────────────────────────────────────────
 
 script PalletTown_TownSign {
@@ -88,7 +87,7 @@ script PalletTown_TownSign {
 script PalletTown_OakLabSign {
     lock
     faceplayer
-    msgbox("OAK POKÉMON RESEARCH LAB\lWhere dreams begin.")
+    msgbox("OAK POKEMON RESEARCH LAB\lWhere dreams begin.")
     release
     end
 }

@@ -42,10 +42,10 @@ PalletTown_ProfessorOaksLab_EventScript_BulbasaurBall::
 	msgbox PalletTown_ProfessorOaksLab_Text_AreYouSure, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, NO, PalletTown_ProfessorOaksLab_EventScript_TakeYourTime
 	hidemonpic
-	givemon SPECIES_BULBASAUR, 5, ITEM_NONE
-	goto_if_eq VAR_RESULT, MON_GIVEN_TO_PARTY, PalletTown_ProfessorOaksLab_EventScript_StarterGiven
-	goto_if_eq VAR_RESULT, MON_GIVEN_TO_PC, PalletTown_ProfessorOaksLab_EventScript_StarterGiven
-	msgbox PalletTown_ProfessorOaksLab_Text_NoRoom, MSGBOX_DEFAULT
+	givemon SPECIES_BULBASAUR, 5
+	goto_if_eq VAR_RESULT, 0, PalletTown_ProfessorOaksLab_EventScript_StarterGiven
+	goto_if_eq VAR_RESULT, 1, PalletTown_ProfessorOaksLab_EventScript_StarterGiven
+	goto_if_eq VAR_RESULT, 2, PalletTown_ProfessorOaksLab_EventScript_NoRoom
 	release
 	end
 
@@ -58,10 +58,10 @@ PalletTown_ProfessorOaksLab_EventScript_CharmanderBall::
 	msgbox PalletTown_ProfessorOaksLab_Text_AreYouSure, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, NO, PalletTown_ProfessorOaksLab_EventScript_TakeYourTime
 	hidemonpic
-	givemon SPECIES_CHARMANDER, 5, ITEM_NONE
-	goto_if_eq VAR_RESULT, MON_GIVEN_TO_PARTY, PalletTown_ProfessorOaksLab_EventScript_StarterGiven
-	goto_if_eq VAR_RESULT, MON_GIVEN_TO_PC, PalletTown_ProfessorOaksLab_EventScript_StarterGiven
-	msgbox PalletTown_ProfessorOaksLab_Text_NoRoom, MSGBOX_DEFAULT
+	givemon SPECIES_CHARMANDER, 5
+	goto_if_eq VAR_RESULT, 0, PalletTown_ProfessorOaksLab_EventScript_StarterGiven
+	goto_if_eq VAR_RESULT, 1, PalletTown_ProfessorOaksLab_EventScript_StarterGiven
+	goto_if_eq VAR_RESULT, 2, PalletTown_ProfessorOaksLab_EventScript_NoRoom
 	release
 	end
 
@@ -74,10 +74,10 @@ PalletTown_ProfessorOaksLab_EventScript_SquirtleBall::
 	msgbox PalletTown_ProfessorOaksLab_Text_AreYouSure, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, NO, PalletTown_ProfessorOaksLab_EventScript_TakeYourTime
 	hidemonpic
-	givemon SPECIES_SQUIRTLE, 5, ITEM_NONE
-	goto_if_eq VAR_RESULT, MON_GIVEN_TO_PARTY, PalletTown_ProfessorOaksLab_EventScript_StarterGiven
-	goto_if_eq VAR_RESULT, MON_GIVEN_TO_PC, PalletTown_ProfessorOaksLab_EventScript_StarterGiven
-	msgbox PalletTown_ProfessorOaksLab_Text_NoRoom, MSGBOX_DEFAULT
+	givemon SPECIES_SQUIRTLE, 5
+	goto_if_eq VAR_RESULT, 0, PalletTown_ProfessorOaksLab_EventScript_StarterGiven
+	goto_if_eq VAR_RESULT, 1, PalletTown_ProfessorOaksLab_EventScript_StarterGiven
+	goto_if_eq VAR_RESULT, 2, PalletTown_ProfessorOaksLab_EventScript_NoRoom
 	release
 	end
 
@@ -153,6 +153,11 @@ PalletTown_ProfessorOaksLab_EventScript_TakeYourTime::
 PalletTown_ProfessorOaksLab_Text_TakeYourTime:
 	.string "Take your time, {PLAYER}.\n"
 	.string "Choose the one that speaks to you.$"
+
+PalletTown_ProfessorOaksLab_EventScript_NoRoom::
+	msgbox PalletTown_ProfessorOaksLab_Text_NoRoom, MSGBOX_DEFAULT
+	release
+	end
 
 PalletTown_ProfessorOaksLab_Text_NoRoom:
 	.string "Your party and PC are full!\n"

@@ -1,154 +1,121 @@
+@ Pallet Town — Scripts (Khanto)
+@ Map: MAP_PALLET_TOWN_KHANTO
+
 PalletTown_Khanto_MapScripts::
-# 5 "data/maps/PalletTown_Khanto/scripts.pory"
-	map_script MAP_SCRIPT_ON_TRANSITION, PalletTown_Khanto_MapScripts_MAP_SCRIPT_ON_TRANSITION
-# 8 "data/maps/PalletTown_Khanto/scripts.pory"
-	map_script MAP_SCRIPT_ON_RESUME, PalletTown_Khanto_MapScripts_MAP_SCRIPT_ON_RESUME
+	map_script MAP_SCRIPT_ON_TRANSITION, PalletTown_Khanto_OnTransition
+	map_script MAP_SCRIPT_ON_FRAME_TABLE, PalletTown_Khanto_OnFrame
 	.byte 0
 
-PalletTown_Khanto_MapScripts_MAP_SCRIPT_ON_TRANSITION:
-# 6 "data/maps/PalletTown_Khanto/scripts.pory"
-	call_if_eq VAR_TEMP_5, 1, PalletTown_EventScript_TruckArrival
-	return
+PalletTown_Khanto_OnTransition::
+	call_if_eq VAR_TEMP_5, 1, PalletTown_EventScript_SetTruckArrival
+	end
 
-PalletTown_Khanto_MapScripts_MAP_SCRIPT_ON_RESUME:
-	return
-
-
-PalletTown_EventScript_TruckArrival::
-# 17 "data/maps/PalletTown_Khanto/scripts.pory"
-	lockall
-# 18 "data/maps/PalletTown_Khanto/scripts.pory"
-	msgbox PalletTown_EventScript_TruckArrival_Text_0
-# 19 "data/maps/PalletTown_Khanto/scripts.pory"
-	closemessage
-# 20 "data/maps/PalletTown_Khanto/scripts.pory"
-	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkInPlaceFasterDown
-# 21 "data/maps/PalletTown_Khanto/scripts.pory"
-	waitmovement 0
-# 22 "data/maps/PalletTown_Khanto/scripts.pory"
-	msgbox PalletTown_EventScript_TruckArrival_Text_1
-# 23 "data/maps/PalletTown_Khanto/scripts.pory"
+PalletTown_EventScript_SetTruckArrival::
 	setvar VAR_TEMP_5, 0
-# 24 "data/maps/PalletTown_Khanto/scripts.pory"
+	return
+
+PalletTown_Khanto_OnFrame::
+	map_script_2 VAR_TEMP_5, 1, PalletTown_EventScript_TruckArrivalScene
+	.2byte 0
+
+PalletTown_EventScript_TruckArrivalScene::
+	lockall
+	msgbox PalletTown_Text_TruckArrival, MSGBOX_DEFAULT
+	closemessage
+	msgbox PalletTown_Text_SeeOak, MSGBOX_DEFAULT
+	closemessage
+	setvar VAR_TEMP_5, 0
 	releaseall
 	end
 
+@ ----- NPC Scripts -----
 
 PalletTown_ProfOak::
-# 34 "data/maps/PalletTown_Khanto/scripts.pory"
 	lock
-# 35 "data/maps/PalletTown_Khanto/scripts.pory"
 	faceplayer
-# 36 "data/maps/PalletTown_Khanto/scripts.pory"
-	msgbox PalletTown_ProfOak_Text_0
-# 40 "data/maps/PalletTown_Khanto/scripts.pory"
-	msgbox PalletTown_ProfOak_Text_1
-# 42 "data/maps/PalletTown_Khanto/scripts.pory"
+	msgbox PalletTown_Text_OakGreeting, MSGBOX_DEFAULT
+	msgbox PalletTown_Text_OakLabDirections, MSGBOX_DEFAULT
 	release
 	end
-
 
 PalletTown_Woman::
-# 48 "data/maps/PalletTown_Khanto/scripts.pory"
 	lock
-# 49 "data/maps/PalletTown_Khanto/scripts.pory"
 	faceplayer
-# 50 "data/maps/PalletTown_Khanto/scripts.pory"
-	msgbox PalletTown_Woman_Text_0
-# 53 "data/maps/PalletTown_Khanto/scripts.pory"
+	msgbox PalletTown_Text_WomanGreeting, MSGBOX_DEFAULT
 	release
 	end
-
 
 PalletTown_Man::
-# 58 "data/maps/PalletTown_Khanto/scripts.pory"
 	lock
-# 59 "data/maps/PalletTown_Khanto/scripts.pory"
 	faceplayer
-# 60 "data/maps/PalletTown_Khanto/scripts.pory"
-	msgbox PalletTown_Man_Text_0
-# 62 "data/maps/PalletTown_Khanto/scripts.pory"
+	msgbox PalletTown_Text_ManGreeting, MSGBOX_DEFAULT
 	release
 	end
-
 
 PalletTown_Fisherman::
-# 67 "data/maps/PalletTown_Khanto/scripts.pory"
 	lock
-# 68 "data/maps/PalletTown_Khanto/scripts.pory"
 	faceplayer
-# 69 "data/maps/PalletTown_Khanto/scripts.pory"
-	msgbox PalletTown_Fisherman_Text_0
-# 72 "data/maps/PalletTown_Khanto/scripts.pory"
+	msgbox PalletTown_Text_FishermanTips, MSGBOX_DEFAULT
 	release
 	end
 
+@ ----- Signs -----
 
 PalletTown_TownSign::
-# 81 "data/maps/PalletTown_Khanto/scripts.pory"
 	lock
-# 82 "data/maps/PalletTown_Khanto/scripts.pory"
 	faceplayer
-# 83 "data/maps/PalletTown_Khanto/scripts.pory"
-	msgbox PalletTown_TownSign_Text_0
-# 84 "data/maps/PalletTown_Khanto/scripts.pory"
-	release
+	msgbox PalletTown_Text_TownSign, MSGBOX_SIGN
 	end
-
 
 PalletTown_OakLabSign::
-# 89 "data/maps/PalletTown_Khanto/scripts.pory"
 	lock
-# 90 "data/maps/PalletTown_Khanto/scripts.pory"
 	faceplayer
-# 91 "data/maps/PalletTown_Khanto/scripts.pory"
-	msgbox PalletTown_OakLabSign_Text_0
-# 92 "data/maps/PalletTown_Khanto/scripts.pory"
-	release
+	msgbox PalletTown_Text_OakLabSign, MSGBOX_SIGN
 	end
 
+@ ===== TEXT =====
 
-PalletTown_EventScript_TruckArrival_Text_0:
-# 18 "data/maps/PalletTown_Khanto/scripts.pory"
-	.string "You arrived in PALLET TOWN!\lThe truck driver waves goodbye and drives off.$"
+PalletTown_Text_TruckArrival:
+	.string "You arrived in PALLET TOWN!\p"
+	.string "The truck driver waves goodbye\n"
+	.string "and drives off.$"
 
-PalletTown_EventScript_TruckArrival_Text_1:
-# 22 "data/maps/PalletTown_Khanto/scripts.pory"
-	.string "There's PROFESSOR OAK's lab\njust ahead.\lBetter go introduce yourself.$"
+PalletTown_Text_SeeOak:
+	.string "There's PROFESSOR OAK's lab\n"
+	.string "just ahead.\p"
+	.string "Better go introduce yourself.$"
 
-PalletTown_ProfOak_Text_0:
-# 36 "data/maps/PalletTown_Khanto/scripts.pory"
-	.string "Ah, you must be {PLAYER}!\n"
-	.string "Your mother called ahead.\p\l"
-	.string "I've been expecting you!\l"
-	.string "Come see me in my lab just up ahead.$"
+PalletTown_Text_OakGreeting:
+	.string "Ah, you must be {PLAYER}!\p"
+	.string "Your mother called ahead.\n"
+	.string "I've been expecting you!\p"
+	.string "Come see me in my lab\n"
+	.string "just up ahead.$"
 
-PalletTown_ProfOak_Text_1:
-# 40 "data/maps/PalletTown_Khanto/scripts.pory"
-	.string "It's the building with the big sign.\n\n"
-	.string "I'll set you up with a POKÉMON!$"
+PalletTown_Text_OakLabDirections:
+	.string "I'll set you up with a\n"
+	.string "POKEMON of your own!$"
 
-PalletTown_Woman_Text_0:
-# 50 "data/maps/PalletTown_Khanto/scripts.pory"
-	.string "Welcome to Pallet Town!\n"
-	.string "It's a quiet little town,\l"
+PalletTown_Text_WomanGreeting:
+	.string "Welcome to PALLET TOWN!\n"
+	.string "It's a quiet little town,\n"
 	.string "but we love it.$"
 
-PalletTown_Man_Text_0:
-# 60 "data/maps/PalletTown_Khanto/scripts.pory"
-	.string "Prof. Oak's lab is up ahead.\n"
-	.string "He's a world-famous Pokémon researcher!$"
+PalletTown_Text_ManGreeting:
+	.string "PROF. OAK's lab is up ahead.\n"
+	.string "He's a world-famous POKEMON\n"
+	.string "researcher!$"
 
-PalletTown_Fisherman_Text_0:
-# 69 "data/maps/PalletTown_Khanto/scripts.pory"
+PalletTown_Text_FishermanTips:
 	.string "If you walk in tall grass,\n"
-	.string "wild Pokémon will appear.\l"
-	.string "Be sure to have some Pokéballs handy!$"
+	.string "wild POKEMON will appear.\p"
+	.string "Be sure to have some\n"
+	.string "POKE BALLS handy!$"
 
-PalletTown_TownSign_Text_0:
-# 83 "data/maps/PalletTown_Khanto/scripts.pory"
-	.string "PALLET TOWN\lA place of new beginnings.$"
+PalletTown_Text_TownSign:
+	.string "PALLET TOWN\n"
+	.string "A place of new beginnings.$"
 
-PalletTown_OakLabSign_Text_0:
-# 91 "data/maps/PalletTown_Khanto/scripts.pory"
-	.string "OAK POKÉMON RESEARCH LAB\lWhere dreams begin.$"
+PalletTown_Text_OakLabSign:
+	.string "OAK POKEMON RESEARCH LAB\n"
+	.string "Where dreams begin.$"

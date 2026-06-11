@@ -160,7 +160,8 @@ LittlerootTown_EventScript_TruckAlreadyUsed::
 	return
 
 LittlerootTown_EventScript_TruckToPallet::
-	lockall
+	lock
+	faceplayer
 	@gate check - only fire if mom has sent us
 	goto_if_lt VAR_LITTLEROOT_INTRO_STATE, 7, LittlerootTown_EventScript_TruckNotReady
 	msgbox LittlerootTown_Text_TruckToPallet, MSGBOX_DEFAULT
@@ -169,15 +170,15 @@ LittlerootTown_EventScript_TruckToPallet::
 	setflag FLAG_HIDE_LITTLEROOT_TOWN_BRENDANS_HOUSE_TRUCK
 	setflag FLAG_HIDE_LITTLEROOT_TOWN_MAYS_HOUSE_TRUCK
 	fadescreen FADE_TO_BLACK
-	warp MAP_PALLET_TOWN_KHANTO, 12, 23
 	setvar VAR_TEMP_5, 1
+	warp MAP_PALLET_TOWN_KHANTO, 12, 23
 	fadescreen FADE_FROM_BLACK
-	releaseall
+	release
 	end
 
 LittlerootTown_EventScript_TruckNotReady::
 	msgbox LittlerootTown_Text_TruckNotReady, MSGBOX_DEFAULT
-	releaseall
+	release
 	end
 
 LittlerootTown_EventScript_BeginDexUpgradeScene::
