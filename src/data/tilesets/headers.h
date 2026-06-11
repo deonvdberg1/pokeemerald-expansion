@@ -50,8 +50,6 @@ const struct Tileset gTileset_Petalburg =
     .callback = InitTilesetAnim_Petalburg,
 };
 
-#if !IS_FRLG
-
 const struct Tileset gTileset_Rustboro =
 {
     .isCompressed = TRUE,
@@ -833,8 +831,6 @@ const struct Tileset gTileset_UnionRoom =
     .callback = NULL,
 };
 
-#else
-
 // FRLG tilesets
 const struct Tileset gTileset_BuildingFrlg =
 {
@@ -1539,8 +1535,6 @@ const struct Tileset gTileset_HallOfFame =
     .metatileAttributes = gMetatileAttributes_HallOfFame,
     .callback = NULL,
 };
-
-#endif // IS_FRLG
 
 // ORAS General
 const struct Tileset gTileset_GeneralORAS =

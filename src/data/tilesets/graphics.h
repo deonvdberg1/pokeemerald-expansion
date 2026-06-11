@@ -1848,8 +1848,6 @@ const u16 gTilesetPalettes_ViridianGymKhanto[][16] =
     INCGFX_U16("data/tilesets/secondary/viridiangymkhanto/palettes/15.pal", ".gbapal")
 };
 
-#if IS_FRLG
-
 const u32 gTilesetTiles_Building_Frlg[] = INCGFX_U32("data/tilesets/primary/building_frlg/tiles.png", ".4bpp.smol");
 
 const u16 gTilesetPalettes_Building_Frlg[][16] =
@@ -3264,5 +3262,3 @@ const u32 gTilesetTiles_General_Frlg[] = INCGFX_U32("data/tilesets/primary/gener
 
 
 
-
-#endif // IS_FRLG

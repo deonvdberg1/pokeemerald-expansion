@@ -1,0 +1,24 @@
+#!/bin/bash
+# porymap-open - Unlock Porymap-sensitive files and launch Porymap
+# This script runs from the project root.
+
+cd "$(dirname "$0")" || exit 1
+
+# First fix directory permissions so files inside can be accessed
+find data/layouts -type d -exec chmod u+x {} \; 2>/dev/null
+find data/maps -type d -exec chmod u+x {} \; 2>/dev/null
+find data/tilesets -type d -exec chmod u+x {} \; 2>/dev/null
+
+# Then unlock the sensitive files
+chmod u+w \
+  data/layouts/layouts.json \
+  data/layouts/*/map.bin \
+  data/layouts/*/border.bin \
+  data/maps/map_groups.json \
+  data/maps/*/map.json \
+  data/tilesets/*/palettes/*.pal \
+  data/tilesets/*/tiles.png \
+  2>/dev/null
+
+echo "✅ Porymap files unlocked"
+open /Applications/Porymap.app

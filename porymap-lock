@@ -1,0 +1,17 @@
+#!/bin/bash
+# porymap-lock - Lock Porymap-sensitive files read-only after editing
+# This script runs from the project root.
+
+cd "$(dirname "$0")" || exit 1
+
+chmod ugo-w \
+  data/layouts/layouts.json \
+  data/layouts/*/map.bin \
+  data/layouts/*/border.bin \
+  data/maps/map_groups.json \
+  data/maps/*/map.json \
+  data/tilesets/*/palettes/*.pal \
+  data/tilesets/*/tiles.png \
+  2>/dev/null
+
+echo "🔒 Porymap files locked"

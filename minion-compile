@@ -22,7 +22,7 @@ echo "🔨 Building with make -j$(sysctl -n hw.logicalcpu)..."
 make -j$(sysctl -n hw.logicalcpu) 2>&1
 echo "✅ Build complete!"
 
-ROM="$ROOT/pokefirered.gba"
+ROM="$ROOT/pokeemerald.gba"
 if [ -f "$ROM" ]; then
     echo "🎮 Launching in mGBA..."
     open -a mGBA "$ROM"

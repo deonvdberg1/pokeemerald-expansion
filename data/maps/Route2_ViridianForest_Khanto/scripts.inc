@@ -215,26 +215,27 @@ Route2_ViridianForest_Khanto_Text_GuardPass:
 Route2_ViridianForest_Khanto_EventScript_Rocket1::
 	trainerbattle_single TRAINER_ROCKET_GRUNT_1, Route2_ViridianForest_Khanto_Text_Rocket1Intro, Route2_ViridianForest_Khanto_Text_Rocket1Defeat
 	msgbox Route2_ViridianForest_Khanto_Text_Rocket1PostBattle, MSGBOX_AUTOCLOSE
-	call Route2_ViridianForest_Khanto_EventScript_CheckRocketsDefeated
-	end
+	goto Route2_ViridianForest_Khanto_EventScript_CheckBothRocketsDefeated
 
 Route2_ViridianForest_Khanto_EventScript_Rocket2::
 	trainerbattle_single TRAINER_ROCKET_GRUNT_2, Route2_ViridianForest_Khanto_Text_Rocket2Intro, Route2_ViridianForest_Khanto_Text_Rocket2Defeat
 	msgbox Route2_ViridianForest_Khanto_Text_Rocket2PostBattle, MSGBOX_AUTOCLOSE
-	call Route2_ViridianForest_Khanto_EventScript_CheckRocketsDefeated
-	end
+	goto Route2_ViridianForest_Khanto_EventScript_CheckBothRocketsDefeated
 
-Route2_ViridianForest_Khanto_EventScript_CheckRocketsDefeated::
-	goto_if_not_defeated TRAINER_ROCKET_GRUNT_1, Route2_ViridianForest_Khanto_EventScript_RocketsStillActive
-	goto_if_not_defeated TRAINER_ROCKET_GRUNT_2, Route2_ViridianForest_Khanto_EventScript_RocketsStillActive
+Route2_ViridianForest_Khanto_EventScript_CheckBothRocketsDefeated::
+	goto_if_not_defeated TRAINER_ROCKET_GRUNT_1, Route2_ViridianForest_Khanto_EventScript_End
+	goto_if_not_defeated TRAINER_ROCKET_GRUNT_2, Route2_ViridianForest_Khanto_EventScript_End
+	fadescreen FADE_TO_BLACK
 	removeobject 13
 	removeobject 14
+	fadescreen FADE_FROM_BLACK
 	clearflag FLAG_HIDE_VIRIDIAN_FOREST_SCYTHER
-	msgbox Route2_ViridianForest_Khanto_Text_RocketsGone, MSGBOX_DEFAULT
-	return
+	msgbox Route2_ViridianForest_Khanto_Text_TheScytherAppears, MSGBOX_DEFAULT
+	closemessage
+	end
 
-Route2_ViridianForest_Khanto_EventScript_RocketsStillActive::
-	return
+Route2_ViridianForest_Khanto_EventScript_End::
+	end
 
 Route2_ViridianForest_Khanto_Text_Rocket1Intro:
 	.string "Heh heh heh! This rare SCYTHER\n"
@@ -260,19 +261,27 @@ Route2_ViridianForest_Khanto_Text_Rocket2PostBattle:
 	.string "to you! TEAM ROCKET won't\n"
 	.string "forget this!$"
 
-Route2_ViridianForest_Khanto_Text_RocketsGone:
+Route2_ViridianForest_Khanto_Text_TheScytherAppears:
 	.string "The TEAM ROCKET members fled!\p"
-	.string "The SCYTHER is safe now...\n"
-	.string "It looks at you gratefully.$"
+	.string "A SCYTHER cautiously emerges\n"
+	.string "from the treeline...$"
 
-@ ----- Scyther (Dome Quest completion) -----
+@ ----- Scyther (Dome Quest) -----
+@ Becomes visible after both Rockets are defeated
 Route2_ViridianForest_Khanto_EventScript_Scyther::
 	lock
 	faceplayer
 	goto_if_set FLAG_DOME_QUEST_COMPLETE, Route2_ViridianForest_Khanto_EventScript_ScytherAlreadySaved
-	msgbox Route2_ViridianForest_Khanto_Text_ScytherGrateful, MSGBOX_DEFAULT
+	setwildbattle SPECIES_SCYTHER, 18, ITEM_METAL_COAT
+	dowildbattle
 	setflag FLAG_DOME_QUEST_COMPLETE
 	setflag FLAG_HIDE_VIRIDIAN_FOREST_SCYTHER
+	setflag FLAG_GOT_METAL_COAT_FROM_SCYTHER
+	fadescreen FADE_TO_BLACK
+	removeobject 15
+	fadescreen FADE_FROM_BLACK
+	releaseall
+	msgbox Route2_ViridianForest_Khanto_Text_ScytherCaught, MSGBOX_DEFAULT
 	release
 	end
 
@@ -281,17 +290,12 @@ Route2_ViridianForest_Khanto_EventScript_ScytherAlreadySaved::
 	release
 	end
 
-Route2_ViridianForest_Khanto_Text_ScytherGrateful:
-	.string "The SCYTHER approaches you\n"
-	.string "and nudges your hand gently.\p"
-	.string "It seems grateful to be free\n"
-	.string "from TEAM ROCKET.\p"
-	.string "It drops a strange metallic\n"
-	.string "coating at your feet and\n"
-	.string "disappears into the trees...\p"
-	.string "You got a glimpse of a\n"
-	.string "METAL COAT!$"
+Route2_ViridianForest_Khanto_Text_ScytherCaught:
+	.string "The SCYTHER disappeared into\n"
+	.string "the forest. It dropped something...\p"
+	.string "You found a METAL COAT on\n"
+	.string "the ground nearby!$"
 
 Route2_ViridianForest_Khanto_Text_ScytherGone:
 	.string "The forest is quiet now...\n"
-	.string "The SCYTHER made it out safely.$"
+	.string "The wild SCYTHER is out there.$"

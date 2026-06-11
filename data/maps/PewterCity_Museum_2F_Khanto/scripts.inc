@@ -5,93 +5,109 @@ PewterCity_Museum_2F_Khanto_MapScripts::
 PewterCity_Museum_2F_Khanto_EventScript_Curator::
 	lock
 	faceplayer
-	goto_if_set FLAG_RECEIVED_HELIX_FOSSIL, PewterCity_Museum_2F_Khanto_EventScript_AfterHelix
-	goto_if_set FLAG_ACCEPTED_HELIX_FOSSIL_QUEST, PewterCity_Museum_2F_Khanto_EventScript_HelixQuestInProgress
+	@ Already got fossils? Skip quest entirely
+	goto_if_set FLAG_RECEIVED_HELIX_FOSSIL, PewterCity_Museum_2F_Khanto_EventScript_GotHelixAskDome
+	goto_if_set FLAG_RECEIVED_DOME_FOSSIL, PewterCity_Museum_2F_Khanto_EventScript_GotDomeAskHelix
+	@ Both quests done? Reward time
+	goto_if_set FLAG_DOME_QUEST_COMPLETE, PewterCity_Museum_2F_Khanto_EventScript_CheckDiglettsDone
+	goto_if_set FLAG_HELIX_QUEST_COMPLETE, PewterCity_Museum_2F_Khanto_EventScript_RemindViridian
+	@ Quest not started yet?
+	goto_if_unset FLAG_ACCEPTED_HELIX_FOSSIL_QUEST, PewterCity_Museum_2F_Khanto_EventScript_StartQuest
+	@ Accepted but Helix not complete
+	goto PewterCity_Museum_2F_Khanto_EventScript_RemindDigletts
+
+@ ----- Quest: Start -----
+PewterCity_Museum_2F_Khanto_EventScript_StartQuest::
+	msgbox PewterCity_Museum_2F_Khanto_Text_QuestIntro, MSGBOX_DEFAULT
+	setflag FLAG_ACCEPTED_HELIX_FOSSIL_QUEST
+	release
+	end
+
+@ ----- Quest: Reminders -----
+PewterCity_Museum_2F_Khanto_EventScript_RemindDigletts::
+	msgbox PewterCity_Museum_2F_Khanto_Text_RemindDigletts, MSGBOX_DEFAULT
+	release
+	end
+
+PewterCity_Museum_2F_Khanto_EventScript_RemindViridian::
+	msgbox PewterCity_Museum_2F_Khanto_Text_RemindViridian, MSGBOX_DEFAULT
+	release
+	end
+
+@ ----- Both quests done -> gate to fossils -----
+PewterCity_Museum_2F_Khanto_EventScript_CheckDiglettsDone::
+	goto_if_set FLAG_HELIX_QUEST_COMPLETE, PewterCity_Museum_2F_Khanto_EventScript_BothQuestsComplete
+	msgbox PewterCity_Museum_2F_Khanto_Text_RemindDigletts, MSGBOX_DEFAULT
+	release
+	end
+
+PewterCity_Museum_2F_Khanto_EventScript_BothQuestsComplete::
+	msgbox PewterCity_Museum_2F_Khanto_Text_BothQuestsDone, MSGBOX_DEFAULT
+	goto PewterCity_Museum_2F_Khanto_EventScript_GiveHelixPrompt
+
+@ ----- Fossil Distribution (original flow, now guarded) -----
+PewterCity_Museum_2F_Khanto_EventScript_GiveHelixPrompt::
 	msgbox PewterCity_Museum_2F_Khanto_Text_CuratorIntro, MSGBOX_YESNO
-	goto_if_eq VAR_RESULT, YES, PewterCity_Museum_2F_Khanto_EventScript_AcceptHelixQuest
+	goto_if_eq VAR_RESULT, NO, PewterCity_Museum_2F_Khanto_EventScript_CuratorDecline
+	goto PewterCity_Museum_2F_Khanto_EventScript_GiveHelix
+
+PewterCity_Museum_2F_Khanto_EventScript_CuratorDecline::
 	msgbox PewterCity_Museum_2F_Khanto_Text_CuratorDecline, MSGBOX_DEFAULT
 	release
 	end
 
-PewterCity_Museum_2F_Khanto_EventScript_AcceptHelixQuest::
-	setflag FLAG_ACCEPTED_HELIX_FOSSIL_QUEST
-	msgbox PewterCity_Museum_2F_Khanto_Text_HelixQuestAccepted, MSGBOX_DEFAULT
-	release
-	end
-
-PewterCity_Museum_2F_Khanto_EventScript_HelixQuestInProgress::
-	goto_if_set FLAG_HELIX_QUEST_COMPLETE, PewterCity_Museum_2F_Khanto_EventScript_GiveHelix
-	goto_if_set FLAG_RECEIVED_DOME_FOSSIL, PewterCity_Museum_2F_Khanto_EventScript_BothDone
-	goto_if_set FLAG_ACCEPTED_DOME_FOSSIL_QUEST, PewterCity_Museum_2F_Khanto_EventScript_DomeQuestInProgress
-	msgbox PewterCity_Museum_2F_Khanto_Text_StillNeedHelix, MSGBOX_YESNO
-	goto_if_eq VAR_RESULT, YES, PewterCity_Museum_2F_Khanto_EventScript_AcceptDomeQuest
-	msgbox PewterCity_Museum_2F_Khanto_Text_HelixReminder, MSGBOX_DEFAULT
-	release
-	end
-
-PewterCity_Museum_2F_Khanto_EventScript_AcceptDomeQuest::
-	setflag FLAG_ACCEPTED_DOME_FOSSIL_QUEST
-	msgbox PewterCity_Museum_2F_Khanto_Text_DomeQuestAccepted, MSGBOX_DEFAULT
-	release
-	end
-
-PewterCity_Museum_2F_Khanto_EventScript_DomeQuestInProgress::
-	goto_if_set FLAG_DOME_QUEST_COMPLETE, PewterCity_Museum_2F_Khanto_EventScript_GiveDome
-	msgbox PewterCity_Museum_2F_Khanto_Text_DomeReminder, MSGBOX_DEFAULT
-	release
-	end
-
-PewterCity_Museum_2F_Khanto_EventScript_BothDone::
-	msgbox PewterCity_Museum_2F_Khanto_Text_AllQuestsComplete, MSGBOX_DEFAULT
-	release
-	end
-
-PewterCity_Museum_2F_Khanto_EventScript_AfterHelix::
-	goto_if_set FLAG_RECEIVED_DOME_FOSSIL, PewterCity_Museum_2F_Khanto_EventScript_BothFossilsGiven
-	goto_if_set FLAG_ACCEPTED_DOME_FOSSIL_QUEST, PewterCity_Museum_2F_Khanto_EventScript_DomeQuestInProgress
-	goto_if_set FLAG_DOME_QUEST_COMPLETE, PewterCity_Museum_2F_Khanto_EventScript_GiveDome
-	msgbox PewterCity_Museum_2F_Khanto_Text_HelixDoneOfferDome, MSGBOX_YESNO
-	goto_if_eq VAR_RESULT, YES, PewterCity_Museum_2F_Khanto_EventScript_AcceptDomeQuest
-	release
-	end
-
-@ Give Helix Fossil reward
 PewterCity_Museum_2F_Khanto_EventScript_GiveHelix::
-	lock
-	faceplayer
-	msgbox PewterCity_Museum_2F_Khanto_Text_HelixQuestComplete, MSGBOX_DEFAULT
 	checkitemspace ITEM_HELIX_FOSSIL
 	goto_if_eq VAR_RESULT, FALSE, PewterCity_Museum_2F_Khanto_EventScript_NoBagSpace
 	giveitem ITEM_HELIX_FOSSIL
 	setflag FLAG_RECEIVED_HELIX_FOSSIL
 	setflag FLAG_GOT_HELIX_FOSSIL
-	setflag FLAG_HIDE_PEWTER_MUSEUM_AERODACTYL_SKELETON
-	msgbox PewterCity_Museum_2F_Khanto_Text_HelixPostReward, MSGBOX_DEFAULT
+	msgbox PewterCity_Museum_2F_Khanto_Text_GotHelix, MSGBOX_DEFAULT
+	goto PewterCity_Museum_2F_Khanto_EventScript_AskDome
+
+PewterCity_Museum_2F_Khanto_EventScript_AskDome::
+	msgbox PewterCity_Museum_2F_Khanto_Text_WantDomeToo, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, PewterCity_Museum_2F_Khanto_EventScript_ComeBackForDome
+	goto PewterCity_Museum_2F_Khanto_EventScript_GiveDome
+
+PewterCity_Museum_2F_Khanto_EventScript_ComeBackForDome::
+	msgbox PewterCity_Museum_2F_Khanto_Text_ComeBackForDome, MSGBOX_DEFAULT
 	release
 	end
 
-@ Give Dome Fossil reward
 PewterCity_Museum_2F_Khanto_EventScript_GiveDome::
-	lock
-	faceplayer
-	msgbox PewterCity_Museum_2F_Khanto_Text_DomeQuestComplete, MSGBOX_DEFAULT
 	checkitemspace ITEM_DOME_FOSSIL
 	goto_if_eq VAR_RESULT, FALSE, PewterCity_Museum_2F_Khanto_EventScript_NoBagSpace
 	giveitem ITEM_DOME_FOSSIL
 	setflag FLAG_RECEIVED_DOME_FOSSIL
 	setflag FLAG_GOT_DOME_FOSSIL
+	setflag FLAG_HIDE_PEWTER_MUSEUM_AERODACTYL_SKELETON
 	setflag FLAG_HIDE_PEWTER_MUSEUM_KABUTOPS_SKELETON
-	msgbox PewterCity_Museum_2F_Khanto_Text_DomePostReward, MSGBOX_DEFAULT
+	msgbox PewterCity_Museum_2F_Khanto_Text_GotBoth, MSGBOX_DEFAULT
+	release
+	end
+
+PewterCity_Museum_2F_Khanto_EventScript_GotHelixAskDome::
+	goto_if_set FLAG_RECEIVED_DOME_FOSSIL, PewterCity_Museum_2F_Khanto_EventScript_AlreadyGotBoth
+	goto PewterCity_Museum_2F_Khanto_EventScript_AskDome
+
+PewterCity_Museum_2F_Khanto_EventScript_AlreadyGotBoth::
+	msgbox PewterCity_Museum_2F_Khanto_Text_AlreadyGotBoth, MSGBOX_DEFAULT
+	release
+	end
+
+PewterCity_Museum_2F_Khanto_EventScript_GotDomeAskHelix::
+	msgbox PewterCity_Museum_2F_Khanto_Text_AlreadyGotDome, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, PewterCity_Museum_2F_Khanto_EventScript_DeclineHelixEnd
+	goto PewterCity_Museum_2F_Khanto_EventScript_GiveHelix
+
+PewterCity_Museum_2F_Khanto_EventScript_DeclineHelixEnd::
+	msgbox PewterCity_Museum_2F_Khanto_Text_ComeBackAnytime, MSGBOX_DEFAULT
 	release
 	end
 
 PewterCity_Museum_2F_Khanto_EventScript_NoBagSpace::
 	msgbox PewterCity_Museum_2F_Khanto_Text_NoRoom, MSGBOX_DEFAULT
-	release
-	end
-
-PewterCity_Museum_2F_Khanto_EventScript_BothFossilsGiven::
-	msgbox PewterCity_Museum_2F_Khanto_Text_AllFossilsGiven, MSGBOX_DEFAULT
 	release
 	end
 
@@ -103,7 +119,7 @@ PewterCity_Museum_2F_Khanto_EventScript_LittleGirl::
 	release
 	end
 
-@ ----- Skeleton Display Signs (always visible) -----
+@ ----- Skeleton Display Signs -----
 PewterCity_Museum_2F_Khanto_EventScript_AerodactylSkeleton::
 	msgbox PewterCity_Museum_2F_Khanto_Text_AerodactylSkeleton, MSGBOX_SIGN
 	end
@@ -113,111 +129,123 @@ PewterCity_Museum_2F_Khanto_EventScript_KabutopsSkeleton::
 	end
 
 @ ----- TEXT -----
-PewterCity_Museum_2F_Khanto_Text_CuratorIntro:
+PewterCity_Museum_2F_Khanto_Text_QuestIntro:
 	.string "Ah, welcome to our fossil gallery!\p"
 	.string "I'm the curator of the prehistoric\n"
 	.string "collection here at the museum.\p"
-	.string "As you can see, we have remarkable\n"
-	.string "skeletons of ancient POKEMON.\p"
-	.string "But they're only replicas... We're\n"
-	.string "missing the real fossils themselves.\p"
-	.string "I've been trying to acquire genuine\n"
-	.string "HELIX and DOME FOSSILS for years.\p"
-	.string "They're said to be hidden deep in\n"
-	.string "the caves of the region.\p"
-	.string "Say, you look like an adventurous\n"
-	.string "sort! Would you help me retrieve\n"
-	.string "the HELIX FOSSIL?$"
+	.string "Listen, I'm in a bit of a bind...\p"
+	.string "I've got two remarkable fossils - a HELIX\n"
+	.string "and a DOME FOSSIL - that need to go\n"
+	.string "to the lab on CINNABAR ISLAND.\p"
+	.string "But I need a favour first before I can\n"
+	.string "entrust them to you. Actually, two favours.\p"
+	.string "First - our excavation team in DIGLETT'S\n"
+	.string "CAVE unearthed something strange.\p"
+	.string "They've sealed off the dig site and won't\n"
+	.string "let anyone near it without my permission.\p"
+	.string "Take this authorization letter and find\n"
+	.string "out what they've discovered.\p"
+	.string "Second - I've heard reports of suspicious\n"
+	.string "types lurking deep in VIRIDIAN FOREST,\n"
+	.string "trying to poach a rare POKEMON.\p"
+	.string "The path past the BUG CATCHERS' UNION\n"
+	.string "checkpoint leads there, but they only\n"
+	.string "let certified TRAINERS through.\p"
+	.string "Beat the PEWTER GYM LEADER to get\n"
+	.string "their respect, then investigate.\p"
+	.string "Do both these things for me, and the\n"
+	.string "fossils are yours to take to CINNABAR!$"
+
+PewterCity_Museum_2F_Khanto_Text_CuratorIntro:
+	.string "Excellent work, TRAINER!\p"
+	.string "You investigated the DIGLETT'S CAVE\n"
+	.string "excavation AND dealt with those\n"
+	.string "poachers in VIRIDIAN FOREST?\p"
+	.string "A DITTO at the dig site and TEAM\n"
+	.string "ROCKET poaching a SCYTHER...\p"
+	.string "You've proven yourself reliable.\p"
+	.string "I'd say you've earned the right to\n"
+	.string "take these fossils to CINNABAR.\p"
+	.string "Would you like the HELIX FOSSIL?$"
+
+PewterCity_Museum_2F_Khanto_Text_RemindDigletts:
+	.string "Still waiting on that excavation\n"
+	.string "report from DIGLETT'S CAVE.\p"
+	.string "Remember - show the excavators my\n"
+	.string "authorization to get past and see\n"
+	.string "what they've unearthed!$"
+
+PewterCity_Museum_2F_Khanto_Text_RemindViridian:
+	.string "Don't forget about VIRIDIAN FOREST!\p"
+	.string "Those suspicious types were spotted\n"
+	.string "past the BUG CATCHERS' UNION\n"
+	.string "checkpoint.\p"
+	.string "You'll need to beat BROCK at the\n"
+	.string "PEWTER GYM first to get through.$"
+
+PewterCity_Museum_2F_Khanto_Text_BothQuestsDone:
+	.string "You've done it? You investigated\n"
+	.string "the excavation AND handled the\n"
+	.string "forest?\p"
+	.string "A DITTO in the dig site? And TEAM\n"
+	.string "ROCKET poaching a SCYTHER?\n"
+	.string "Remarkable!\p"
+	.string "The PEWTER MUSEUM is grateful for\n"
+	.string "your help, TRAINER. You've earned\n"
+	.string "this.$"
 
 PewterCity_Museum_2F_Khanto_Text_CuratorDecline:
-	.string "Oh... Well, if you ever change your\n"
-	.string "mind, the offer stands!$"
+	.string "Oh, I understand. Well, the offer\n"
+	.string "is always open if you change\n"
+	.string "your mind!$"
 
-PewterCity_Museum_2F_Khanto_Text_HelixQuestAccepted:
-	.string "Wonderful! The HELIX FOSSIL is said\n"
-	.string "to be hidden in the depths of\n"
-	.string "MT. MOON.\p"
-	.string "It's a spiral-shaped fossil of an\n"
-	.string "ancient sea creature.\p"
-	.string "Bring it back to me, and I'll make\n"
-	.string "sure you're well rewarded!$"
+PewterCity_Museum_2F_Khanto_Text_GotHelix:
+	.string "There you go - the HELIX FOSSIL!\p"
+	.string "It's a spiral-shaped fossil from\n"
+	.string "an ancient sea creature.\p"
+	.string "The CINNABAR ISLAND lab will know\n"
+	.string "what to do with it.$"
+
+PewterCity_Museum_2F_Khanto_Text_WantDomeToo:
+	.string "Would you like the DOME FOSSIL\n"
+	.string "as well, while you're at it?$"
+
+PewterCity_Museum_2F_Khanto_Text_ComeBackForDome:
+	.string "No problem! I'll hold onto the\n"
+	.string "DOME FOSSIL for you.\p"
+	.string "Come back anytime to pick it up.$"
+
+PewterCity_Museum_2F_Khanto_Text_ComeBackAnytime:
+	.string "Alright, the HELIX FOSSIL will be\n"
+	.string "here whenever you want it!$"
+
+PewterCity_Museum_2F_Khanto_Text_GotBoth:
+	.string "Splendid! Now you have both the\n"
+	.string "HELIX and DOME FOSSILS!\p"
+	.string "Take them to the POKEMON LAB on\n"
+	.string "CINNABAR ISLAND and revive them.\p"
+	.string "Imagine seeing ancient POKEMON\n"
+	.string "come back to life!$"
 
 PewterCity_Museum_2F_Khanto_Text_StillNeedHelix:
-	.string "Any luck finding that HELIX FOSSIL?\p"
-	.string "I've also heard rumors of the\n"
-	.string "DOME FOSSIL being out there.\p"
-	.string "Would you like to take on that\n"
-	.string "mission as well?$"
+	.string "Back for the HELIX FOSSIL?\p"
+	.string "It's still here waiting for you.$"
 
-PewterCity_Museum_2F_Khanto_Text_HelixReminder:
-	.string "Keep searching those caves!\n"
-	.string "The HELIX FOSSIL is out there\n"
-	.string "somewhere, I'm sure of it.$"
+PewterCity_Museum_2F_Khanto_Text_AlreadyGotDome:
+	.string "Oh, you already took the DOME\n"
+	.string "FOSSIL before!\p"
+	.string "Would you like the HELIX FOSSIL\n"
+	.string "now?$"
 
-PewterCity_Museum_2F_Khanto_Text_DomeQuestAccepted:
-	.string "Excellent! The DOME FOSSIL is\n"
-	.string "believed to be in the GRANITE CAVE\n"
-	.string "area - a shelter-shaped fossil.\p"
-	.string "Two fossils, two adventures!\n"
-	.string "Best of luck, TRAINER!$"
-
-PewterCity_Museum_2F_Khanto_Text_DomeReminder:
-	.string "Don't forget about the DOME FOSSIL!\n"
-	.string "The GRANITE CAVE area is your\n"
-	.string "best bet for finding it.$"
-
-PewterCity_Museum_2F_Khanto_Text_AllQuestsComplete:
-	.string "You've accepted both fossil quests!\p"
-	.string "The HELIX FOSSIL is in MT. MOON,\n"
-	.string "and the DOME FOSSIL is near\n"
-	.string "GRANITE CAVE.\p"
-	.string "Good luck on your expeditions!$"
-
-PewterCity_Museum_2F_Khanto_Text_HelixDoneOfferDome:
-	.string "You found the HELIX FOSSIL!\p"
-	.string "That's one down! Now, what about\n"
-	.string "the DOME FOSSIL?\p"
-	.string "Would you like to search for that\n"
-	.string "one too?$"
-
-PewterCity_Museum_2F_Khanto_Text_HelixQuestComplete:
-	.string "You found the HELIX FOSSIL!\p"
-	.string "Incredible! This spiral fossil is\n"
-	.string "perfectly preserved!\p"
-	.string "As promised, this genuine HELIX\n"
-	.string "FOSSIL is yours!$"
-
-PewterCity_Museum_2F_Khanto_Text_HelixPostReward:
-	.string "The HELIX FOSSIL can be revived\n"
-	.string "into a POKEMON at the lab in\n"
-	.string "CINNABAR ISLAND.\p"
-	.string "I can't wait to see it come\n"
-	.string "back to life!$"
-
-PewterCity_Museum_2F_Khanto_Text_DomeQuestComplete:
-	.string "You found the DOME FOSSIL!\p"
-	.string "Splendid! This fossilized shell\n"
-	.string "is in remarkable condition!\p"
-	.string "Take it - you've earned it!$"
-
-PewterCity_Museum_2F_Khanto_Text_DomePostReward:
-	.string "With this DOME FOSSIL, you can\n"
-	.string "revive an ancient POKEMON at\n"
-	.string "the CINNABAR ISLAND lab.\p"
-	.string "Two fossils down - what a\n"
-	.string "collection you'll have!$"
-
-PewterCity_Museum_2F_Khanto_Text_AllFossilsGiven:
-	.string "You've collected both the HELIX\n"
-	.string "and DOME FOSSILS!\p"
-	.string "Take them to CINNABAR ISLAND and\n"
-	.string "bring those ancient POKEMON back\n"
-	.string "to life!$"
+PewterCity_Museum_2F_Khanto_Text_AlreadyGotBoth:
+	.string "You've already got both fossils!\p"
+	.string "Get going to CINNABAR ISLAND\n"
+	.string "and revive those ancient POKEMON!\p"
+	.string "I can't wait to hear about it!$"
 
 PewterCity_Museum_2F_Khanto_Text_NoRoom:
-	.string "Your BAG is full!\p"
-	.string "Make some room and come back\n"
-	.string "to collect your fossil.$"
+	.string "Your BAG is completely full!\p"
+	.string "Make some room and come back.$"
 
 PewterCity_Museum_2F_Khanto_Text_LittleGirl:
 	.string "My daddy says those skeletons\n"

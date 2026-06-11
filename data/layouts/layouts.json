@@ -596,10 +596,20 @@
       "name": "House2_Layout",
       "width": 15,
       "height": 10,
-      "primary_tileset": "gTileset_General",
+      "primary_tileset": "gTileset_Building",
       "secondary_tileset": "gTileset_LilycoveMuseum",
       "border_filepath": "data/layouts/House2/border.bin",
       "blockdata_filepath": "data/layouts/House2/map.bin"
+    },
+    {
+      "id": "LAYOUT_ROUTE2_HOUSE_KHANTO",
+      "name": "Route2_House_Khanto_Layout",
+      "width": 15,
+      "height": 10,
+      "primary_tileset": "gTileset_Building",
+      "secondary_tileset": "gTileset_BrendansMaysHouse",
+      "border_filepath": "data/layouts/Route2_House_Khanto/border.bin",
+      "blockdata_filepath": "data/layouts/Route2_House_Khanto/map.bin"
     },
     {
       "id": "LAYOUT_POKEMON_CENTER_1F",

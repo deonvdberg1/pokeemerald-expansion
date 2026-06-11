@@ -235,6 +235,7 @@ const struct Trainer gTrainers[DIFFICULTY_COUNT][TRAINERS_COUNT] =
 #include "data/trainers_frlg.h"
 #else
 #include "data/trainers.h"
+#include "data/trainers_khanto.h"
 #endif
 };
 #endif

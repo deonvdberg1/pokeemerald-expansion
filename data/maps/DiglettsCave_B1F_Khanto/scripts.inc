@@ -27,11 +27,7 @@ DiglettsCave_B1F_Khanto_EventScript_Excavator1::
 	goto_if_set FLAG_ACCEPTED_HELIX_FOSSIL_QUEST, DiglettsCave_B1F_Khanto_EventScript_Excavator1Pass
 	msgbox DiglettsCave_B1F_Khanto_Text_ExcavatorBlock, MSGBOX_DEFAULT
 	closemessage
-	applymovement 3, DiglettsCave_B1F_Khanto_Movement_ExcavatorStepForward
-	waitmovement 0
-	applymovement OBJ_EVENT_ID_PLAYER, DiglettsCave_B1F_Khanto_Movement_PlayerTurnBack
-	waitmovement 0
-	applymovement 3, DiglettsCave_B1F_Khanto_Movement_ExcavatorStepBack
+	applymovement 3, DiglettsCave_B1F_Khanto_Movement_ExcavatorShakeHead
 	waitmovement 0
 	release
 	end
@@ -50,11 +46,7 @@ DiglettsCave_B1F_Khanto_EventScript_Excavator2::
 	goto_if_set FLAG_ACCEPTED_HELIX_FOSSIL_QUEST, DiglettsCave_B1F_Khanto_EventScript_Excavator2Pass
 	msgbox DiglettsCave_B1F_Khanto_Text_ExcavatorBlock, MSGBOX_DEFAULT
 	closemessage
-	applymovement 4, DiglettsCave_B1F_Khanto_Movement_ExcavatorStepForward
-	waitmovement 0
-	applymovement OBJ_EVENT_ID_PLAYER, DiglettsCave_B1F_Khanto_Movement_PlayerTurnBack
-	waitmovement 0
-	applymovement 4, DiglettsCave_B1F_Khanto_Movement_ExcavatorStepBack
+	applymovement 4, DiglettsCave_B1F_Khanto_Movement_ExcavatorShakeHead
 	waitmovement 0
 	release
 	end
@@ -67,31 +59,21 @@ DiglettsCave_B1F_Khanto_EventScript_Excavator2Pass::
 	release
 	end
 
-DiglettsCave_B1F_Khanto_Movement_ExcavatorStepForward:
-	walk_down
-	step_end
-
-DiglettsCave_B1F_Khanto_Movement_ExcavatorStepBack:
-	walk_up
+DiglettsCave_B1F_Khanto_Movement_ExcavatorShakeHead:
+	delay_16
+	delay_16
 	step_end
 
 DiglettsCave_B1F_Khanto_Movement_Excavator1StepBack4:
-	walk_up
-	walk_up
-	walk_up
-	walk_up
+	walk_right
+	walk_right
+	walk_right
 	step_end
 
 DiglettsCave_B1F_Khanto_Movement_Excavator2StepBack4:
-	walk_up
-	walk_up
-	walk_up
-	walk_up
-	step_end
-
-DiglettsCave_B1F_Khanto_Movement_PlayerTurnBack:
-	walk_up
-	walk_up
+	walk_right
+	walk_right
+	walk_right
 	step_end
 
 DiglettsCave_B1F_Khanto_Text_ExcavatorBlock:

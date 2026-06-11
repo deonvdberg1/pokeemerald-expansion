@@ -44,7 +44,7 @@
       "graphics_id": "OBJ_EVENT_GFX_FOSSIL",
       "x": 12,
       "y": 6,
-      "elevation": 3,
+      "elevation": 5,
       "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
       "movement_range_x": 0,
       "movement_range_y": 0,
@@ -57,7 +57,7 @@
       "graphics_id": "OBJ_EVENT_GFX_FOSSIL",
       "x": 12,
       "y": 4,
-      "elevation": 3,
+      "elevation": 5,
       "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
       "movement_range_x": 0,
       "movement_range_y": 0,
@@ -69,14 +69,14 @@
   ],
   "warp_events": [
     {
-      "x": 1,
+      "x": 3,
       "y": 9,
       "elevation": 0,
       "dest_map": "MAP_PEWTER_CITY_MUSEUM_1F_KHANTO",
       "dest_warp_id": "4"
     },
     {
-      "x": 2,
+      "x": 4,
       "y": 9,
       "elevation": 0,
       "dest_map": "MAP_PEWTER_CITY_MUSEUM_1F_KHANTO",
