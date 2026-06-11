@@ -49,7 +49,7 @@ LittlerootTown_BrendansHouse_1F_EventScript_MoveMomToDoor::
 LittlerootTown_BrendansHouse_1F_OnFrame:
 	map_script_2 VAR_LITTLEROOT_INTRO_STATE, 3, LittlerootTown_BrendansHouse_1F_EventScript_EnterHouseMovingIn
 	map_script_2 VAR_LITTLEROOT_INTRO_STATE, 5, LittlerootTown_BrendansHouse_1F_EventScript_GoUpstairsToSetClock
-	map_script_2 VAR_LITTLEROOT_INTRO_STATE, 6, LittlerootTown_BrendansHouse_1F_EventScript_PetalburgGymReport
+	map_script_2 VAR_LITTLEROOT_INTRO_STATE, 6, LittlerootTown_BrendansHouse_1F_EventScript_KantoRedirect
 	map_script_2 VAR_LITTLEROOT_HOUSES_STATE_MAY, 1, LittlerootTown_BrendansHouse_1F_EventScript_YoureNewNeighbor
 	map_script_2 VAR_LITTLEROOT_HOUSES_STATE_MAY, 3, PlayersHouse_1F_EventScript_GetSSTicketAndSeeLatiTV
 	.2byte 0
@@ -77,11 +77,11 @@ LittlerootTown_BrendansHouse_1F_EventScript_EnterHouseMovingIn::
 	goto PlayersHouse_1F_EventScript_EnterHouseMovingIn
 	end
 
-LittlerootTown_BrendansHouse_1F_EventScript_PetalburgGymReport::
+LittlerootTown_BrendansHouse_1F_EventScript_KantoRedirect::
 	lockall
 	setvar VAR_0x8004, MALE
 	setvar VAR_0x8005, LOCALID_PLAYERS_HOUSE_1F_MOM
-	goto PlayersHouse_1F_EventScript_PetalburgGymReportMale
+	goto PlayersHouse_1F_EventScript_KantoRedirectMale
 	end
 
 LittlerootTown_BrendansHouse_1F_EventScript_YoureNewNeighbor::
@@ -310,21 +310,20 @@ PlayersHouse_1F_Text_OhComeQuickly:
 	.string "MOM: Oh! {PLAYER}, {PLAYER}!\n"
 	.string "Quick! Come quickly!$"
 
-PlayersHouse_1F_Text_MaybeDadWillBeOn:
-	.string "MOM: Look! It's PETALBURG GYM!\n"
-	.string "Maybe DAD will be on!$"
+PlayersHouse_1F_Text_DadCalledFromKanto:
+	.string "MOM: Oh, there you are!\p"
+	.string "Your father just called from KANTO.\n"
+	.string "He said he needs your help urgently!\p"
+	.string "Something about an important matter
+	.string "he can't handle alone...$"
 
-PlayersHouse_1F_Text_ItsOverWeMissedHim:
-	.string "MOM: Oh… It's over.\p"
-	.string "I think DAD was on, but we missed him.\n"
-	.string "Too bad.$"
-
-PlayersHouse_1F_Text_GoIntroduceYourselfNextDoor:
-	.string "Oh, yes.\n"
-	.string "One of DAD's friends lives in town.\p"
-	.string "PROF. BIRCH is his name.\p"
-	.string "He lives right next door, so you should\n"
-	.string "go over and introduce yourself.$"
+PlayersHouse_1F_Text_TruckToPallet:
+	.string "MOM: The moving truck is still outside.\p"
+	.string "I've arranged for the driver to take
+	.string "you to PALLET TOWN in KANTO.\p"
+	.string "Professor OAK is there - he'll help
+	.string "you get started as a TRAINER.\p"
+	.string "Hurry now, and be careful!$"
 
 PlayersHouse_1F_Text_SeeYouHoney:
 	.string "MOM: See you, honey!$"

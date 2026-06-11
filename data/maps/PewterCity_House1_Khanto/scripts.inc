@@ -23,7 +23,7 @@ PewterCity_House1_Khanto_EventScript_DoNidoranCry::
 	playmoncry SPECIES_NIDORAN_M, CRY_MODE_NORMAL
 	msgbox PewterCity_House1_Khanto_Text_NidoranPurr
 	waitmoncry
-	end
+	return
 
 PewterCity_House1_Khanto_Text_TradeMonsAreFinicky:
 	.string "POKEMON you get in trades grow faster\n"

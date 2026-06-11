@@ -4462,6 +4462,16 @@
       "blockdata_filepath": "data/layouts/House2_Frlg/map.bin"
     },
     {
+      "id": "LAYOUT_PEWTER_HOUSE2_KHANTO",
+      "name": "PewterCity_House2_Khanto_Layout",
+      "width": 11,
+      "height": 9,
+      "primary_tileset": "gTileset_BuildingFrlg",
+      "secondary_tileset": "gTileset_GenericBuilding",
+      "border_filepath": "data/layouts/PewterCity_House2_Khanto/border.bin",
+      "blockdata_filepath": "data/layouts/PewterCity_House2_Khanto/map.bin"
+    },
+    {
       "id": "LAYOUT_POKEMON_CENTER_1F_FRLG",
       "name": "PokemonCenter_1F_FRLG_Layout",
       "width": 15,

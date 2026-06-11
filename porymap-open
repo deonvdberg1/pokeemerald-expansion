@@ -21,4 +21,4 @@ chmod u+w \
   2>/dev/null
 
 echo "✅ Porymap files unlocked"
-open /Applications/Porymap.app
+open /Users/deonvandenberg/porymap/porymap.app

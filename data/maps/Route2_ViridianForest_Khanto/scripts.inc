@@ -176,7 +176,7 @@ Route2_ViridianForest_Khanto_EventScript_GuardTrigger::
 Route2_ViridianForest_Khanto_EventScript_GuardTriggerPass::
 	msgbox Route2_ViridianForest_Khanto_Text_GuardPass, MSGBOX_DEFAULT
 	closemessage
-	setvar VAR_TEMP_1, 1
+	setvar VAR_TEMP_0, 1
 	releaseall
 	end
 

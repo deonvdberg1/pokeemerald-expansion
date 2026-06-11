@@ -83,6 +83,10 @@ PewterCity_Museum_2F_Khanto_EventScript_GiveDome::
 	setflag FLAG_GOT_DOME_FOSSIL
 	setflag FLAG_HIDE_PEWTER_MUSEUM_AERODACTYL_SKELETON
 	setflag FLAG_HIDE_PEWTER_MUSEUM_KABUTOPS_SKELETON
+	fadescreen FADE_TO_BLACK
+	removeobject 3
+	removeobject 4
+	fadescreen FADE_FROM_BLACK
 	msgbox PewterCity_Museum_2F_Khanto_Text_GotBoth, MSGBOX_DEFAULT
 	release
 	end
@@ -121,11 +125,17 @@ PewterCity_Museum_2F_Khanto_EventScript_LittleGirl::
 
 @ ----- Skeleton Display Signs -----
 PewterCity_Museum_2F_Khanto_EventScript_AerodactylSkeleton::
+	goto_if_set FLAG_HIDE_PEWTER_MUSEUM_AERODACTYL_SKELETON, PewterCity_Museum_2F_Khanto_EventScript_EmptyDisplay
 	msgbox PewterCity_Museum_2F_Khanto_Text_AerodactylSkeleton, MSGBOX_SIGN
 	end
 
 PewterCity_Museum_2F_Khanto_EventScript_KabutopsSkeleton::
+	goto_if_set FLAG_HIDE_PEWTER_MUSEUM_KABUTOPS_SKELETON, PewterCity_Museum_2F_Khanto_EventScript_EmptyDisplay
 	msgbox PewterCity_Museum_2F_Khanto_Text_KabutopsSkeleton, MSGBOX_SIGN
+	end
+
+PewterCity_Museum_2F_Khanto_EventScript_EmptyDisplay::
+	msgbox PewterCity_Museum_2F_Khanto_Text_EmptyDisplay, MSGBOX_SIGN
 	end
 
 @ ----- TEXT -----
@@ -269,3 +279,8 @@ PewterCity_Museum_2F_Khanto_Text_KabutopsSkeleton:
 	.string "Its sharp scythes could slice\n"
 	.string "through prey effortlessly.\p"
 	.string "A fierce predator of the deep.$"
+
+PewterCity_Museum_2F_Khanto_Text_EmptyDisplay:
+	.string "This display case is now empty.\p"
+	.string "The fossil was removed for\n"
+	.string "transport to CINNABAR ISLAND.$"

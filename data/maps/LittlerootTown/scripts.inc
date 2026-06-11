@@ -17,7 +17,7 @@ LittlerootTown_MapScripts::
 	@ 4: Told to go set clock
 	@ 5: Entered 2F to set clock
 	@ 6: Set clock
-	@ 7: Told to go meet rival
+	@ 7: Mom told you about Kanto (truck available)
 
 	@ State descriptions for VAR_LITTLEROOT_HOUSES_STATE_MAY
 	@                    and VAR_LITTLEROOT_HOUSES_STATE_BRENDAN
