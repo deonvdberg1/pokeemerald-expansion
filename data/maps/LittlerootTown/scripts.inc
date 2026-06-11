@@ -140,19 +140,29 @@ LittlerootTown_Movement_PlayerStepOffTruck:
 	delay_16
 	step_end
 
-LittlerootTown_EventScript_TruckToPallet::
-	lockall
-	goto_if_lt VAR_LITTLEROOT_INTRO_STATE, 7, LittlerootTown_EventScript_TruckNotReady
-	setvar VAR_TEMP_3, 1
+LittlerootTown_EventScript_Sailor::
+	lock
+	faceplayer
+	goto_if_lt VAR_LITTLEROOT_INTRO_STATE, 7, LittlerootTown_EventScript_SailorNotReady
+	msgbox LittlerootTown_Text_SailorQuestion, MSGBOX_YESNO
+	compare VAR_RESULT, NO
+	goto_if_eq VAR_RESULT, NO, LittlerootTown_EventScript_SailorDecline
+	msgbox LittlerootTown_Text_SailorDepart, MSGBOX_DEFAULT
+	closemessage
 	fadescreen FADE_TO_BLACK
-	warp MAP_PALLET_TOWN_KHANTO, 13, 14
+	warp MAP_ROUTE21_KHANTO, 10, 10
 	fadescreen FADE_FROM_BLACK
-	releaseall
+	release
 	end
 
-LittlerootTown_EventScript_TruckNotReady::
-	msgbox LittlerootTown_Text_WarpNotReady, MSGBOX_DEFAULT
-	releaseall
+LittlerootTown_EventScript_SailorNotReady::
+	msgbox LittlerootTown_Text_SailorNotReady, MSGBOX_DEFAULT
+	release
+	end
+
+LittlerootTown_EventScript_SailorDecline::
+	msgbox LittlerootTown_Text_SailorDecline, MSGBOX_DEFAULT
+	release
 	end
 
 
@@ -982,9 +992,25 @@ LittlerootTown_Text_BirchSomethingToShowYouAtLab:
 LittlerootTown_EventScript_BagonBall::
 	lock
 	faceplayer
-LittlerootTown_Text_WarpNotReady:
-	.string "The area ahead is humming with\n"
-	.string "a strange energy...$"
+LittlerootTown_Text_SailorQuestion:
+	.string "Ahoy there, young TRAINER!\p"
+	.string "Want to sail across to KANTO?\n"
+	.string "I can take you to ROUTE 21,\n"
+	.string "just south of PALLET TOWN!$"
+
+LittlerootTown_Text_SailorDepart:
+	.string "Anchor's aweigh!\n"
+	.string "Next stop... KANTO!$"
+
+LittlerootTown_Text_SailorNotReady:
+	.string "Sorry, young one.\n"
+	.string "Come back when you're ready\n"
+	.string "to set sail!$"
+
+LittlerootTown_Text_SailorDecline:
+	.string "Arr, no worries!\n"
+	.string "The sea'll be here whenever\n"
+	.string "you're ready!$"
 
 	msgbox LittlerootTown_Text_BagonFound, MSGBOX_DEFAULT
 
