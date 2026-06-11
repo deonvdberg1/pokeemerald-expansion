@@ -1,8 +1,35 @@
-// Pallet Town — PlayersHouse_1F
-// Map: MAP_PALLET_TOWN_PLAYERS_HOUSE_1F
+// Pallet Town — PlayersHouse_1F (Red's House)
+// Map: MAP_PALLET_TOWN_PLAYERS_HOUSE_1F_KHANTO
 
 mapscripts PalletTown_PlayersHouse_1F_MapScripts {
     MAP_SCRIPT_ON_TRANSITION {
         // Placeholder
     }
+}
+
+// Red — The legendary trainer, waiting for you
+script PalletTown_PlayersHouse_1F_EventScript_Red {
+    lock
+    faceplayer
+    msgbox("…")
+    msgbox("… … …")
+    msgbox("… … … … …")
+    msgbox("{PLAYER}… 
+           You have a long journey ahead.
+           Train hard.
+           Defeat the eight GYM LEADERS.
+           Conquer the LEAGUE.
+           Then come find me.
+           I'll be waiting at the peak of
+           MOUNT SILVER…")
+    msgbox("…")
+    release
+    end
+}
+
+script PalletTown_PlayersHouse_1F_EventScript_Television {
+    msgbox("The TV shows a snowy mountain peak.
+           A lone figure stands at the summit…
+           Could that be RED?")
+    end
 }

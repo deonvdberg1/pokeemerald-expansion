@@ -314,14 +314,14 @@ PlayersHouse_1F_Text_DadCalledFromKanto:
 	.string "MOM: Oh, there you are!\p"
 	.string "Your father just called from KANTO.\n"
 	.string "He said he needs your help urgently!\p"
-	.string "Something about an important matter
+	.string "Something about an important matter\n"
 	.string "he can't handle alone...$"
 
 PlayersHouse_1F_Text_TruckToPallet:
 	.string "MOM: The moving truck is still outside.\p"
-	.string "I've arranged for the driver to take
+	.string "I've arranged for the driver to take\n"
 	.string "you to PALLET TOWN in KANTO.\p"
-	.string "Professor OAK is there - he'll help
+	.string "Professor OAK is there - he'll help\n"
 	.string "you get started as a TRAINER.\p"
 	.string "Hurry now, and be careful!$"
 

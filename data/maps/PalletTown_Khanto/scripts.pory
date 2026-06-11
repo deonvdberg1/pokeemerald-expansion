@@ -15,13 +15,20 @@ mapscripts PalletTown_Khanto_MapScripts {
 // OBJECT EVENT SCRIPTS (NPCs)
 // ─────────────────────────────────────────────
 
-// Prof. Oak — Introduces himself, starter selection
+// Prof. Oak — Greets you on arrival, directs you to his lab
 script PalletTown_ProfOak {
     lock
     faceplayer
-    msgbox("Ah, {PLAYER}!
-           I was hoping you'd come by.
-           Come see me in my lab when you're ready!")
+    msgbox("Ah, you must be {PLAYER}!
+           Your mother called ahead.
+           She said you'd be arriving from Hoenn.")
+    msgbox("I'm PROFESSOR OAK.
+           I study POKÉMON here in KANTO.")
+    msgbox("Your father mentioned you'd be coming.
+           He's in VIRIDIAN CITY - but before you
+           head out, you'll need a POKÉMON of your own.")
+    msgbox("Come see me in my lab just up ahead.
+           I'll set you up with a starter POKÉMON!")
     release
     end
 }

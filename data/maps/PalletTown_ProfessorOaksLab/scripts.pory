@@ -1,7 +1,9 @@
+// Pallet Town — Prof. Oak's Lab (Khanto)
+// Map: MAP_PALLET_TOWN_PROFESSOR_OAKS_LAB_KHANTO
 
 mapscripts PalletTown_ProfessorOaksLab_MapScripts {
     MAP_SCRIPT_ON_TRANSITION {
-        setflag(FLAG_HIDE_OAK_IN_HIS_LAB)
+        call_if_eq(VAR_TEMP_0, 0, OakLab_EventScript_ReadyOakForIntro)
     }
     MAP_SCRIPT_ON_WARP_INTO_MAP_TABLE {
         if (var(VAR_TEMP_0) == 0) {
@@ -10,82 +12,63 @@ mapscripts PalletTown_ProfessorOaksLab_MapScripts {
     }
     MAP_SCRIPT_ON_FRAME_TABLE {
         if (var(VAR_TEMP_0) == 0) {
-            call(OaksLab_EventScript_IntroScene)
+            call(OakLab_EventScript_IntroScene)
         }
     }
 }
 
-script PalletTown_ProfessorOaksLab_EventScript_Oak {
-    lock
-    faceplayer
-    msgbox("Oak: Welcome to my lab, {PLAYER}!
-           Feel free to look around.")
-    release
-    end
+script OakLab_EventScript_ReadyOakForIntro {
+    setobjectxyperm(LOCALID_OAKS_LAB_KHANTO_PROF_OAK, 6, 9)
+    setobjectmovementtype(LOCALID_OAKS_LAB_KHANTO_PROF_OAK, MOVEMENT_TYPE_FACE_UP)
+    return
 }
 
-script OaksLab_EventScript_IntroScene {
+// ─────────────────────────────────────────────
+// INTRO SCENE — Oak greets you, starter offer
+// ─────────────────────────────────────────────
+
+script OakLab_EventScript_IntroScene {
     lockall
     textcolor(NPC_TEXT_COLOR_MALE)
-    clearflag(FLAG_HIDE_OAK_IN_HIS_LAB)
     applymovement(1, Common_Movement_WalkInPlaceFasterUp)
     waitmovement(0)
     msgbox("Oak: Ah, {PLAYER}!
-           Right on time!
-           I was hoping you'd come by today.")
-    msgbox("Oak: You see, {PLAYER},
-           I need your help with something
-           very important.
-           I've been researching a legendary
-           Pokémon that lives atop
-           MOUNT SILVER.
-           Its power is immense-
-           I believe studying it could
-           unlock secrets about Pokémon
-           we've never understood before.")
-    msgbox("Oak: However, MOUNT SILVER
-           is blocked off by the
-           POKÉMON LEAGUE.
-           Only the strongest trainers
-           are allowed past the checkpoint.
-           To get there, you must first
-           defeat all eight GYM LEADERS
-           and challenge the
-           POKÉMON LEAGUE.")
-    msgbox("Oak: It won't be easy.
-           The road ahead is long,
-           and the Gym Leaders of KANTO
-           are no pushovers.
-           But I believe you have what it
-           takes, {PLAYER}.")
-    msgbox("Oak: Of course, you can't start
-           a journey empty-handed!
-           That's why I've prepared
-           something for you.")
-    msgbox("Oak: Behold!
-           These three POKé BALLS each
-           contain a powerful Pokémon.
-           Choose one to be your partner
-           on this journey.")
+           I've been expecting you.
+           Your mother called from HOENN
+           and told me you were coming.")
+    msgbox("Oak: I'm PROFESSOR OAK.
+           I study POKÉMON here in KANTO.
+           Your father is in VIRIDIAN CITY
+           waiting for you.")
+    msgbox("Oak: But before you head out,
+           you can't travel without a
+           POKÉMON of your own!")
+    msgbox("Oak: I have three POKÉMON here.
+           Each one has different strengths.
+           Choose the one that feels right!")
     setvar(VAR_TEMP_0, 1)
     releaseall
     end
 }
 
+// ─────────────────────────────────────────────
+// STARTER SELECTION — Poké Ball scripts
+// ─────────────────────────────────────────────
+
 script PalletTown_ProfessorOaksLab_EventScript_BulbasaurBall {
     lock
     faceplayer
-    msgbox("It's a POKé BALL containing
-           BULBASAUR, the Grass type.
-           Would you like to choose
-           BULBASAUR as your partner?")
-    multichoicedefault(0, 0, 0, 2, FALSE)
+    msgbox("It's a POKé BALL with
+           BULBASAUR inside.
+           A GRASS type.
+           Would you like BULBASAUR?")
+    multichoice(0, 0, 0, 2, FALSE)
     if (var(VAR_RESULT) == 0) {
         setvar(VAR_TEMP_1, 0)
-        call(OaksLab_EventScript_GiveStarter)
+        setvar(VAR_TEMP_2, SPECIES_BULBASAUR)
+        call(OakLab_EventScript_GiveStarter)
     } else {
-        msgbox("Take your time, {PLAYER}.
-               Choose the one that speaks to you.")
+        msgbox("Take your time, choose wisely!")
         release
         end
     }
@@ -94,17 +77,17 @@ script PalletTown_ProfessorOaksLab_EventScript_BulbasaurBall {
 script PalletTown_ProfessorOaksLab_EventScript_CharmanderBall {
     lock
     faceplayer
-    msgbox("It's a POKé BALL containing
-           CHARMANDER, the Fire type.
-           Would you like to choose
-           CHARMANDER as your partner?")
-    multichoicedefault(0, 0, 0, 2, FALSE)
+    msgbox("It's a POKé BALL with
+           CHARMANDER inside.
+           A FIRE type.
+           Would you like CHARMANDER?")
+    multichoice(0, 0, 0, 2, FALSE)
     if (var(VAR_RESULT) == 0) {
         setvar(VAR_TEMP_1, 1)
-        call(OaksLab_EventScript_GiveStarter)
+        setvar(VAR_TEMP_2, SPECIES_CHARMANDER)
+        call(OakLab_EventScript_GiveStarter)
     } else {
-        msgbox("Take your time, {PLAYER}.
-               Choose the one that speaks to you.")
+        msgbox("Take your time, choose wisely!")
         release
         end
     }
@@ -113,47 +96,64 @@ script PalletTown_ProfessorOaksLab_EventScript_CharmanderBall {
 script PalletTown_ProfessorOaksLab_EventScript_SquirtleBall {
     lock
     faceplayer
-    msgbox("It's a POKé BALL containing
-           SQUIRTLE, the Water type.
-           Would you like to choose
-           SQUIRTLE as your partner?")
-    multichoicedefault(0, 0, 0, 2, FALSE)
+    msgbox("It's a POKé BALL with
+           SQUIRTLE inside.
+           A WATER type.
+           Would you like SQUIRTLE?")
+    multichoice(0, 0, 0, 2, FALSE)
     if (var(VAR_RESULT) == 0) {
         setvar(VAR_TEMP_1, 2)
-        call(OaksLab_EventScript_GiveStarter)
+        setvar(VAR_TEMP_2, SPECIES_SQUIRTLE)
+        call(OakLab_EventScript_GiveStarter)
     } else {
-        msgbox("Take your time, {PLAYER}.
-               Choose the one that speaks to you.")
+        msgbox("Take your time, choose wisely!")
         release
         end
     }
 }
 
-script OaksLab_EventScript_GiveStarter {
+// ─────────────────────────────────────────────
+// GIVE STARTER — Give the chosen Pokémon + dex + balls
+// ─────────────────────────────────────────────
+
+script OakLab_EventScript_GiveStarter {
     lockall
     textcolor(NPC_TEXT_COLOR_MALE)
-    if (var(VAR_TEMP_1) == 0) {
-        setvar(VAR_TEMP_2, SPECIES_BULBASAUR)
-    } else {
-        if (var(VAR_TEMP_1) == 1) {
-            setvar(VAR_TEMP_2, SPECIES_CHARMANDER)
-        } else {
-            setvar(VAR_TEMP_2, SPECIES_SQUIRTLE)
-        }
-    }
-    givemon(SPECIES_BAGON, 30, ITEM_NONE)
-    setvar(VAR_STARTER_MON, SPECIES_BAGON)
-    msgbox("Oak: This is a special BAGON
-           I've been raising. It's level 30
-           and knows some powerful moves.
-           Take good care of it!")
-    msgbox("Oak: Now go, {PLAYER}!
-           The world of Pokémon awaits.
-           Defeat the Gym Leaders,
-           conquer the LEAGUE,
-           and meet me at
-           MOUNT SILVER.
-           I'll be waiting.")
+    // Give starter at level 5
+    givemon(var(VAR_TEMP_2), 5, ITEM_NONE)
+    setvar(VAR_STARTER_MON, var(VAR_TEMP_2))
+    fadescreen(FADE_TO_BLACK)
+    removeobject(2)
+    removeobject(3)
+    removeobject(4)
+    fadescreen(FADE_FROM_BLACK)
+    msgbox("Oak: Excellent choice!
+           That POKÉMON has been my
+           research partner's offspring.
+           It's strong and loyal!")
+    msgbox("Oak: Now then, you'll need
+           this as well.")
+    // Give Pokédex
+    setflag(FLAG_SYS_POKEDEX_GET)
+    msgbox("Oak: That's a POKÉDEX!
+           It automatically records data
+           on POKÉMON you see and catch.
+           I'd like you to complete it
+           as you travel across KANTO!")
+    // Give Poké Balls
+    giveitem(ITEM_POKE_BALL, 5)
+    msgbox("Oak: Here are some POKé BALLS.
+           You'll need them to catch
+           wild POKÉMON.")
+    msgbox("Oak: Now head north through
+           ROUTE 1 to VIRIDIAN CITY.
+           Your father is waiting there.
+           And remember - to reach
+           MOUNT SILVER, you'll need to
+           defeat all eight KANTO GYM
+           LEADERS and the LEAGUE!")
+    msgbox("Oak: Good luck, {PLAYER}!
+           I believe in you!")
     setvar(VAR_TEMP_0, 2)
     releaseall
     end
