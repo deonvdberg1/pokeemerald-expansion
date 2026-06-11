@@ -38,7 +38,6 @@ LittlerootTown_OnTransition:
 	setflag FLAG_VISITED_LITTLEROOT_TOWN
 	call Common_EventScript_SetupRivalGfxId
 	call_if_eq VAR_LITTLEROOT_INTRO_STATE, 2, LittlerootTown_EventScript_MoveMomToMaysDoor
-	call_if_ge VAR_LITTLEROOT_INTRO_STATE, 7, LittlerootTown_EventScript_ShowKantoTruck
 	call_if_unset FLAG_RESCUED_BIRCH, LittlerootTown_EventScript_SetTwinPos
 	call_if_eq VAR_LITTLEROOT_TOWN_STATE, 3, LittlerootTown_EventScript_SetMomStandingInFrontOfDoorPos
 	call_if_eq VAR_LITTLEROOT_HOUSES_STATE_MAY, 4, LittlerootTown_EventScript_SetExitedHouseAfterLatiSSTicketEvent
@@ -141,45 +140,21 @@ LittlerootTown_Movement_PlayerStepOffTruck:
 	delay_16
 	step_end
 
-@ Kanto Redirect - truck appears after mom tells you about Dad
-@ But NOT if the truck has already been used
-LittlerootTown_EventScript_ShowKantoTruck::
-	goto_if_eq VAR_TEMP_3, 1, LittlerootTown_EventScript_TruckAlreadyUsed
-	checkplayergender
-	goto_if_eq VAR_RESULT, MALE, LittlerootTown_EventScript_ShowKantoTruckMale
-	clearflag FLAG_HIDE_LITTLEROOT_TOWN_MAYS_HOUSE_TRUCK
-	return
-
-LittlerootTown_EventScript_ShowKantoTruckMale:
-	clearflag FLAG_HIDE_LITTLEROOT_TOWN_BRENDANS_HOUSE_TRUCK
-	return
-
-LittlerootTown_EventScript_TruckAlreadyUsed::
-	setflag FLAG_HIDE_LITTLEROOT_TOWN_BRENDANS_HOUSE_TRUCK
-	setflag FLAG_HIDE_LITTLEROOT_TOWN_MAYS_HOUSE_TRUCK
-	return
-
 LittlerootTown_EventScript_TruckToPallet::
-	lock
-	faceplayer
-	@gate check - only fire if mom has sent us
+	lockall
 	goto_if_lt VAR_LITTLEROOT_INTRO_STATE, 7, LittlerootTown_EventScript_TruckNotReady
-	msgbox LittlerootTown_Text_TruckToPallet, MSGBOX_DEFAULT
-	closemessage
 	setvar VAR_TEMP_3, 1
-	setflag FLAG_HIDE_LITTLEROOT_TOWN_BRENDANS_HOUSE_TRUCK
-	setflag FLAG_HIDE_LITTLEROOT_TOWN_MAYS_HOUSE_TRUCK
 	fadescreen FADE_TO_BLACK
-	setvar VAR_TEMP_5, 1
-	warp MAP_PALLET_TOWN_KHANTO, 12, 23
+	warp MAP_PALLET_TOWN_KHANTO, 13, 14
 	fadescreen FADE_FROM_BLACK
-	release
+	releaseall
 	end
 
 LittlerootTown_EventScript_TruckNotReady::
-	msgbox LittlerootTown_Text_TruckNotReady, MSGBOX_DEFAULT
-	release
+	msgbox LittlerootTown_Text_WarpNotReady, MSGBOX_DEFAULT
+	releaseall
 	end
+
 
 LittlerootTown_EventScript_BeginDexUpgradeScene::
 	lockall
@@ -1007,6 +982,10 @@ LittlerootTown_Text_BirchSomethingToShowYouAtLab:
 LittlerootTown_EventScript_BagonBall::
 	lock
 	faceplayer
+LittlerootTown_Text_WarpNotReady:
+	.string "The area ahead is humming with\n"
+	.string "a strange energy...$"
+
 	msgbox LittlerootTown_Text_BagonFound, MSGBOX_DEFAULT
 
 	setflag FLAG_BADGE01_GET
@@ -1022,14 +1001,6 @@ LittlerootTown_EventScript_BagonBall::
 	setflag FLAG_HIDE_LITTLEROOT_BAGON_BALL
 	release
 	end
-
-LittlerootTown_Text_TruckToPallet:
-	.string "The truck is loaded up and ready\n"
-	.string "for the long drive to KANTO.$"
-
-LittlerootTown_Text_TruckNotReady:
-	.string "It's a moving truck with KANTO\n"
-	.string "license plates. Not much to see.$"
 
 LittlerootTown_Text_BagonFound:
 	.string "A lone POKE BALL sits on the\n"
