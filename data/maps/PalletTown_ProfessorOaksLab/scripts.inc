@@ -3,7 +3,6 @@
 
 PalletTown_ProfessorOaksLab_MapScripts::
 	map_script MAP_SCRIPT_ON_TRANSITION, PalletTown_ProfessorOaksLab_OnTransition
-	map_script MAP_SCRIPT_ON_FRAME_TABLE, PalletTown_ProfessorOaksLab_OnFrame
 	.byte 0
 
 PalletTown_ProfessorOaksLab_OnTransition::
@@ -12,79 +11,83 @@ PalletTown_ProfessorOaksLab_OnTransition::
 
 PalletTown_ProfessorOaksLab_EventScript_ReadyOak::
 	setobjectxyperm 1, 6, 9
-	setobjectmovementtype 1, MOVEMENT_TYPE_FACE_UP
+	setobjectmovementtype 1, MOVEMENT_TYPE_FACE_DOWN
 	return
 
-PalletTown_ProfessorOaksLab_OnFrame::
-	map_script_2 VAR_TEMP_0, 0, PalletTown_ProfessorOaksLab_EventScript_IntroScene
-	.2byte 0
+@ ----- Oak NPC (press A to talk) -----
+PalletTown_ProfessorOaksLab_EventScript_Oak::
+	lock
+	faceplayer
+	goto_if_eq VAR_TEMP_0, 0, PalletTown_ProfessorOaksLab_EventScript_OakIntro
+	msgbox PalletTown_ProfessorOaksLab_Text_OakPostGame, MSGBOX_DEFAULT
+	release
+	end
 
-@ ----- Intro Scene -----
-PalletTown_ProfessorOaksLab_EventScript_IntroScene::
-	lockall
-	textcolor NPC_TEXT_COLOR_MALE
-	applymovement 1, Common_Movement_WalkInPlaceFasterUp
-	waitmovement 0
+PalletTown_ProfessorOaksLab_EventScript_OakIntro::
 	msgbox PalletTown_ProfessorOaksLab_Text_Intro1, MSGBOX_DEFAULT
 	msgbox PalletTown_ProfessorOaksLab_Text_Intro2, MSGBOX_DEFAULT
 	msgbox PalletTown_ProfessorOaksLab_Text_Intro3, MSGBOX_DEFAULT
 	msgbox PalletTown_ProfessorOaksLab_Text_Intro4, MSGBOX_DEFAULT
 	setvar VAR_TEMP_0, 1
-	releaseall
+	release
 	end
 
 @ ----- Starter Poké Balls -----
 PalletTown_ProfessorOaksLab_EventScript_BulbasaurBall::
 	lock
 	faceplayer
-	setvar VAR_TEMP_1, 0
-	setvar VAR_TEMP_2, SPECIES_BULBASAUR
 	msgbox PalletTown_ProfessorOaksLab_Text_WantBulbasaur, MSGBOX_YESNO
-	goto_if_eq VAR_RESULT, YES, PalletTown_ProfessorOaksLab_EventScript_GiveStarter
-	msgbox PalletTown_ProfessorOaksLab_Text_TakeYourTime, MSGBOX_DEFAULT
-	release
-	end
-
-PalletTown_ProfessorOaksLab_EventScript_CharmanderBall::
-	lock
-	faceplayer
-	setvar VAR_TEMP_1, 1
-	setvar VAR_TEMP_2, SPECIES_CHARMANDER
-	msgbox PalletTown_ProfessorOaksLab_Text_WantCharmander, MSGBOX_YESNO
-	goto_if_eq VAR_RESULT, YES, PalletTown_ProfessorOaksLab_EventScript_GiveStarter
-	msgbox PalletTown_ProfessorOaksLab_Text_TakeYourTime, MSGBOX_DEFAULT
-	release
-	end
-
-PalletTown_ProfessorOaksLab_EventScript_SquirtleBall::
-	lock
-	faceplayer
-	setvar VAR_TEMP_1, 2
-	setvar VAR_TEMP_2, SPECIES_SQUIRTLE
-	msgbox PalletTown_ProfessorOaksLab_Text_WantSquirtle, MSGBOX_YESNO
-	goto_if_eq VAR_RESULT, YES, PalletTown_ProfessorOaksLab_EventScript_GiveStarter
-	msgbox PalletTown_ProfessorOaksLab_Text_TakeYourTime, MSGBOX_DEFAULT
-	release
-	end
-
-@ ----- Give Starter -----
-PalletTown_ProfessorOaksLab_EventScript_GiveStarter::
-	lockall
-	textcolor NPC_TEXT_COLOR_MALE
-	givemon VAR_TEMP_2, 5, ITEM_NONE
+	goto_if_eq VAR_RESULT, NO, PalletTown_ProfessorOaksLab_EventScript_TakeYourTime
+	showmonpic SPECIES_BULBASAUR, 10, 3
+	msgbox PalletTown_ProfessorOaksLab_Text_AreYouSure, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, PalletTown_ProfessorOaksLab_EventScript_TakeYourTime
+	hidemonpic
+	givemon SPECIES_BULBASAUR, 5, ITEM_NONE
 	goto_if_eq VAR_RESULT, MON_GIVEN_TO_PARTY, PalletTown_ProfessorOaksLab_EventScript_StarterGiven
 	goto_if_eq VAR_RESULT, MON_GIVEN_TO_PC, PalletTown_ProfessorOaksLab_EventScript_StarterGiven
 	msgbox PalletTown_ProfessorOaksLab_Text_NoRoom, MSGBOX_DEFAULT
 	release
 	end
 
+PalletTown_ProfessorOaksLab_EventScript_CharmanderBall::
+	lock
+	faceplayer
+	msgbox PalletTown_ProfessorOaksLab_Text_WantCharmander, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, PalletTown_ProfessorOaksLab_EventScript_TakeYourTime
+	showmonpic SPECIES_CHARMANDER, 10, 3
+	msgbox PalletTown_ProfessorOaksLab_Text_AreYouSure, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, PalletTown_ProfessorOaksLab_EventScript_TakeYourTime
+	hidemonpic
+	givemon SPECIES_CHARMANDER, 5, ITEM_NONE
+	goto_if_eq VAR_RESULT, MON_GIVEN_TO_PARTY, PalletTown_ProfessorOaksLab_EventScript_StarterGiven
+	goto_if_eq VAR_RESULT, MON_GIVEN_TO_PC, PalletTown_ProfessorOaksLab_EventScript_StarterGiven
+	msgbox PalletTown_ProfessorOaksLab_Text_NoRoom, MSGBOX_DEFAULT
+	release
+	end
+
+PalletTown_ProfessorOaksLab_EventScript_SquirtleBall::
+	lock
+	faceplayer
+	msgbox PalletTown_ProfessorOaksLab_Text_WantSquirtle, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, PalletTown_ProfessorOaksLab_EventScript_TakeYourTime
+	showmonpic SPECIES_SQUIRTLE, 10, 3
+	msgbox PalletTown_ProfessorOaksLab_Text_AreYouSure, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, PalletTown_ProfessorOaksLab_EventScript_TakeYourTime
+	hidemonpic
+	givemon SPECIES_SQUIRTLE, 5, ITEM_NONE
+	goto_if_eq VAR_RESULT, MON_GIVEN_TO_PARTY, PalletTown_ProfessorOaksLab_EventScript_StarterGiven
+	goto_if_eq VAR_RESULT, MON_GIVEN_TO_PC, PalletTown_ProfessorOaksLab_EventScript_StarterGiven
+	msgbox PalletTown_ProfessorOaksLab_Text_NoRoom, MSGBOX_DEFAULT
+	release
+	end
+
+@ ----- Give Starter Flow -----
 PalletTown_ProfessorOaksLab_EventScript_StarterGiven::
 	fadescreen FADE_TO_BLACK
 	removeobject 2
 	removeobject 3
 	removeobject 4
 	fadescreen FADE_FROM_BLACK
-	setvar VAR_STARTER_MON, VAR_TEMP_2
 	msgbox PalletTown_ProfessorOaksLab_Text_GreatChoice, MSGBOX_DEFAULT
 	setflag FLAG_SYS_POKEDEX_GET
 	msgbox PalletTown_ProfessorOaksLab_Text_HereIsPokedex, MSGBOX_DEFAULT
@@ -95,28 +98,10 @@ PalletTown_ProfessorOaksLab_EventScript_StarterGiven::
 	msgbox PalletTown_ProfessorOaksLab_Text_HeadToViridian, MSGBOX_DEFAULT
 	msgbox PalletTown_ProfessorOaksLab_Text_GoodLuck, MSGBOX_DEFAULT
 	setvar VAR_TEMP_0, 2
-	releaseall
-	end
-
-@ ----- Oak NPC (post-starter) -----
-PalletTown_ProfessorOaksLab_EventScript_Oak::
-	lock
-	faceplayer
-	goto_if_eq VAR_TEMP_0, 0, PalletTown_ProfessorOaksLab_EventScript_OakIntro
-	msgbox PalletTown_ProfessorOaksLab_Text_OakPostGame, MSGBOX_DEFAULT
-	release
-	end
-
-PalletTown_ProfessorOaksLab_EventScript_OakIntro::
-	msgbox PalletTown_ProfessorOaksLab_Text_OakGreeting, MSGBOX_DEFAULT
 	release
 	end
 
 @ ===== TEXT =====
-
-PalletTown_ProfessorOaksLab_Text_OakGreeting:
-	.string "OAK: Welcome to my lab, {PLAYER}!\n"
-	.string "Feel free to look around.$"
 
 PalletTown_ProfessorOaksLab_Text_Intro1:
 	.string "OAK: Ah, {PLAYER}!\n"
@@ -155,6 +140,15 @@ PalletTown_ProfessorOaksLab_Text_WantSquirtle:
 	.string "It's a POKé BALL containing\n"
 	.string "SQUIRTLE, the WATER type.\p"
 	.string "Would you like SQUIRTLE?$"
+
+PalletTown_ProfessorOaksLab_Text_AreYouSure:
+	.string "Are you sure you want this\n"
+	.string "POKÉMON as your partner?$"
+
+PalletTown_ProfessorOaksLab_EventScript_TakeYourTime::
+	msgbox PalletTown_ProfessorOaksLab_Text_TakeYourTime, MSGBOX_DEFAULT
+	release
+	end
 
 PalletTown_ProfessorOaksLab_Text_TakeYourTime:
 	.string "Take your time, {PLAYER}.\n"

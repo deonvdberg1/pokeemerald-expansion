@@ -169,7 +169,8 @@ LittlerootTown_EventScript_TruckToPallet::
 	setflag FLAG_HIDE_LITTLEROOT_TOWN_BRENDANS_HOUSE_TRUCK
 	setflag FLAG_HIDE_LITTLEROOT_TOWN_MAYS_HOUSE_TRUCK
 	fadescreen FADE_TO_BLACK
-	warp MAP_PALLET_TOWN_KHANTO, 12, 14
+	warp MAP_PALLET_TOWN_KHANTO, 12, 23
+	setvar VAR_TEMP_5, 1
 	fadescreen FADE_FROM_BLACK
 	releaseall
 	end

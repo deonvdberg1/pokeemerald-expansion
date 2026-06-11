@@ -3,54 +3,42 @@
 
 mapscripts PalletTown_Khanto_MapScripts {
     MAP_SCRIPT_ON_TRANSITION {
-        // Any setup logic when entering Pallet Town
-        // e.g. setvar(VAR_TEMP_0, 0) for frame events
+        call_if_eq(VAR_TEMP_5, 1, PalletTown_EventScript_TruckArrival)
     }
     MAP_SCRIPT_ON_RESUME {
-        // Runs when returning from interior maps (houses, lab)
     }
+}
+
+// ─────────────────────────────────────────────
+// TRUCK ARRIVAL — First time you arrive from Hoenn
+// ─────────────────────────────────────────────
+
+script PalletTown_EventScript_TruckArrival {
+    lockall
+    msgbox("You arrived in PALLET TOWN!\lThe truck driver waves goodbye and drives off.")
+    closemessage
+    applymovement(OBJ_EVENT_ID_PLAYER, Common_Movement_WalkInPlaceFasterDown)
+    waitmovement(0)
+    msgbox("There's PROFESSOR OAK's lab\njust ahead.\lBetter go introduce yourself.")
+    setvar(VAR_TEMP_5, 0)
+    releaseall
+    end
 }
 
 // ─────────────────────────────────────────────
 // OBJECT EVENT SCRIPTS (NPCs)
 // ─────────────────────────────────────────────
 
-// Prof. Oak — Greets you on arrival, directs you to his lab
+// Prof. Oak — Greets you on arrival
 script PalletTown_ProfOak {
     lock
     faceplayer
     msgbox("Ah, you must be {PLAYER}!
-           Your mother called ahead.
-           She said you'd be arriving from Hoenn.")
-    msgbox("I'm PROFESSOR OAK.
-           I study POKÉMON here in KANTO.")
-    msgbox("Your father mentioned you'd be coming.
-           He's in VIRIDIAN CITY - but before you
-           head out, you'll need a POKÉMON of your own.")
-    msgbox("Come see me in my lab just up ahead.
-           I'll set you up with a starter POKÉMON!")
-    release
-    end
-}
-
-// Mom — Heal point, basic tips
-script PalletTown_Mom {
-    lock
-    faceplayer
-    msgbox("Hello, dear! 
-           Take a rest before you head out.")
-    release
-    end
-}
-
-// Rival — Rival encounter trigger
-script PalletTown_Rival {
-    lock
-    faceplayer
-    msgbox("{PLAYER}! 
-           You're still here?
-           I'm going to be the very best,
-           you know!")
+           Your mother called ahead.\p
+           I've been expecting you!
+           Come see me in my lab just up ahead.")
+    msgbox("It's the building with the big sign.\n
+           I'll set you up with a POKÉMON!")
     release
     end
 }
